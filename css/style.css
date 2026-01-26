@@ -1,15 +1,12 @@
 /* ====== VARIABLES DE COLOR ====== */
 :root {
-    /* Colores Primarios */
     --brown-dark: #3A1F1B;
     --brown: #5c3a36;
     --brown-light: #7a5552;
     
-    /* Colores Secundarios - Verde Salvia */
     --green-sage: #3D7A6B;
     --green-light: #5a9b8a;
     
-    /* Fondos y Neutros */
     --arena: #F7EDE2;
     --cream: #faf7f4;
     --light-bg: #f0ede8;
@@ -18,17 +15,14 @@
     --gray-dark: #4a4a4a;
     --gray-light: #7a7a7a;
     
-    /* Colores de Acento */
     --coral: #E07A5F;
     --coral-light: #f0a395;
     --accent-gold: #d4a574;
     
-    /* Fuentes */
-    --font-display: 'Playfair Display', serif;
-    --font-body: 'Poppins', sans-serif;
+    --font-display: 'Georgia', 'Trebuchet MS', serif;
+    --font-body: 'Cambria', 'Palatino Linotype', Georgia, serif;
 }
 
-/* ====== RESET Y ESTILOS GENERALES ====== */
 * {
     margin: 0;
     padding: 0;
@@ -46,7 +40,6 @@ body {
     background: linear-gradient(135deg, #E8DFD5 0%, #D9CDBF 100%);
 }
 
-/* ====== HEADER PROFESIONAL ====== */
 .top-header {
     background: linear-gradient(135deg, var(--black-soft) 0%, var(--brown-dark) 100%);
     padding: 25px 0;
@@ -130,7 +123,6 @@ nav a:hover::after {
     width: 100%;
 }
 
-/* ====== HERO SECTION ====== */
 .hero {
     padding: 100px 40px;
     text-align: center;
@@ -158,7 +150,6 @@ nav a:hover::after {
     line-height: 1.8;
 }
 
-/* ====== SECCIONES GENERALES ====== */
 section {
     padding: 80px 40px;
     max-width: 1400px;
@@ -188,7 +179,6 @@ section h3::after {
     border-radius: 2px;
 }
 
-/* ====== ABOUT SECTION ====== */
 .about {
     background: var(--white);
     border-radius: 20px;
@@ -205,7 +195,6 @@ section h3::after {
     line-height: 1.8;
 }
 
-/* ====== SERVICIOS ====== */
 .services {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -312,7 +301,6 @@ section h3::after {
     color: var(--brown-dark);
 }
 
-/* ====== BOOKING SECTION ====== */
 .booking {
     background: linear-gradient(135deg, var(--brown-dark) 0%, var(--green-sage) 100%);
     padding: 60px 40px;
@@ -357,7 +345,6 @@ select option {
     background: var(--white);
 }
 
-/* ====== BOTONES ====== */
 .btn-primary {
     background: linear-gradient(135deg, var(--brown-dark) 0%, var(--coral) 100%);
     color: var(--white);
@@ -389,7 +376,6 @@ form .btn-primary {
     padding: 16px;
 }
 
-/* ====== FOOTER ====== */
 footer {
     background: linear-gradient(135deg, var(--brown-dark) 0%, var(--green-sage) 100%);
     color: var(--white);
@@ -438,7 +424,6 @@ footer {
     margin: 0 auto;
 }
 
-/* ====== RESPONSIVE ====== */
 @media (max-width: 768px) {
     .header-content {
         flex-direction: column;
@@ -528,4 +513,3 @@ footer {
     }
 }
 
-/* -------*
