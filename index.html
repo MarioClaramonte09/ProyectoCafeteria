@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Java Espresso | Café & Coworking</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fuentes Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Link a CSS externo -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="top-header">
+    <div class="header-content">
+        <div class="logo-section">
+            <h1 class="logo-text">☕ Java Espresso</h1>
+            <p class="logo-subtitle">Café & Coworking</p>
+        </div>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#espacio">Espacio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#reservas">Reservas</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </div>
+</header>
+
+
+<section class="hero" id="inicio">
+    <h2>Café, concentración y tranquilidad</h2>
+    <p>
+        Java Espresso es un espacio pensado para trabajar, estudiar o desconectar,
+        combinando café de calidad con zonas de trabajo silenciosas y cabinas insonorizadas.
+    </p>
+    <button class="btn-primary">Reservar espacio</button>
+</section>
+
+<section class="about" id="espacio">
+    <h3>Sobre Java Espresso</h3>
+    <p>
+        Nuestra cafetería está diseñada para estudiantes y profesionales que buscan
+        un entorno moderno, cómodo y silencioso. Ofrecemos ordenadores, cabinas privadas
+        y una atmósfera minimalista que favorece la concentración.
+    </p>
+</section>
+
+<section id="servicios">
+    <h3>Servicios Disponibles</h3>
+    <div class="services">
+        <div class="service-card">
+            <div class="service-image">
+                <img src="img/zonaTrabajo.png" alt="Zona de trabajo">
+            </div>
+            <div class="service-icon">📊</div>
+            <h4>Zona de trabajo</h4>
+            <p>Mesas amplias, enchufes y Wi-Fi de alta velocidad para tu máximo rendimiento.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-image">
+                <img src="img/cabinaInsonorizada.jpg" alt="Cabinas insonorizadas">
+            </div>
+            <div class="service-icon">🔇</div>
+            <h4>Cabinas insonorizadas</h4>
+            <p>Perfectas para videollamadas o máxima concentración sin distracciones.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-image">
+                <img src="img/ordenadoresDisponibles.jpg" alt="Ordenadores">
+            </div>
+            <div class="service-icon">💻</div>
+            <h4>Ordenadores disponibles</h4>
+            <p>Equipos de última generación para clientes que lo necesiten.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-image">
+                <img src="img/cafe.jpg" alt="Café y descanso">
+            </div>
+            <div class="service-icon">☕</div>
+            <h4>Café & descanso</h4>
+            <p>Café de especialidad en un entorno relajado y acogedor.</p>
+        </div>
+    </div>
+</section>
+
+<section id="reservas">
+    <h3>Reserva tu espacio</h3>
+    <div class="booking">
+        <form>
+            <input type="text" placeholder="Tu nombre completo" required>
+            <input type="email" placeholder="Tu correo electrónico" required>
+            <select required>
+                <option value="">Selecciona un servicio</option>
+                <option value="zona-trabajo">Zona de trabajo</option>
+                <option value="cabina">Cabina insonorizada</option>
+                <option value="ordenador">Ordenador</option>
+            </select>
+            <input type="date" required>
+            <input type="time" placeholder="Hora de inicio" required>
+            <button type="submit" class="btn-primary">Confirmar reserva</button>
+        </form>
+    </div>
+</section>
+
+<footer id="contacto">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>Java Espresso</h4>
+            <p>Tu espacio perfecto para trabajar y estudiar</p>
+        </div>
+        <div class="footer-section">
+            <h4>Contacto</h4>
+            <p>📧 info@javaespresso.com</p>
+            <p>📱 +34 600 123 456</p>
+        </div>
+        <div class="footer-section">
+            <h4>Horario</h4>
+            <p>Lunes a Viernes: 7:00 - 21:00</p>
+            <p>Sábados: 9:00 - 18:00</p>
+        </div>
+    </div>
+    <hr class="footer-divider">
+    <p class="footer-copyright">© 2026 Java Espresso · Café & Coworking · Todos los derechos reservados</p>
+</footer>
+
+</body>
+</html>
