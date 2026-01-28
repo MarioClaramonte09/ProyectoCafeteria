@@ -41,63 +41,36 @@ body {
 
 .top-header {
     background: linear-gradient(135deg, var(--black-soft) 0%, var(--brown-dark) 100%);
-    padding: 25px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
     box-shadow: 0 8px 32px rgba(30, 30, 30, 0.4);
 }
 
-.header-content {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 60px;
-}
-
-.logo-section {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    flex-shrink: 0;
-}
-
-.logo-text {
+.brand-title {
     font-family: var(--font-display);
     font-size: 1.8rem;
     font-weight: 700;
     color: var(--white);
     letter-spacing: 0.5px;
+    display: block;
+    margin: 0;
 }
 
-.logo-subtitle {
+.brand-subtitle {
     font-size: 0.8rem;
     color: var(--coral-light);
     font-weight: 500;
     letter-spacing: 2px;
     text-transform: uppercase;
+    display: block;
 }
 
-nav {
-    display: flex;
-    gap: 45px;
-    align-items: center;
-    flex: 1;
+.nav-link {
+    color: var(--white) !important;
+    transition: color 0.3s ease;
 }
 
-nav a {
-    text-decoration: none;
-    color: var(--white);
-    font-weight: 500;
-    font-size: 0.95rem;
-    position: relative;
-    transition: all 0.3s ease;
-    letter-spacing: 0.3px;
-    padding: 8px 15px;
-    border-radius: 8px;
+.nav-link:hover {
+    color: var(--coral-light) !important;
+}
     background: rgba(224, 122, 95, 0);
 }
 
@@ -109,18 +82,7 @@ nav a::after {
     width: 0;
     height: 3px;
     background: linear-gradient(90deg, var(--coral), var(--coral-light));
-    transition: width 0.4s ease;
-    border-radius: 2px;
-}
 
-nav a:hover {
-    color: var(--white);
-    background: rgba(224, 122, 95, 0.25);
-}
-
-nav a:hover::after {
-    width: 100%;
-}
 
 .hero {
     padding: 100px 40px;
