@@ -2,134 +2,128 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Java Espresso | Café & Coworking</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Nespresso - Cafetería Minimalista</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="img/LogoCafeteria.png" alt="Java Espresso" width="32" class="me-2">
+      Java Espresso
+    </a>
 
-<header class="navbar navbar-expand-lg top-header sticky-top">
-    <div class="container-fluid ps-4 pe-4">
-        <a class="navbar-brand d-flex align-items-center gap-3" href="#">
-            <img src="img/LogoCafeteria.png" alt="Java Espresso" style="height: 50px; width: auto;">
-            <div class="d-flex flex-column">
-                <span class="brand-title">Java Espresso</span>
-                <span class="brand-subtitle">Café & Coworking</span>
-            </div>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="menu">
-            <ul class="navbar-nav ms-auto gap-3 text-center">
-                <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link" href="#espacio">Espacio</a></li>
-                <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
-                <li class="nav-item"><a class="nav-link" href="#reservas">Reservas</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-            </ul>
-        </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto text-center text-lg-start">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="pag/catalogo.html">Carta</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="pag/servicios">Servicios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="pag/contacto.html">Contacto</a>
+        </li>
+      </ul>
     </div>
-</header>
+
+  </div>
+</nav>
 
 
-<section class="hero" id="inicio">
-    <h2>Café, concentración y tranquilidad</h2>
+<section class="hero-section d-flex align-items-center justify-content-center" id="inicio">
+  <div class="container-fluid">
+    <div class="row h-100 align-items-center justify-content-center">
+      <div class="col-12 col-md-8 col-lg-6 text-center">
+        <div class="p-5 rounded-4" style="background-color: rgba(41, 25, 2, 0.6);">
+          <h1 class="display-4 fw-bold text-warning mb-3 text-uppercase" style="letter-spacing: 3px; text-shadow: 3px 3px 10px rgba(0,0,0,0.7);">‹Java› Espresso</h1>
+          <p class="lead fs-5 text-light fw-normal mb-4" style="text-shadow: 2px 2px 5px rgba(0,0,0,0.5);">Café de especialidad y los mejores servicios para la productividad y el desarrollo.</p>
+          <a href="#productos" class="btn btn-warning btn-lg fw-bold px-5 py-3 rounded-pill shadow-lg">
+            <i class="bi bi-arrow-down-circle me-2"></i>Descubre nuestros productos
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5" id="productos">
+  <div class="container">
+    <h2 class="text-center mb-5 text-dark">Nuestros Productos</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <img src="img/cafe1.jpg" alt="Café Espresso" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Espresso</h5>
+            <p class="card-text text-dark">El clásico espresso italiano, fuerte y aromático.</p>
+            <a href="#" class="btn btn-dark btn-sm">Ver más</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <img src="img/cafe2.jpg" alt="Café Latte" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Latte</h5>
+            <p class="card-text text-dark">Delicioso latte con la suavidad de la leche y la intensidad del café.</p>
+            <a href="#" class="btn btn-dark btn-sm">Ver más</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <img src="img/cafe3.jpg" alt="Capuccino" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Capuccino</h5>
+            <p class="card-text text-dark">La combinación perfecta de espuma, café y sabor.</p>
+            <a href="#" class="btn btn-dark btn-sm">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contacto -->
+<section class="py-5" id="contacto">
+  <div class="container">
+    <h2 class="text-center mb-5 text-dark">Contacto</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-6 text-center">
+        <p class="text-dark">📧 info@javanespresso.com</p>
+        <p class="text-dark">📱 +34 600 123 456</p>
+        <p class="text-dark">🏪 Calle del Café, 42 - Madrid</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center py-4">
+  <div class="container">
+    <h5 class="mb-3">Java Nespresso</h5>
+    <p class="mb-2">&copy; 2026 Java Nespresso. Todos los derechos reservados.</p>
     <p>
-        Java Espresso es un espacio pensado para trabajar, estudiar o desconectar,
-        combinando café de calidad con zonas de trabajo silenciosas y cabinas insonorizadas.
+      <a href="#inicio">Inicio</a> | 
+      <a href="#productos">Productos</a> | 
+      <a href="#contacto">Contacto</a>
     </p>
-    <button class="btn-primary">Reservar espacio</button>
-</section>
-
-<section class="about" id="espacio">
-    <h3>Sobre Java Espresso</h3>
-    <p>
-        Nuestra cafetería está diseñada para estudiantes y profesionales que buscan
-        un entorno moderno, cómodo y silencioso. Ofrecemos ordenadores, cabinas privadas
-        y una atmósfera minimalista que favorece la concentración.
-    </p>
-</section>
-
-<section id="servicios">
-    <h3>Servicios Disponibles</h3>
-    <div class="services">
-        <div class="service-card">
-            <div class="service-image">
-                <img src="img/zonaTrabajo.png" alt="Zona de trabajo">
-            </div>
-            <div class="service-icon">📊</div>
-            <h4>Zona de trabajo</h4>
-            <p>Mesas amplias, enchufes y Wi-Fi de alta velocidad para tu máximo rendimiento.</p>
-        </div>
-        <div class="service-card">
-            <div class="service-image">
-                <img src="img/cabinaInsonorizada.jpg" alt="Cabinas insonorizadas">
-            </div>
-            <div class="service-icon">🔇</div>
-            <h4>Cabinas insonorizadas</h4>
-            <p>Perfectas para videollamadas o máxima concentración sin distracciones.</p>
-        </div>
-        <div class="service-card">
-            <div class="service-image">
-                <img src="img/ordenadoresDisponibles.jpg" alt="Ordenadores">
-            </div>
-            <div class="service-icon">💻</div>
-            <h4>Ordenadores disponibles</h4>
-            <p>Equipos de última generación para clientes que lo necesiten.</p>
-        </div>
-        <div class="service-card">
-            <div class="service-image">
-                <img src="img/cafe.jpg" alt="Café y descanso">
-            </div>
-            <div class="service-icon">☕</div>
-            <h4>Café & descanso</h4>
-            <p>Café de especialidad en un entorno relajado y acogedor.</p>
-        </div>
-    </div>
-</section>
-
-<section id="reservas">
-    <h3>Reserva tu espacio</h3>
-    <div class="booking">
-        <form>
-            <input type="text" placeholder="Tu nombre completo" required>
-            <input type="email" placeholder="Tu correo electrónico" required>
-            <select required>
-                <option value="">Selecciona un servicio</option>
-                <option value="zona-trabajo">Zona de trabajo</option>
-                <option value="cabina">Cabina insonorizada</option>
-                <option value="ordenador">Ordenador</option>
-            </select>
-            <input type="date" required>
-            <input type="time" placeholder="Hora de inicio" required>
-            <button type="submit" class="btn-primary">Confirmar reserva</button>
-        </form>
-    </div>
-</section>
-
-<footer id="contacto">
-    <div class="footer-content">
-        <div class="footer-section">
-            <h4>Java Espresso</h4>
-            <p>Tu espacio perfecto para trabajar y estudiar</p>
-        </div>
-        <div class="footer-section">
-            <h4>Contacto</h4>
-            <p>📧 info@javaespresso.com</p>
-            <p>📱 +34 600 123 456</p>
-        </div>
-        <div class="footer-section">
-            <h4>Horario</h4>
-            <p>Lunes a Viernes: 7:00 - 21:00</p>
-            <p>Sábados: 9:00 - 18:00</p>
-        </div>
-    </div>
-    <hr class="footer-divider">
-    <p class="footer-copyright">© 2026 Java Espresso · Café & Coworking · Todos los derechos reservados</p>
+  </div>
 </footer>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
