@@ -99,6 +99,11 @@ h1, h2, h3, h4, h5, h6 {
     animation: slideDown 0.8s ease-out;
 }
 
+/* Navegación suave */
+html {
+    scroll-behavior: smooth;
+}
+
 .hero-section .lead {
     color: #ffffff;
     font-size: clamp(1rem, 2vw, 1.5rem);
