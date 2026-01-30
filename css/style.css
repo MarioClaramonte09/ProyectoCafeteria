@@ -195,3 +195,65 @@ footer a:hover {
     text-decoration: underline;
     color: var(--blue-soft);
 }
+
+/* ESTILOS PARA MODALES Y GALERÍAS */
+
+/* Modales */
+.modal-header {
+    border-bottom: 2px solid var(--copper) !important;
+}
+
+.modal-content {
+    border: 1px solid var(--copper) !important;
+}
+
+.modal-title {
+    color: var(--copper) !important;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+/* Carrusel dentro de modales */
+#carouselTrabajo .carousel-indicators [data-bs-slide-to] {
+    background-color: var(--copper);
+}
+
+#carouselTrabajo .carousel-indicators [data-bs-slide-to].active {
+    background-color: var(--cream);
+}
+
+#carouselTrabajo .carousel-control-prev-icon,
+#carouselTrabajo .carousel-control-next-icon {
+    filter: brightness(0) invert(1);
+}
+
+/* Efecto hover en tarjetas de servicios */
+.card {
+    cursor: pointer;
+}
+
+.card:hover {
+    box-shadow: 0 15px 40px rgba(255, 193, 7, 0.3) !important;
+}
+
+/* Botones en modales */
+.btn-warning {
+    transition: all 0.3s ease;
+}
+
+.btn-warning:hover {
+    background: linear-gradient(135deg, #FFB81C 0%, #FFC107 100%) !important;
+    box-shadow: 0 8px 25px rgba(255, 193, 7, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Responsive para modales */
+@media (max-width: 768px) {
+    .modal-dialog {
+        margin: 1rem;
+    }
+    
+    .carousel-inner {
+        height: 300px;
+    }
+}
