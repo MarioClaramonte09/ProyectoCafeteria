@@ -50,17 +50,10 @@
       <button type="button" data-bs-target="#carouselServicios" data-bs-slide-to="1"></button>
       <button type="button" data-bs-target="#carouselServicios" data-bs-slide-to="2"></button>
       <button type="button" data-bs-target="#carouselServicios" data-bs-slide-to="3"></button>
+      <button type="button" data-bs-target="#carouselServicios" data-bs-slide-to="4"></button>
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="../img/carruselCafeteria.png" class="d-block w-100" alt="Cafetería"
-          style="height: 400px; object-fit: cover;">
-        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 py-4">
-          <h5 class="fw-bold display-6">☕ Cafetería</h5>
-          <p>Disfruta de nuestras bebidas de café artesanales elaboradas con granos de alta calidad</p>
-        </div>
-      </div>
-      <div class="carousel-item">
         <img src="../img/espacioDeTrabajo.png" class="d-block w-100" alt="Espacio de Trabajo"
           style="height: 400px; object-fit: cover;">
         <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 py-4">
@@ -69,18 +62,34 @@
         </div>
       </div>
       <div class="carousel-item">
-        <img src="../img/comida.png" class="d-block w-100" alt="Pastelería" style="height: 400px; object-fit: cover;">
-        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 py-4">
-          <h5 class="fw-bold display-6">🍰 Pastelería</h5>
-          <p>Deliciosos pasteles y postres frescos elaborados diariamente</p>
-        </div>
-      </div>
-      <div class="carousel-item">
         <img src="../img/salaPrivada.png" class="d-block w-100" alt="Salas Privadas"
           style="height: 400px; object-fit: cover;">
         <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 py-4">
           <h5 class="fw-bold display-6">🏢 Salas Privadas</h5>
           <p>Espacios para reuniones y eventos corporativos</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../img/salaGaming.png" class="d-block w-100" alt="Sala Gaming"
+          style="height: 400px; object-fit: cover;">
+        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 py-4">
+          <h5 class="fw-bold display-6">🎮 Sala Gaming</h5>
+          <p>Estaciones de juego de última generación para una experiencia inmersiva</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../img/carruselCafeteria.png" class="d-block w-100" alt="Cafetería"
+          style="height: 400px; object-fit: cover;">
+        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 py-4">
+          <h5 class="fw-bold display-6">☕ Cafetería</h5>
+          <p>Disfruta de nuestras bebidas de café artesanales elaboradas con granos de alta calidad</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../img/comida.png" class="d-block w-100" alt="Pastelería" style="height: 400px; object-fit: cover;">
+        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 py-4">
+          <h5 class="fw-bold display-6">🍰 Pastelería</h5>
+          <p>Deliciosos pasteles y postres frescos elaborados diariamente</p>
         </div>
       </div>
     </div>
@@ -93,7 +102,10 @@
   </div>
 
   <section class="container pt-3 pb-5">
-    <h2 class="text-center mb-5 fw-bold" style="font-size: 2.5rem; color: #291902;">Nuestros Servicios</h2>
+    <div class="text-center mb-5">
+      <h2 class="section-title d-inline-block fw-bold" style="font-size: 2.5rem; color: #291902;">Nuestros Servicios
+      </h2>
+    </div>
     <div class="row g-4">
       <!-- Espacio de Trabajo -->
       <div class="col-md-6 col-lg-4">
@@ -123,30 +135,16 @@
         </div>
       </div>
 
-      <!-- Ordenadores Gaming -->
+      <!-- Sala Gaming -->
       <div class="col-md-6 col-lg-4">
         <div class="card h-100 shadow-lg border-0 position-relative overflow-hidden"
           style="transition: transform 0.3s ease; border-left: 5px solid #FFC107;">
           <div class="card-body">
-            <h5 class="card-title fw-bold text-warning">🎮 Ordenadores Gaming</h5>
+            <h5 class="card-title fw-bold text-warning">🎮 Sala Gaming</h5>
             <p class="card-text text-muted">Estaciones de juego de última generación con conexión de alta velocidad para
               experiencia inmersiva.</p>
             <button type="button" class="btn btn-sm btn-warning" data-bs-toggle="modal"
               data-bs-target="#galeriasGaming">Ver galería</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Eventos Privados -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100 shadow-lg border-0 position-relative overflow-hidden"
-          style="transition: transform 0.3s ease; border-left: 5px solid #FFC107;">
-          <div class="card-body">
-            <h5 class="card-title fw-bold text-warning">🎉 Eventos Privados</h5>
-            <p class="card-text text-muted">Realizamos eventos especiales, reuniones corporativas y celebraciones en un
-              ambiente acogedor y profesional.</p>
-            <button type="button" class="btn btn-sm btn-warning" data-bs-toggle="modal"
-              data-bs-target="#galeriasEventos">Ver galería</button>
           </div>
         </div>
       </div>
@@ -178,7 +176,23 @@
           </div>
         </div>
       </div>
+
+      <!-- Eventos Privados -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-lg border-0 position-relative overflow-hidden"
+          style="transition: transform 0.3s ease; border-left: 5px solid #FFC107;">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-warning">🎉 Eventos Privados</h5>
+            <p class="card-text text-muted">Realizamos eventos especiales, reuniones corporativas y celebraciones en un
+              ambiente acogedor y profesional.</p>
+            <button type="button" class="btn btn-sm btn-warning" data-bs-toggle="modal"
+              data-bs-target="#galeriasEventos">Ver galería</button>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
+  </div>
   </section>
 
   <!-- MODALES CON GALERÍAS -->
