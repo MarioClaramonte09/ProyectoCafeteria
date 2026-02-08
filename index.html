@@ -1,416 +1,486 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Java Nespresso - Cafetería Minimalista</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Java Nespresso - Cafetería Minimalista</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&family=Playfair+Display:wght@700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-  <div class="container-fluid px-4">
-    <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
-      <img src="img/LogoCafeteria.png" alt="Java Espresso" width="40" class="me-2">
-      <span class="text-warning">Java Espresso</span>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto gap-2">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="pag/catalogo.html">Carta</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="pag/servicios.html">Servicios</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="pag/contacto.html">Contacto</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-
-<section class="hero-section d-flex align-items-center justify-content-center" id="inicio">
-  <div class="container-fluid">
-    <div class="row h-100 align-items-center justify-content-center">
-      <div class="col-12 col-md-8 col-lg-6 text-center">
-        <div class="p-5 rounded-4" style="background-color: rgba(41, 25, 2, 0.6);">
-          <h1 class="display-4 fw-bold text-warning mb-3 text-uppercase" style="letter-spacing: 3px; text-shadow: 3px 3px 10px rgba(0,0,0,0.7);">‹Java› Espresso</h1>
-          <p class="lead fs-5 text-light fw-normal mb-4" style="text-shadow: 2px 2px 5px rgba(0,0,0,0.5);">Café de especialidad y los mejores servicios para la productividad y el desarrollo.</p>
-          <a href="#productos" class="btn btn-warning btn-lg fw-bold px-5 py-3 rounded-pill shadow-lg">
-            <i class="bi bi-arrow-down-circle me-2"></i>Descubre nuestros productos
-          </a>
-        </div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+        <img src="img/LogoCafeteria.png" alt="Java Espresso" width="40" class="me-2">
+        <span class="text-warning">Java Espresso</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto gap-2">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pag/catalogo.html">Carta</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pag/servicios.html">Servicios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pag/contacto.html">Contacto</a>
+          </li>
+        </ul>
       </div>
     </div>
-  </div>
-</section>
+  </nav>
 
-<section class="py-5" id="productos">
-  <div class="container">
-    <h2 class="text-center mb-5 text-dark fw-bold" style="font-family: 'Playfair Display', serif; font-size: 2.5rem;">Nuestros Servicios</h2>
-    <div class="row g-4">
-      <!-- Comida y Bebida -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm overflow-hidden position-relative group">
-          <img src="img/cafe.jpg" alt="Comida y Bebida" class="card-img-top" style="height: 250px; object-fit: cover;">
-          <div class="card-body bg-light">
-            <h5 class="card-title fw-bold">☕ Comida y Bebida</h5>
-            <p class="card-text text-dark">Disfruta de nuestro café artesanal y deliciosas opciones gastronómicas.</p>
-            <a href="pag/catalogo.html" class="btn btn-dark btn-sm">Ver carta</a>
+
+  <section class="hero-section d-flex align-items-center justify-content-center" id="inicio">
+    <div class="container-fluid">
+      <div class="row h-100 align-items-center justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6 text-center">
+          <div class="p-5 rounded-4" style="background-color: rgba(41, 25, 2, 0.6);">
+            <h1 class="display-4 fw-bold text-warning mb-3 text-uppercase"
+              style="letter-spacing: 3px; text-shadow: 3px 3px 10px rgba(0,0,0,0.7);">‹Java› Espresso</h1>
+            <p class="lead fs-5 text-light fw-normal mb-4" style="text-shadow: 2px 2px 5px rgba(0,0,0,0.5);">Café de
+              especialidad y los mejores servicios para la productividad y el desarrollo.</p>
+            <a href="#productos" id="btn-discover"
+              class="btn btn-warning btn-lg fw-bold px-5 py-3 rounded-pill shadow-lg">
+              <i class="bi bi-arrow-down-circle me-2"></i>Descubre nuestros servicios
+            </a>
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Ordenadores Gaming -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm overflow-hidden">
-          <img src="img/gaming.jpg" alt="Ordenadores Gaming" class="card-img-top" style="height: 250px; object-fit: cover;">
-          <div class="card-body bg-light d-flex flex-column">
-            <h5 class="card-title fw-bold">🎮 Ordenadores Gaming</h5>
-            <p class="card-text text-dark">Estaciones de juego de última generación para una experiencia inmersiva.</p>
-            <div class="d-flex gap-2 mt-auto">
+  <section class="py-5" id="productos">
+    <div class="container">
+      <h2 class="text-center mb-5 text-dark fw-bold" style="font-family: 'Playfair Display', serif; font-size: 2.5rem;">
+        Nuestros Servicios</h2>
+      <div class="row g-4">
+        <!-- Comida y Bebida -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm overflow-hidden position-relative group">
+            <img src="img/cafe.jpg" alt="Comida y Bebida" class="card-img-top"
+              style="height: 250px; object-fit: cover;">
+            <div class="card-body bg-light">
+              <h5 class="card-title fw-bold">☕ Comida y Bebida</h5>
+              <p class="card-text text-dark">Disfruta de nuestro café artesanal y deliciosas opciones gastronómicas.</p>
+              <a href="pag/catalogo.html" class="btn btn-dark btn-sm">Ver carta</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ordenadores Gaming -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm overflow-hidden">
+            <img src="img/gaming.jpg" alt="Ordenadores Gaming" class="card-img-top"
+              style="height: 250px; object-fit: cover;">
+            <div class="card-body bg-light d-flex flex-column">
+              <h5 class="card-title fw-bold">🎮 Ordenadores Gaming</h5>
+              <p class="card-text text-dark">Estaciones de juego de última generación para una experiencia inmersiva.
+              </p>
+              <div class="d-flex gap-2 mt-auto">
+                <a href="pag/servicios.html" class="btn btn-dark btn-sm">Más info</a>
+                <button class="btn btn-dark btn-sm ms-auto" data-bs-toggle="modal"
+                  data-bs-target="#specModal">Especificaciones</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ordenadores para Trabajar -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm overflow-hidden">
+            <img src="img/ordenadoresDisponibles.jpg" alt="Ordenadores Disponibles" class="card-img-top"
+              style="height: 250px; object-fit: cover;">
+            <div class="card-body bg-light d-flex flex-column">
+              <h5 class="card-title fw-bold">💻 Ordenadores para Trabajar</h5>
+              <p class="card-text text-dark">Equipos profesionales con conexión de alta velocidad para tu productividad.
+              </p>
+              <div class="d-flex gap-2 mt-auto">
+                <a href="pag/servicios.html" class="btn btn-dark btn-sm">Más info</a>
+                <button class="btn btn-dark btn-sm ms-auto" data-bs-toggle="modal"
+                  data-bs-target="#specModalWork">Especificaciones</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Salas Privadas -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm overflow-hidden">
+            <img src="img/zonaTrabajo.png" alt="Zona de Trabajo" class="card-img-top"
+              style="height: 250px; object-fit: cover;">
+            <div class="card-body bg-light">
+              <h5 class="card-title fw-bold">🏢 Salas Privadas</h5>
+              <p class="card-text text-dark">Espacios reservados para reuniones, presentaciones y eventos corporativos.
+              </p>
               <a href="pag/servicios.html" class="btn btn-dark btn-sm">Más info</a>
-              <button class="btn btn-dark btn-sm ms-auto" data-bs-toggle="modal" data-bs-target="#specModal">Especificaciones</button>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Ordenadores para Trabajar -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm overflow-hidden">
-          <img src="img/ordenadoresDisponibles.jpg" alt="Ordenadores Disponibles" class="card-img-top" style="height: 250px; object-fit: cover;">
-          <div class="card-body bg-light d-flex flex-column">
-            <h5 class="card-title fw-bold">💻 Ordenadores para Trabajar</h5>
-            <p class="card-text text-dark">Equipos profesionales con conexión de alta velocidad para tu productividad.</p>
-            <div class="d-flex gap-2 mt-auto">
+        <!-- Cabinas Insonorizadas -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm overflow-hidden">
+            <img src="img/cabinaInsonorizada.jpg" alt="Cabinas Insonorizadas" class="card-img-top"
+              style="height: 250px; object-fit: cover;">
+            <div class="card-body bg-light">
+              <h5 class="card-title fw-bold">🔇 Cabinas Insonorizadas</h5>
+              <p class="card-text text-dark">Espacios privados y silenciosos para videoconferencias y trabajo enfocado.
+              </p>
               <a href="pag/servicios.html" class="btn btn-dark btn-sm">Más info</a>
-              <button class="btn btn-dark btn-sm ms-auto" data-bs-toggle="modal" data-bs-target="#specModalWork">Especificaciones</button>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Salas Privadas -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm overflow-hidden">
-          <img src="img/zonaTrabajo.png" alt="Zona de Trabajo" class="card-img-top" style="height: 250px; object-fit: cover;">
-          <div class="card-body bg-light">
-            <h5 class="card-title fw-bold">🏢 Salas Privadas</h5>
-            <p class="card-text text-dark">Espacios reservados para reuniones, presentaciones y eventos corporativos.</p>
-            <a href="pag/servicios.html" class="btn btn-dark btn-sm">Más info</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Cabinas Insonorizadas -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm overflow-hidden">
-          <img src="img/cabinaInsonorizada.jpg" alt="Cabinas Insonorizadas" class="card-img-top" style="height: 250px; object-fit: cover;">
-          <div class="card-body bg-light">
-            <h5 class="card-title fw-bold">🔇 Cabinas Insonorizadas</h5>
-            <p class="card-text text-dark">Espacios privados y silenciosos para videoconferencias y trabajo enfocado.</p>
-            <a href="pag/servicios.html" class="btn btn-dark btn-sm">Más info</a>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Contacto -->
-<section class="py-5" id="contacto">
-  <div class="container">
-    <h2 class="text-center mb-5 text-dark">Contacto</h2>
-    <div class="row justify-content-center">
-      <div class="col-md-6 text-center">
-        <p class="text-dark">📧 info@javanespresso.com</p>
-        <p class="text-dark">📱 +34 600 123 456</p>
-        <p class="text-dark">🏪 Calle del Café, 42 - Madrid</p>
+  <!-- Contacto -->
+  <section class="py-5" id="contacto">
+    <div class="container">
+      <h2 class="text-center mb-5 text-dark">Contacto</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
+          <p class="text-dark">📧 info@javanespresso.com</p>
+          <p class="text-dark">📱 +34 600 123 456</p>
+          <p class="text-dark">🏪 Calle del Café, 42 - Madrid</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Especificaciones -->
+  <div class="modal fade" id="specModal" tabindex="-1" aria-labelledby="specModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-dark text-warning">
+          <h5 class="modal-title fw-bold" id="specModalLabel">Especificaciones de Ordenadores</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-3 mb-4">
+            <!-- Foto 1 -->
+            <div class="col-md-4">
+              <div class="card photo-card cursor-pointer" data-spec="1" style="cursor: pointer;">
+                <img src="https://www.lg.com/es/lg-experience/images/es-es/2024/batch-1/9-1.jpg" alt="Foto 1"
+                  class="card-img-top" style="height: 200px; object-fit: cover;">
+                <div class="card-body">
+                  <p class="text-muted small">EQUIPO LOWCOST</p>
+                </div>
+              </div>
+            </div>
+            <!-- Foto 2 -->
+            <div class="col-md-4">
+              <div class="card photo-card cursor-pointer" data-spec="2" style="cursor: pointer;">
+                <img src="https://i.ytimg.com/vi/pYMchqcc2Qc/maxresdefault.jpg" alt="Foto 2" class="card-img-top"
+                  style="height: 200px; object-fit: cover;">
+                <div class="card-body">
+                  <p class="text-muted small">EQUIPO IDRA</p>
+                </div>
+              </div>
+            </div>
+            <!-- Foto 3 -->
+            <div class="col-md-4">
+              <div class="card photo-card cursor-pointer" data-spec="3" style="cursor: pointer;">
+                <img
+                  src="https://preview.redd.it/v0pn116evmp71.jpg?auto=webp&s=9108c6b751dab34a105e71f2d643f65cec0b1dbc"
+                  alt="Foto 3" class="card-img-top" style="height: 200px; object-fit: cover;">
+                <div class="card-body">
+                  <p class="text-muted small">EQUIPO ULTRA</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Información sobre Especificaciones -->
+          <div class="bg-light p-4 rounded" id="specContent">
+            <h6 class="fw-bold mb-3">Especificaciones Técnicas</h6>
+            <ul class="list-unstyled" id="specList">
+              <li class="mb-2"><strong>Procesador:</strong> Intel Core i9 / AMD Ryzen 9</li>
+              <li class="mb-2"><strong>Memoria RAM:</strong> 32 GB DDR5</li>
+              <li class="mb-2"><strong>Almacenamiento:</strong> SSD NVMe 1TB</li>
+              <li class="mb-2"><strong>GPU:</strong> NVIDIA RTX 4070 Ti / AMD Radeon RX 7900 XT</li>
+              <li class="mb-2"><strong>Monitor:</strong> 4K 144Hz</li>
+              <li class="mb-2"><strong>Conectividad:</strong> WiFi 6E, Gigabit Ethernet</li>
+              <li class="mb-2"><strong>Refrigeración:</strong> Líquida de última generación</li>
+            </ul>
+            <hr>
+            <p class="text-dark small" id="specDesc">Todos nuestros ordenadores incluyen sistemas de última generación
+              con las mejores prestaciones para gaming profesional y trabajo intensivo.</p>
+          </div>
+        </div>
+        <div class="modal-footer bg-light">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
       </div>
     </div>
   </div>
-</section>
 
-<!-- Modal Especificaciones -->
-<div class="modal fade" id="specModal" tabindex="-1" aria-labelledby="specModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header bg-dark text-warning">
-        <h5 class="modal-title fw-bold" id="specModalLabel">Especificaciones de Ordenadores</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="row g-3 mb-4">
-          <!-- Foto 1 -->
-          <div class="col-md-4">
-            <div class="card photo-card cursor-pointer" data-spec="1" style="cursor: pointer;">
-              <img src="https://www.lg.com/es/lg-experience/images/es-es/2024/batch-1/9-1.jpg" alt="Foto 1" class="card-img-top" style="height: 200px; object-fit: cover;">
-              <div class="card-body">
-                <p class="text-muted small">EQUIPO LOWCOST</p>
+  <!-- Modal Especificaciones Ordenadores para Trabajar -->
+  <div class="modal fade" id="specModalWork" tabindex="-1" aria-labelledby="specModalWorkLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-dark text-warning">
+          <h5 class="modal-title fw-bold" id="specModalWorkLabel">Especificaciones - Ordenadores para Trabajar</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-3 mb-4">
+            <!-- Foto 1 -->
+            <div class="col-md-4">
+              <div class="card photo-card-work cursor-pointer" data-spec-work="1" style="cursor: pointer;">
+                <img
+                  src="https://i.ytimg.com/vi/C0_H-lnMDys/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBiFCNx8MWFu9TNj0SnurPuk-fvnA"
+                  alt="Foto 1" class="card-img-top" style="height: 200px; object-fit: cover;">
+                <div class="card-body">
+                  <p class="text-muted small">PRODUCTIVIDAD BÁSICA</p>
+                </div>
+              </div>
+            </div>
+            <!-- Foto 2 -->
+            <div class="col-md-4">
+              <div class="card photo-card-work cursor-pointer" data-spec-work="2" style="cursor: pointer;">
+                <img src="https://img.pccomponentes.com/pcblog/6151/mejores-ordenadores-sobremesa.jpg" alt="Foto 2"
+                  class="card-img-top" style="height: 200px; object-fit: cover;">
+                <div class="card-body">
+                  <p class="text-muted small">WORKSTATION PRO</p>
+                </div>
+              </div>
+            </div>
+            <!-- Foto 3 -->
+            <div class="col-md-4">
+              <div class="card photo-card-work cursor-pointer" data-spec-work="3" style="cursor: pointer;">
+                <img
+                  src="https://thumbs.dreamstime.com/b/espacio-de-trabajo-moderno-con-un-ordenador-sobremesa-que-muestra-obras-arte-digitales-una-computadora-escritorio-digital-formas-376874312.jpg  "
+                  alt="Foto 3" class="card-img-top" style="height: 200px; object-fit: cover;">
+                <div class="card-body">
+                  <p class="text-muted small">SERVIDOR EMPRESARIAL</p>
+                </div>
               </div>
             </div>
           </div>
-          <!-- Foto 2 -->
-          <div class="col-md-4">
-            <div class="card photo-card cursor-pointer" data-spec="2" style="cursor: pointer;">
-              <img src="https://i.ytimg.com/vi/pYMchqcc2Qc/maxresdefault.jpg" alt="Foto 2" class="card-img-top" style="height: 200px; object-fit: cover;">
-              <div class="card-body">
-                <p class="text-muted small">EQUIPO IDRA</p>
-              </div>
-            </div>
-          </div>
-          <!-- Foto 3 -->
-          <div class="col-md-4">
-            <div class="card photo-card cursor-pointer" data-spec="3" style="cursor: pointer;">
-              <img src="https://preview.redd.it/v0pn116evmp71.jpg?auto=webp&s=9108c6b751dab34a105e71f2d643f65cec0b1dbc" alt="Foto 3" class="card-img-top" style="height: 200px; object-fit: cover;">
-              <div class="card-body">
-                <p class="text-muted small">EQUIPO ULTRA</p>
-              </div>
-            </div>
+
+          <!-- Información sobre Especificaciones -->
+          <div class="bg-light p-4 rounded" id="specContentWork">
+            <h6 class="fw-bold mb-3">Especificaciones Técnicas</h6>
+            <ul class="list-unstyled" id="specListWork">
+              <li class="mb-2"><strong>Procesador:</strong> Intel Core i5 / AMD Ryzen 5</li>
+              <li class="mb-2"><strong>Memoria RAM:</strong> 16 GB DDR4</li>
+              <li class="mb-2"><strong>Almacenamiento:</strong> SSD 512GB</li>
+              <li class="mb-2"><strong>GPU:</strong> Integrada</li>
+              <li class="mb-2"><strong>Monitor:</strong> Full HD</li>
+              <li class="mb-2"><strong>Conectividad:</strong> WiFi 6, Gigabit Ethernet</li>
+              <li class="mb-2"><strong>Refrigeración:</strong> Aire pasivo</li>
+            </ul>
+            <hr>
+            <p class="text-dark small" id="specDescWork">Equipos diseñados para tareas de oficina y trabajo productivo.
+            </p>
           </div>
         </div>
-
-        <!-- Información sobre Especificaciones -->
-        <div class="bg-light p-4 rounded" id="specContent">
-          <h6 class="fw-bold mb-3">Especificaciones Técnicas</h6>
-          <ul class="list-unstyled" id="specList">
-            <li class="mb-2"><strong>Procesador:</strong> Intel Core i9 / AMD Ryzen 9</li>
-            <li class="mb-2"><strong>Memoria RAM:</strong> 32 GB DDR5</li>
-            <li class="mb-2"><strong>Almacenamiento:</strong> SSD NVMe 1TB</li>
-            <li class="mb-2"><strong>GPU:</strong> NVIDIA RTX 4070 Ti / AMD Radeon RX 7900 XT</li>
-            <li class="mb-2"><strong>Monitor:</strong> 4K 144Hz</li>
-            <li class="mb-2"><strong>Conectividad:</strong> WiFi 6E, Gigabit Ethernet</li>
-            <li class="mb-2"><strong>Refrigeración:</strong> Líquida de última generación</li>
-          </ul>
-          <hr>
-          <p class="text-dark small" id="specDesc">Todos nuestros ordenadores incluyen sistemas de última generación con las mejores prestaciones para gaming profesional y trabajo intensivo.</p>
+        <div class="modal-footer bg-light">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
         </div>
-      </div>
-      <div class="modal-footer bg-light">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
       </div>
     </div>
   </div>
-</div>
 
-<!-- Modal Especificaciones Ordenadores para Trabajar -->
-<div class="modal fade" id="specModalWork" tabindex="-1" aria-labelledby="specModalWorkLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header bg-dark text-warning">
-        <h5 class="modal-title fw-bold" id="specModalWorkLabel">Especificaciones - Ordenadores para Trabajar</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="row g-3 mb-4">
-          <!-- Foto 1 -->
-          <div class="col-md-4">
-            <div class="card photo-card-work cursor-pointer" data-spec-work="1" style="cursor: pointer;">
-              <img src="https://i.ytimg.com/vi/C0_H-lnMDys/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBiFCNx8MWFu9TNj0SnurPuk-fvnA" alt="Foto 1" class="card-img-top" style="height: 200px; object-fit: cover;">
-              <div class="card-body">
-                <p class="text-muted small">PRODUCTIVIDAD BÁSICA</p>
-              </div>
-            </div>
-          </div>
-          <!-- Foto 2 -->
-          <div class="col-md-4">
-            <div class="card photo-card-work cursor-pointer" data-spec-work="2" style="cursor: pointer;">
-              <img src="https://img.pccomponentes.com/pcblog/6151/mejores-ordenadores-sobremesa.jpg" alt="Foto 2" class="card-img-top" style="height: 200px; object-fit: cover;">
-              <div class="card-body">
-                <p class="text-muted small">WORKSTATION PRO</p>
-              </div>
-            </div>
-          </div>
-          <!-- Foto 3 -->
-          <div class="col-md-4">
-            <div class="card photo-card-work cursor-pointer" data-spec-work="3" style="cursor: pointer;">
-              <img src="https://thumbs.dreamstime.com/b/espacio-de-trabajo-moderno-con-un-ordenador-sobremesa-que-muestra-obras-arte-digitales-una-computadora-escritorio-digital-formas-376874312.jpg  " alt="Foto 3" class="card-img-top" style="height: 200px; object-fit: cover;">
-              <div class="card-body">
-                <p class="text-muted small">SERVIDOR EMPRESARIAL</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Información sobre Especificaciones -->
-        <div class="bg-light p-4 rounded" id="specContentWork">
-          <h6 class="fw-bold mb-3">Especificaciones Técnicas</h6>
-          <ul class="list-unstyled" id="specListWork">
-            <li class="mb-2"><strong>Procesador:</strong> Intel Core i5 / AMD Ryzen 5</li>
-            <li class="mb-2"><strong>Memoria RAM:</strong> 16 GB DDR4</li>
-            <li class="mb-2"><strong>Almacenamiento:</strong> SSD 512GB</li>
-            <li class="mb-2"><strong>GPU:</strong> Integrada</li>
-            <li class="mb-2"><strong>Monitor:</strong> Full HD</li>
-            <li class="mb-2"><strong>Conectividad:</strong> WiFi 6, Gigabit Ethernet</li>
-            <li class="mb-2"><strong>Refrigeración:</strong> Aire pasivo</li>
-          </ul>
-          <hr>
-          <p class="text-dark small" id="specDescWork">Equipos diseñados para tareas de oficina y trabajo productivo.</p>
-        </div>
-      </div>
-      <div class="modal-footer bg-light">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-5 text-center mt-5">
+    <div class="container">
+      <h5 class="mb-3">Java Espresso</h5>
+      <p class="mb-2">&copy; 2026 Java Espresso. Todos los derechos reservados.</p>
+      <div class="mt-3">
+        <a href="index.html" class="text-warning text-decoration-none me-3">Inicio</a>
+        <a href="pag/catalogo.html" class="text-warning text-decoration-none me-3">Carta</a>
+        <a href="pag/servicios.html" class="text-warning text-decoration-none me-3">Servicios</a>
+        <a href="pag/contacto.html" class="text-warning text-decoration-none">Contacto</a>
       </div>
     </div>
-  </div>
-</div>
+  </footer>
 
-<!-- Footer -->
-<footer class="text-center py-4">
-  <div class="container">
-    <h5 class="mb-3">Java Nespresso</h5>
-    <p class="mb-2">&copy; 2026 Java Nespresso. Todos los derechos reservados.</p>
-    <p>
-      <a href="#inicio">Inicio</a> | 
-      <a href="#productos">Productos</a> | 
-      <a href="#contacto">Contacto</a>
-    </p>
-  </div>
-</footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Especificaciones por foto
+    const specifications = {
+      1: {
+        title: "Especificaciones - Equipo Principal",
+        items: [
+          "<strong>Procesador:</strong> Intel Core i5-13600K",
+          "<strong>Memoria RAM:</strong> 16 GB DDR4",
+          "<strong>Almacenamiento:</strong> SSD NVMe 512GB",
+          "<strong>GPU:</strong> NVIDIA RTX 4060 Ti",
+          "<strong>Monitor:</strong> 1080p 144Hz IPS",
+          "<strong>Conectividad:</strong> WiFi 6, Gigabit Ethernet",
+          "<strong>Refrigeración:</strong> Aire con sistemas silenciosos"
+        ],
+        description: "Equipo accesible con excelente relación rendimiento-precio, ideal para gaming casual y trabajo productivo."
+      },
+      2: {
+        title: "Especificaciones - Detalles Técnicos",
+        items: [
+          "<strong>Procesador:</strong> Intel Core i7-13700K",
+          "<strong>Memoria RAM:</strong> 16 GB DDR5 6000MHz",
+          "<strong>Almacenamiento:</strong> SSD NVMe 1TB Gen 4",
+          "<strong>GPU:</strong> NVIDIA RTX 4070 Ti",
+          "<strong>Monitor:</strong> 1440p 165Hz",
+          "<strong>Conectividad:</strong> WiFi 6E, Gigabit Ethernet",
+          "<strong>Refrigeración:</strong> Aire con torres de 240mm"
+        ],
+        description: "Equipo versátil perfecto para gaming competitivo, streaming y producción de contenido multimedia."
+      },
+      3: {
+        title: "Especificaciones - Ambiente y Confort",
+        items: [
+          "<strong>Procesador:</strong> Intel Core i9-13900K",
+          "<strong>Memoria RAM:</strong> 32 GB DDR5 7200MHz",
+          "<strong>Almacenamiento:</strong> SSD NVMe 2TB Gen 4",
+          "<strong>GPU:</strong> NVIDIA RTX 5090",
+          "<strong>Monitor:</strong> 4K 280Hz OLED",
+          "<strong>Conectividad:</strong> WiFi 7, Gigabit Ethernet",
+          "<strong>Refrigeración:</strong> Líquida 360mm RGB"
+        ],
+        description: "Equipo de gama alta con máximo rendimiento para gaming extremo y trabajo profesional de alto nivel."
+      }
+    };
 
-<script>
-  // Especificaciones por foto
-  const specifications = {
-    1: {
-      title: "Especificaciones - Equipo Principal",
-      items: [
-        "<strong>Procesador:</strong> Intel Core i5-13600K",
-        "<strong>Memoria RAM:</strong> 16 GB DDR4",
-        "<strong>Almacenamiento:</strong> SSD NVMe 512GB",
-        "<strong>GPU:</strong> NVIDIA RTX 4060 Ti",
-        "<strong>Monitor:</strong> 1080p 144Hz IPS",
-        "<strong>Conectividad:</strong> WiFi 6, Gigabit Ethernet",
-        "<strong>Refrigeración:</strong> Aire con sistemas silenciosos"
-      ],
-      description: "Equipo accesible con excelente relación rendimiento-precio, ideal para gaming casual y trabajo productivo."
-    },
-    2: {
-      title: "Especificaciones - Detalles Técnicos",
-      items: [
-        "<strong>Procesador:</strong> Intel Core i7-13700K",
-        "<strong>Memoria RAM:</strong> 16 GB DDR5 6000MHz",
-        "<strong>Almacenamiento:</strong> SSD NVMe 1TB Gen 4",
-        "<strong>GPU:</strong> NVIDIA RTX 4070 Ti",
-        "<strong>Monitor:</strong> 1440p 165Hz",
-        "<strong>Conectividad:</strong> WiFi 6E, Gigabit Ethernet",
-        "<strong>Refrigeración:</strong> Aire con torres de 240mm"
-      ],
-      description: "Equipo versátil perfecto para gaming competitivo, streaming y producción de contenido multimedia."
-    },
-    3: {
-      title: "Especificaciones - Ambiente y Confort",
-      items: [
-        "<strong>Procesador:</strong> Intel Core i9-13900K",
-        "<strong>Memoria RAM:</strong> 32 GB DDR5 7200MHz",
-        "<strong>Almacenamiento:</strong> SSD NVMe 2TB Gen 4",
-        "<strong>GPU:</strong> NVIDIA RTX 5090",
-        "<strong>Monitor:</strong> 4K 280Hz OLED",
-        "<strong>Conectividad:</strong> WiFi 7, Gigabit Ethernet",
-        "<strong>Refrigeración:</strong> Líquida 360mm RGB"
-      ],
-      description: "Equipo de gama alta con máximo rendimiento para gaming extremo y trabajo profesional de alto nivel."
-    }
-  };
+    // Event listeners para las fotos
+    document.querySelectorAll('.photo-card').forEach(card => {
+      card.addEventListener('click', function () {
+        const specNum = this.getAttribute('data-spec');
+        const spec = specifications[specNum];
 
-  // Event listeners para las fotos
-  document.querySelectorAll('.photo-card').forEach(card => {
-    card.addEventListener('click', function() {
-      const specNum = this.getAttribute('data-spec');
-      const spec = specifications[specNum];
-      
-      // Actualizar lista de especificaciones
-      const specList = document.getElementById('specList');
-      specList.innerHTML = spec.items.map(item => `<li class="mb-2">${item}</li>`).join('');
-      
-      // Actualizar descripción
-      document.getElementById('specDesc').textContent = spec.description;
-      
-      // Agregar efecto visual en la tarjeta clickeada
-      document.querySelectorAll('.photo-card').forEach(c => c.classList.remove('border-dark', 'border-3'));
-      this.classList.add('border-dark', 'border-3');
+        // Actualizar lista de especificaciones
+        const specList = document.getElementById('specList');
+        specList.innerHTML = spec.items.map(item => `<li class="mb-2">${item}</li>`).join('');
+
+        // Actualizar descripción
+        document.getElementById('specDesc').textContent = spec.description;
+
+        // Agregar efecto visual en la tarjeta clickeada
+        document.querySelectorAll('.photo-card').forEach(c => c.classList.remove('border-dark', 'border-3'));
+        this.classList.add('border-dark', 'border-3');
+      });
     });
-  });
 
-  // Inicializar con la primera foto seleccionada
-  document.querySelector('.photo-card').classList.add('border-dark', 'border-3');
+    // Inicializar con la primera foto seleccionada
+    document.querySelector('.photo-card').classList.add('border-dark', 'border-3');
 
-  // ====== ESPECIFICACIONES ORDENADORES PARA TRABAJAR ======
-  const specificationsWork = {
-    1: {
-      title: "Especificaciones - Productividad Básica",
-      items: [
-        "<strong>Procesador:</strong> Intel Core i5-13600",
-        "<strong>Memoria RAM:</strong> 16 GB DDR4 3200MHz",
-        "<strong>Almacenamiento:</strong> SSD NVMe 512GB",
-        "<strong>GPU:</strong> Intel UHD 770",
-        "<strong>Monitor:</strong> 1080p IPS 24 pulgadas",
-        "<strong>Conectividad:</strong> WiFi 6, Gigabit Ethernet",
-        "<strong>Refrigeración:</strong> Aire pasivo silencioso"
-      ],
-      description: "Equipo compacto y silencioso perfecto para tareas de ofimática, navegación web y videoconferencias sin compromisos."
-    },
-    2: {
-      title: "Especificaciones - Workstation Pro",
-      items: [
-        "<strong>Procesador:</strong> Intel Core i7-13700H",
-        "<strong>Memoria RAM:</strong> 32 GB DDR5 5600MHz",
-        "<strong>Almacenamiento:</strong> SSD NVMe 1TB Gen 4",
-        "<strong>GPU:</strong> NVIDIA RTX 4070 Super",
-        "<strong>Monitor:</strong> 1440p OLED 27 pulgadas",
-        "<strong>Conectividad:</strong> WiFi 6E, 2x Gigabit Ethernet",
-        "<strong>Refrigeración:</strong> Agua 240mm + Aire"
-      ],
-      description: "Workstation potente para diseño gráfico, edición de video, programación y aplicaciones profesionales exigentes."
-    },
-    3: {
-      title: "Especificaciones - Servidor Empresarial",
-      items: [
-        "<strong>Procesador:</strong> Intel Xeon W9-3595X",
-        "<strong>Memoria RAM:</strong> 128 GB DDR5 RDIMM",
-        "<strong>Almacenamiento:</strong> 4x SSD NVMe 2TB RAID 10",
-        "<strong>GPU:</strong> NVIDIA RTX 6000 Ada 48GB",
-        "<strong>Monitor:</strong> 4K UHD OLED WQLAG 32 pulgadas",
-        "<strong>Conectividad:</strong> WiFi 7, 4x 10G Ethernet",
-        "<strong>Refrigeración:</strong> Líquida industrial 480mm"
-      ],
-      description: "Sistema de servidor ultra potente para rendering profesional, machine learning, análisis de datos y computación científica."
-    }
-  };
+    // ====== ESPECIFICACIONES ORDENADORES PARA TRABAJAR ======
+    const specificationsWork = {
+      1: {
+        title: "Especificaciones - Productividad Básica",
+        items: [
+          "<strong>Procesador:</strong> Intel Core i5-13600",
+          "<strong>Memoria RAM:</strong> 16 GB DDR4 3200MHz",
+          "<strong>Almacenamiento:</strong> SSD NVMe 512GB",
+          "<strong>GPU:</strong> Intel UHD 770",
+          "<strong>Monitor:</strong> 1080p IPS 24 pulgadas",
+          "<strong>Conectividad:</strong> WiFi 6, Gigabit Ethernet",
+          "<strong>Refrigeración:</strong> Aire pasivo silencioso"
+        ],
+        description: "Equipo compacto y silencioso perfecto para tareas de ofimática, navegación web y videoconferencias sin compromisos."
+      },
+      2: {
+        title: "Especificaciones - Workstation Pro",
+        items: [
+          "<strong>Procesador:</strong> Intel Core i7-13700H",
+          "<strong>Memoria RAM:</strong> 32 GB DDR5 5600MHz",
+          "<strong>Almacenamiento:</strong> SSD NVMe 1TB Gen 4",
+          "<strong>GPU:</strong> NVIDIA RTX 4070 Super",
+          "<strong>Monitor:</strong> 1440p OLED 27 pulgadas",
+          "<strong>Conectividad:</strong> WiFi 6E, 2x Gigabit Ethernet",
+          "<strong>Refrigeración:</strong> Agua 240mm + Aire"
+        ],
+        description: "Workstation potente para diseño gráfico, edición de video, programación y aplicaciones profesionales exigentes."
+      },
+      3: {
+        title: "Especificaciones - Servidor Empresarial",
+        items: [
+          "<strong>Procesador:</strong> Intel Xeon W9-3595X",
+          "<strong>Memoria RAM:</strong> 128 GB DDR5 RDIMM",
+          "<strong>Almacenamiento:</strong> 4x SSD NVMe 2TB RAID 10",
+          "<strong>GPU:</strong> NVIDIA RTX 6000 Ada 48GB",
+          "<strong>Monitor:</strong> 4K UHD OLED WQLAG 32 pulgadas",
+          "<strong>Conectividad:</strong> WiFi 7, 4x 10G Ethernet",
+          "<strong>Refrigeración:</strong> Líquida industrial 480mm"
+        ],
+        description: "Sistema de servidor ultra potente para rendering profesional, machine learning, análisis de datos y computación científica."
+      }
+    };
 
-  // Event listeners para las fotos de ordenadores para trabajar
-  document.querySelectorAll('.photo-card-work').forEach(card => {
-    card.addEventListener('click', function() {
-      const specNum = this.getAttribute('data-spec-work');
-      const spec = specificationsWork[specNum];
-      
-      // Actualizar lista de especificaciones
-      const specList = document.getElementById('specListWork');
-      specList.innerHTML = spec.items.map(item => `<li class="mb-2">${item}</li>`).join('');
-      
-      // Actualizar descripción
-      document.getElementById('specDescWork').textContent = spec.description;
-      
-      // Agregar efecto visual en la tarjeta clickeada
-      document.querySelectorAll('.photo-card-work').forEach(c => c.classList.remove('border-dark', 'border-3'));
-      this.classList.add('border-dark', 'border-3');
+    // Event listeners para las fotos de ordenadores para trabajar
+    document.querySelectorAll('.photo-card-work').forEach(card => {
+      card.addEventListener('click', function () {
+        const specNum = this.getAttribute('data-spec-work');
+        const spec = specificationsWork[specNum];
+
+        // Actualizar lista de especificaciones
+        const specList = document.getElementById('specListWork');
+        specList.innerHTML = spec.items.map(item => `<li class="mb-2">${item}</li>`).join('');
+
+        // Actualizar descripción
+        document.getElementById('specDescWork').textContent = spec.description;
+
+        // Agregar efecto visual en la tarjeta clickeada
+        document.querySelectorAll('.photo-card-work').forEach(c => c.classList.remove('border-dark', 'border-3'));
+        this.classList.add('border-dark', 'border-3');
+      });
     });
-  });
 
-  // Inicializar con la primera foto seleccionada
-  document.querySelector('.photo-card-work').classList.add('border-dark', 'border-3');
-</script>
+    // Inicializar con la primera foto seleccionada
+    document.querySelector('.photo-card-work').classList.add('border-dark', 'border-3');
+
+    // Configuración del Carrusel de Fondo (Cambio simple) y Hover
+    const btnDiscover = document.getElementById('btn-discover');
+    const heroSection = document.querySelector('.hero-section');
+
+    const images = [
+      'img/espacioDeTrabajo.png',
+      'img/zonaTrabajo.png',
+      'img/salaPrivada.png',
+      'img/salaGaming.png'
+    ];
+    let currentImageIndex = 0;
+    const intervalTime = 4000; // 4 segundos
+
+    // Precargar imágenes
+    images.forEach(src => {
+      const img = new Image();
+      img.src = src;
+    });
+
+    // Función para rotar el fondo
+    function rotateBackground() {
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+      heroSection.style.backgroundImage = `url('${images[currentImageIndex]}')`;
+    }
+
+    // Iniciar carrusel
+    const carouselInterval = setInterval(rotateBackground, intervalTime);
+
+    // Eventos Hover
+    btnDiscover.addEventListener('mouseenter', () => {
+      heroSection.classList.add('hero-active');
+    });
+
+    btnDiscover.addEventListener('mouseleave', () => {
+      heroSection.classList.remove('hero-active');
+    });
+  </script>
 </body>
+
 </html>

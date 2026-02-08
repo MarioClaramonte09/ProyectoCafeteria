@@ -1,365 +1,429 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carta - Java Espresso</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carta - Java Espresso</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&family=Playfair+Display:wght@700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-  <div class="container-fluid px-4">
-    <a class="navbar-brand fw-bold d-flex align-items-center" href="../index.html">
-      <img src="../img/LogoCafeteria.png" alt="Java Espresso" width="40" class="me-2">
-      <span class="text-warning">Java Espresso</span>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="../index.html">
+        <img src="../img/LogoCafeteria.png" alt="Java Espresso" width="40" class="me-2">
+        <span class="text-warning">Java Espresso</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto gap-2">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="catalogo.html">Carta</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="servicios.html">Servicios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacto.html">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Botón para abrir menú lateral -->
+  <div class="container py-4">
+    <button class="btn btn-dark btn-lg" data-bs-toggle="offcanvas" data-bs-target="#cartaMenu">
+      <i class="bi bi-list"></i> Menú de secciones
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto gap-2">
-        <li class="nav-item">
-          <a class="nav-link" href="../index.html">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="catalogo.html">Carta</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="servicios.html">Servicios</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contacto.html">Contacto</a>
-        </li>
+    <h2 class="display-6 fw-bold mt-4 mb-5" style="font-family: 'Playfair Display', serif;">Nuestra Carta</h2>
+  </div>
+
+  <!-- Offcanvas menú lateral -->
+  <div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="cartaMenu">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title fw-bold">Secciones</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body p-0">
+      <ul class="nav nav-pills flex-column w-100" id="menu-filtros">
+        <li class="nav-item"><a class="nav-link text-white ps-4 py-3 active" href="#" data-filter="all"
+            data-bs-dismiss="offcanvas">📋 Todas las secciones</a></li>
+        <li class="nav-item"><a class="nav-link text-white ps-4 py-3" href="#cafes-calientes"
+            data-bs-dismiss="offcanvas">☕ Cafés Calientes</a></li>
+        <li class="nav-item"><a class="nav-link text-white ps-4 py-3" href="#cafes-frios" data-bs-dismiss="offcanvas">❄️
+            Cafés Fríos</a></li>
+        <li class="nav-item"><a class="nav-link text-white ps-4 py-3" href="#tes-infusiones"
+            data-bs-dismiss="offcanvas">🍵 Tés e Infusiones</a></li>
+        <li class="nav-item"><a class="nav-link text-white ps-4 py-3" href="#bolleria-dulces"
+            data-bs-dismiss="offcanvas">🥐 Bollería y Dulces</a></li>
+        <li class="nav-item"><a class="nav-link text-white ps-4 py-3" href="#salado" data-bs-dismiss="offcanvas">🥪
+            Salado</a></li>
+        <li class="nav-item"><a class="nav-link text-white ps-4 py-3" href="#opciones-especiales"
+            data-bs-dismiss="offcanvas">🌱 Opciones Especiales</a></li>
+        <li class="nav-item"><a class="nav-link text-white ps-4 py-3" href="#especialidad" data-bs-dismiss="offcanvas">⭐
+            Especialidad Java Espresso</a></li>
       </ul>
     </div>
   </div>
-</nav>
 
-<!-- Botón para abrir menú lateral -->
-<div class="container py-4">
-  <button class="btn btn-dark btn-lg" data-bs-toggle="offcanvas" data-bs-target="#cartaMenu">
-    <i class="bi bi-list"></i> Menú de secciones
-  </button>
-  <h2 class="display-6 fw-bold mt-4 mb-5" style="font-family: 'Playfair Display', serif;">Nuestra Carta</h2>
-</div>
+  <div class="container py-5">
+    <!-- Cafés Calientes -->
+    <section id="cafes-calientes" class="mb-5 catalogo-section">
+      <h3 class="mb-4 pb-2 border-bottom border-warning">☕ Cafés Calientes</h3>
+      <div class="row g-3">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 border-warning">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Espresso</h5>
+              <p class="card-text text-muted mb-3">Café intenso y aromático, base de todo buen código.</p>
+              <p class="fs-5 fw-bold text-warning">1,60 €</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 border-warning">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Espresso Doble</h5>
+              <p class="card-text text-muted mb-3">Para largas sesiones de programación.</p>
+              <p class="fs-5 fw-bold text-warning">2,20 €</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 border-warning">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Americano</h5>
+              <p class="card-text text-muted mb-3">Espresso con agua caliente.</p>
+              <p class="fs-5 fw-bold text-warning">1,80 €</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 border-warning">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Café con Leche</h5>
+              <p class="card-text text-muted mb-3">Equilibrio perfecto entre café y leche.</p>
+              <p class="fs-5 fw-bold text-warning">2,00 €</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 border-warning">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Capuccino</h5>
+              <p class="card-text text-muted mb-3">Espresso, leche vaporizada y espuma.</p>
+              <p class="fs-5 fw-bold text-warning">2,30 €</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 border-warning">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Latte</h5>
+              <p class="card-text text-muted mb-3">Suave, cremoso y reconfortante.</p>
+              <p class="fs-5 fw-bold text-warning">2,50 €</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 border-warning">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Mocha</h5>
+              <p class="card-text text-muted mb-3">Café con chocolate y leche.</p>
+              <p class="fs-5 fw-bold text-warning">2,70 €</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!-- Offcanvas menú lateral -->
-<div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="cartaMenu">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title fw-bold">Secciones</h5>
-    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    <!-- Cafés Fríos -->
+    <section id="cafes-frios" class="mb-5 catalogo-section">
+      <h3 class="mb-4 pb-2 border-bottom border-warning">❄️ Cafés Fríos</h3>
+      <div class="row g-3">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 border-warning">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Iced Coffee</h5>
+              <p class="card-text text-muted mb-3">Café frío con hielo.</p>
+              <p class="fs-5 fw-bold text-warning">2,50 €</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 border-warning">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Iced Latte</h5>
+              <p class="card-text text-muted mb-3">Latte frío, ideal para el verano.</p>
+              <p class="fs-5 fw-bold text-warning">2,80 €</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 border-warning">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Frappé de Café</h5>
+              <p class="card-text text-muted mb-3">Café batido con hielo y espuma.</p>
+              <p class="fs-5 fw-bold text-warning">3,20 €</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tés e Infusiones -->
+    <section id="tes-infusiones" class="mb-5 catalogo-section">
+      <h3 class="mb-4 pb-2 border-bottom border-warning">🍵 Tés e Infusiones</h3>
+      <div class="row g-3">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 border-warning">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Té Verde</h5>
+              <p class="fs-5 fw-bold text-warning">2,00 €</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 border-warning">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Té Negro</h5>
+              <p class="fs-5 fw-bold text-warning">2,00 €</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 border-warning">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Rooibos</h5>
+              <p class="fs-5 fw-bold text-warning">2,20 €</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 border-warning">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Manzanilla / Menta Poleo</h5>
+              <p class="fs-5 fw-bold text-warning">1,80 €</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bollería y Dulces -->
+    <section id="bolleria-dulces" class="mb-5 catalogo-section">
+      <h3 class="mb-4 pb-2 border-bottom border-warning">🥐 Bollería y Dulces</h3>
+      <div class="row g-3">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 border-warning">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Croissant Clásico</h5>
+              <p class="fs-5 fw-bold text-warning">1,60 €</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 border-warning">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Croissant Relleno</h5>
+              <p class="fs-5 fw-bold text-warning">2,20 €</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 border-warning">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Napolitana de Chocolate</h5>
+              <p class="fs-5 fw-bold text-warning">2,00 €</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 border-warning">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Muffin</h5>
+              <p class="card-text text-muted mb-3">(Chocolate o Arándanos)</p>
+              <p class="fs-5 fw-bold text-warning">2,50 €</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 border-warning">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Cookie Artesanal</h5>
+              <p class="fs-5 fw-bold text-warning">1,80 €</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Salado -->
+    <section id="salado" class="mb-5 catalogo-section">
+      <h3 class="mb-4 pb-2 border-bottom border-warning">🥪 Salado</h3>
+      <div class="row g-3">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 border-warning">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Tostada con Tomate y Aceite</h5>
+              <p class="fs-5 fw-bold text-warning">2,20 €</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 border-warning">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Tostada Mixta</h5>
+              <p class="card-text text-muted mb-3">(Jamón y Queso)</p>
+              <p class="fs-5 fw-bold text-warning">2,80 €</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 border-warning">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Sandwich Vegetal</h5>
+              <p class="fs-5 fw-bold text-warning">3,50 €</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 border-warning">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Bocadillo Caliente</h5>
+              <p class="fs-5 fw-bold text-warning">3,80 €</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Opciones Especiales -->
+    <section id="opciones-especiales" class="mb-5 catalogo-section">
+      <h3 class="mb-4 pb-2 border-bottom border-warning">🌱 Opciones Especiales</h3>
+      <div class="row g-3">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 border-warning">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Leche Vegetal</h5>
+              <p class="card-text text-muted mb-3">(Soja, Avena)</p>
+              <p class="fs-5 fw-bold text-warning">+0,30 €</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 border-warning">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Opciones Sin Lactosa</h5>
+              <p class="text-muted">Disponibles en todos nuestros productos</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 border-warning">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Bollería Vegana</h5>
+              <p class="text-muted">Según disponibilidad</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Especialidad Java Espresso -->
+    <section id="especialidad" class="mb-5 catalogo-section">
+      <h3 class="mb-4 pb-2 border-bottom border-warning">⭐ Especialidad Java Espresso</h3>
+      <div class="row g-3">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 border-warning bg-light">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Java Special Latte</h5>
+              <p class="card-text text-muted mb-3">Latte con sirope a elegir y topping especial.</p>
+              <p class="fs-5 fw-bold text-warning">3,50 €</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 border-warning bg-light">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Café del Programador</h5>
+              <p class="card-text text-muted mb-3">Espresso doble + toque de vainilla.</p>
+              <p class="fs-5 fw-bold text-warning">3,80 €</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </div>
-  <div class="offcanvas-body p-0">
-    <ul class="nav nav-pills flex-column w-100">
-      <li class="nav-item"><a class="nav-link text-white ps-4 py-3" href="#cafes-calientes" data-bs-dismiss="offcanvas">☕ Cafés Calientes</a></li>
-      <li class="nav-item"><a class="nav-link text-white ps-4 py-3" href="#cafes-frios" data-bs-dismiss="offcanvas">❄️ Cafés Fríos</a></li>
-      <li class="nav-item"><a class="nav-link text-white ps-4 py-3" href="#tes-infusiones" data-bs-dismiss="offcanvas">🍵 Tés e Infusiones</a></li>
-      <li class="nav-item"><a class="nav-link text-white ps-4 py-3" href="#bolleria-dulces" data-bs-dismiss="offcanvas">🥐 Bollería y Dulces</a></li>
-      <li class="nav-item"><a class="nav-link text-white ps-4 py-3" href="#salado" data-bs-dismiss="offcanvas">🥪 Salado</a></li>
-      <li class="nav-item"><a class="nav-link text-white ps-4 py-3" href="#opciones-especiales" data-bs-dismiss="offcanvas">🌱 Opciones Especiales</a></li>
-      <li class="nav-item"><a class="nav-link text-white ps-4 py-3" href="#especialidad" data-bs-dismiss="offcanvas">⭐ Especialidad Java Espresso</a></li>
-    </ul>
-  </div>
-</div>
 
-<div class="container py-5">
-  <!-- Cafés Calientes -->
-  <section id="cafes-calientes" class="mb-5">
-    <h3 class="mb-4 pb-2 border-bottom border-warning">☕ Cafés Calientes</h3>
-    <div class="row g-3">
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 border-warning">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Espresso</h5>
-            <p class="card-text text-muted mb-3">Café intenso y aromático, base de todo buen código.</p>
-            <p class="fs-5 fw-bold text-warning">1,60 €</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 border-warning">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Espresso Doble</h5>
-            <p class="card-text text-muted mb-3">Para largas sesiones de programación.</p>
-            <p class="fs-5 fw-bold text-warning">2,20 €</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 border-warning">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Americano</h5>
-            <p class="card-text text-muted mb-3">Espresso con agua caliente.</p>
-            <p class="fs-5 fw-bold text-warning">1,80 €</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 border-warning">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Café con Leche</h5>
-            <p class="card-text text-muted mb-3">Equilibrio perfecto entre café y leche.</p>
-            <p class="fs-5 fw-bold text-warning">2,00 €</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 border-warning">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Capuccino</h5>
-            <p class="card-text text-muted mb-3">Espresso, leche vaporizada y espuma.</p>
-            <p class="fs-5 fw-bold text-warning">2,30 €</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 border-warning">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Latte</h5>
-            <p class="card-text text-muted mb-3">Suave, cremoso y reconfortante.</p>
-            <p class="fs-5 fw-bold text-warning">2,50 €</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 border-warning">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Mocha</h5>
-            <p class="card-text text-muted mb-3">Café con chocolate y leche.</p>
-            <p class="fs-5 fw-bold text-warning">2,70 €</p>
-          </div>
-        </div>
+  <footer class="bg-dark text-white py-5 text-center mt-5">
+    <div class="container">
+      <h5 class="mb-3">Java Espresso</h5>
+      <p class="mb-2">&copy; 2026 Java Espresso. Todos los derechos reservados.</p>
+      <div class="mt-3">
+        <a href="../index.html" class="text-warning text-decoration-none me-3">Inicio</a>
+        <a href="catalogo.html" class="text-warning text-decoration-none me-3">Carta</a>
+        <a href="servicios.html" class="text-warning text-decoration-none me-3">Servicios</a>
+        <a href="contacto.html" class="text-warning text-decoration-none">Contacto</a>
       </div>
     </div>
-  </section>
+  </footer>
 
-  <!-- Cafés Fríos -->
-  <section id="cafes-frios" class="mb-5">
-    <h3 class="mb-4 pb-2 border-bottom border-warning">❄️ Cafés Fríos</h3>
-    <div class="row g-3">
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 border-warning">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Iced Coffee</h5>
-            <p class="card-text text-muted mb-3">Café frío con hielo.</p>
-            <p class="fs-5 fw-bold text-warning">2,50 €</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 border-warning">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Iced Latte</h5>
-            <p class="card-text text-muted mb-3">Latte frío, ideal para el verano.</p>
-            <p class="fs-5 fw-bold text-warning">2,80 €</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 border-warning">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Frappé de Café</h5>
-            <p class="card-text text-muted mb-3">Café batido con hielo y espuma.</p>
-            <p class="fs-5 fw-bold text-warning">3,20 €</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Tés e Infusiones -->
-  <section id="tes-infusiones" class="mb-5">
-    <h3 class="mb-4 pb-2 border-bottom border-warning">🍵 Tés e Infusiones</h3>
-    <div class="row g-3">
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 border-warning">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Té Verde</h5>
-            <p class="fs-5 fw-bold text-warning">2,00 €</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 border-warning">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Té Negro</h5>
-            <p class="fs-5 fw-bold text-warning">2,00 €</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 border-warning">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Rooibos</h5>
-            <p class="fs-5 fw-bold text-warning">2,20 €</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 border-warning">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Manzanilla / Menta Poleo</h5>
-            <p class="fs-5 fw-bold text-warning">1,80 €</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuLinks = document.querySelectorAll('#menu-filtros .nav-link');
+      const sections = document.querySelectorAll('.catalogo-section');
 
-  <!-- Bollería y Dulces -->
-  <section id="bolleria-dulces" class="mb-5">
-    <h3 class="mb-4 pb-2 border-bottom border-warning">🥐 Bollería y Dulces</h3>
-    <div class="row g-3">
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 border-warning">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Croissant Clásico</h5>
-            <p class="fs-5 fw-bold text-warning">1,60 €</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 border-warning">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Croissant Relleno</h5>
-            <p class="fs-5 fw-bold text-warning">2,20 €</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 border-warning">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Napolitana de Chocolate</h5>
-            <p class="fs-5 fw-bold text-warning">2,00 €</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 border-warning">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Muffin</h5>
-            <p class="card-text text-muted mb-3">(Chocolate o Arándanos)</p>
-            <p class="fs-5 fw-bold text-warning">2,50 €</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 border-warning">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Cookie Artesanal</h5>
-            <p class="fs-5 fw-bold text-warning">1,80 €</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+      menuLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+          // Remove active class from all links
+          menuLinks.forEach(l => l.classList.remove('active', 'bg-warning', 'text-dark'));
+          menuLinks.forEach(l => l.classList.add('text-white'));
 
-  <!-- Salado -->
-  <section id="salado" class="mb-5">
-    <h3 class="mb-4 pb-2 border-bottom border-warning">🥪 Salado</h3>
-    <div class="row g-3">
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 border-warning">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Tostada con Tomate y Aceite</h5>
-            <p class="fs-5 fw-bold text-warning">2,20 €</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 border-warning">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Tostada Mixta</h5>
-            <p class="card-text text-muted mb-3">(Jamón y Queso)</p>
-            <p class="fs-5 fw-bold text-warning">2,80 €</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 border-warning">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Sandwich Vegetal</h5>
-            <p class="fs-5 fw-bold text-warning">3,50 €</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 border-warning">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Bocadillo Caliente</h5>
-            <p class="fs-5 fw-bold text-warning">3,80 €</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+          // Add active class to clicked link
+          this.classList.remove('text-white');
+          this.classList.add('active', 'bg-warning', 'text-dark');
 
-  <!-- Opciones Especiales -->
-  <section id="opciones-especiales" class="mb-5">
-    <h3 class="mb-4 pb-2 border-bottom border-warning">🌱 Opciones Especiales</h3>
-    <div class="row g-3">
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 border-warning">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Leche Vegetal</h5>
-            <p class="card-text text-muted mb-3">(Soja, Avena)</p>
-            <p class="fs-5 fw-bold text-warning">+0,30 €</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 border-warning">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Opciones Sin Lactosa</h5>
-            <p class="text-muted">Disponibles en todos nuestros productos</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 border-warning">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Bollería Vegana</h5>
-            <p class="text-muted">Según disponibilidad</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+          const filter = this.getAttribute('href');
 
-  <!-- Especialidad Java Espresso -->
-  <section id="especialidad" class="mb-5">
-    <h3 class="mb-4 pb-2 border-bottom border-warning">⭐ Especialidad Java Espresso</h3>
-    <div class="row g-3">
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 border-warning bg-light">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Java Special Latte</h5>
-            <p class="card-text text-muted mb-3">Latte con sirope a elegir y topping especial.</p>
-            <p class="fs-5 fw-bold text-warning">3,50 €</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 border-warning bg-light">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Café del Programador</h5>
-            <p class="card-text text-muted mb-3">Espresso doble + toque de vainilla.</p>
-            <p class="fs-5 fw-bold text-warning">3,80 €</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+          if (filter === '#' || this.getAttribute('data-filter') === 'all') {
+            // Show all sections
+            sections.forEach(section => {
+              section.style.display = 'block';
+              section.classList.add('fade-in'); // Optional: add animation class
+            });
+          } else {
+            // Hide all sections first
+            sections.forEach(section => section.style.display = 'none');
 
-</div>
-
-<footer class="bg-dark text-white py-4 text-center mt-5">
-  <p>&copy; 2026 Java Espresso</p>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+            // Show target section
+            const targetId = filter.substring(1); // remove #
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+              targetSection.style.display = 'block';
+              targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
+          }
+        });
+      });
+    });
+  </script>
 </body>
+
 </html>
