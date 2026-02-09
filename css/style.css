@@ -14,10 +14,12 @@
     box-sizing: border-box;
 }
 
+
+
 body {
     font-family: 'Poppins', sans-serif;
-    background: #f5f0e8;
-    color: #291902;
+    background-color: #ffffc7;
+    color: var(--bs-body-color);
     min-height: 100vh;
 }
 
@@ -201,7 +203,7 @@ html {
 
 /* Tarjetas */
 .card {
-    background: #F9F5EF;
+    background: white;
     border: 2px solid #ffd863;
     transition: all 0.3s ease;
 }
@@ -272,12 +274,28 @@ footer a:hover {
 }
 
 /* Carrusel dentro de modales */
-#carouselTrabajo .carousel-indicators [data-bs-slide-to] {
+#carouselTrabajo .carousel-indicators [data-bs-slide-to],
+.carousel-indicators [data-bs-slide-to] {
     background-color: var(--copper);
 }
 
-#carouselTrabajo .carousel-indicators [data-bs-slide-to].active {
+#carouselTrabajo .carousel-indicators [data-bs-slide-to].active,
+.carousel-indicators [data-bs-slide-to].active {
     background-color: var(--cream);
+}
+
+.carousel-caption {
+    border-radius: 15px;
+    padding: 1.5rem !important;
+}
+
+[data-bs-theme="dark"] .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+[data-bs-theme="dark"] .carousel-caption h5,
+[data-bs-theme="dark"] .carousel-caption p {
+    color: #f5f0e8 !important;
 }
 
 #carouselTrabajo .carousel-control-prev-icon,

@@ -6,18 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contacto - Java Espresso</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&family=Playfair+Display:wght@700;900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link rel="icon" href="../img/LogoTaza.png" type="image/png">
 </head>
 
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top py-1">
     <div class="container-fluid px-4">
-      <a class="navbar-brand fw-bold d-flex align-items-center" href="../index.html">
-        <img src="../img/LogoCafeteria.png" alt="Java Espresso" width="40" class="me-2">
+      <a class="navbar-brand fw-bold d-flex align-items-center fs-3" href="../index.html">
+        <img src="../img/LogoTaza.png" alt="Java Espresso" width="60" class="me-2">
         <span class="text-warning">Java Espresso</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -30,14 +34,15 @@
             <a class="nav-link" href="../index.html">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="catalogo.html">Carta</a>
+            <a class="nav-link" href="servicios.html">Servicios</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="servicios.html">Servicios</a>
+            <a class="nav-link" href="catalogo.html">Carta</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="contacto.html">Contacto</a>
           </li>
+
         </ul>
       </div>
     </div>
@@ -48,8 +53,8 @@
     <div class="container">
       <!-- Header -->
       <div class="text-center mb-5">
-        <h1 class="section-title d-inline-block display-4 fw-bold"
-          style="color: #291902; font-family: 'Playfair Display', serif;">Ponte en Contacto
+        <h1 class="section-title d-inline-block display-4 fw-bold" style="font-family: 'Playfair Display', serif;">Ponte
+          en Contacto
         </h1>
         <p class="lead text-muted">Nos encantaría escucharte. ¡Envíanos un mensaje!</p>
       </div>
@@ -57,35 +62,35 @@
       <div class="row g-5 align-items-center">
         <!-- Formulario -->
         <div class="col-lg-6">
-          <div class="card border-0 shadow-lg rounded-4" style="background: white;">
+          <div class="card border-0 shadow-lg rounded-4">
             <div class="card-body p-5">
               <form>
                 <!-- Nombre -->
                 <div class="mb-4">
-                  <label for="nombre" class="form-label fw-bold" style="color: #291902;">Nombre completo</label>
+                  <label for="nombre" class="form-label fw-bold">Nombre completo</label>
                   <input type="text" class="form-control form-control-lg rounded-3 border-2" id="nombre"
-                    placeholder="Tu nombre" style="border-color: #ffd863; color: #291902;">
+                    placeholder="Tu nombre" style="border-color: #ffd863;">
                 </div>
 
                 <!-- Email -->
                 <div class="mb-4">
-                  <label for="email" class="form-label fw-bold" style="color: #291902;">Correo electrónico</label>
+                  <label for="email" class="form-label fw-bold">Correo electrónico</label>
                   <input type="email" class="form-control form-control-lg rounded-3 border-2" id="email"
-                    placeholder="tu@email.com" style="border-color: #ffd863; color: #291902;">
+                    placeholder="tu@email.com" style="border-color: #ffd863;">
                 </div>
 
                 <!-- Teléfono -->
                 <div class="mb-4">
-                  <label for="telefono" class="form-label fw-bold" style="color: #291902;">Teléfono (opcional)</label>
+                  <label for="telefono" class="form-label fw-bold">Teléfono (opcional)</label>
                   <input type="tel" class="form-control form-control-lg rounded-3 border-2" id="telefono"
-                    placeholder="+34 600 123 456" style="border-color: #ffd863; color: #291902;">
+                    placeholder="+34 600 123 456" style="border-color: #ffd863;">
                 </div>
 
                 <!-- Asunto -->
                 <div class="mb-4">
-                  <label for="asunto" class="form-label fw-bold" style="color: #291902;">Asunto</label>
+                  <label for="asunto" class="form-label fw-bold">Asunto</label>
                   <select class="form-select form-select-lg rounded-3 border-2" id="asunto"
-                    style="border-color: #ffd863; color: #291902;">
+                    style="border-color: #ffd863;">
                     <option value="">Selecciona un asunto</option>
                     <option value="consulta">Consulta general</option>
                     <option value="reserva">Reserva de salas</option>
@@ -97,15 +102,13 @@
 
                 <!-- Mensaje -->
                 <div class="mb-4">
-                  <label for="mensaje" class="form-label fw-bold" style="color: #291902;">Mensaje</label>
+                  <label for="mensaje" class="form-label fw-bold">Mensaje</label>
                   <textarea class="form-control form-control-lg rounded-3 border-2" id="mensaje" rows="5"
-                    placeholder="Cuéntanos qué necesitas..."
-                    style="border-color: #ffd863; color: #291902; resize: none;"></textarea>
+                    placeholder="Cuéntanos qué necesitas..." style="border-color: #ffd863; resize: none;"></textarea>
                 </div>
 
                 <!-- Botón -->
-                <button type="submit" class="btn btn-lg w-100 rounded-3 fw-bold"
-                  style="background: linear-gradient(135deg, #291902 0%, #3d2505 80%, #ffe680 100%); color: white; border: none;">
+                <button type="submit" class="btn btn-dark btn-lg w-100 rounded-3 fw-bold">
                   <i class="bi bi-send me-2"></i>Enviar mensaje
                 </button>
               </form>
@@ -118,14 +121,13 @@
           <div class="row g-4">
             <!-- Card Ubicación -->
             <div class="col-12">
-              <div class="card border-0 shadow-md rounded-4 h-100"
-                style="background: white; border-left: 5px solid #ffd863;">
+              <div class="card border-0 shadow-md rounded-4 h-100" style="border-left: 5px solid #ffd863;">
                 <div class="card-body p-4">
                   <div class="d-flex align-items-start gap-3">
                     <div class="fs-3" style="color: #ffd863;">📍</div>
                     <div>
-                      <h5 class="fw-bold" style="color: #291902;">Ubicación</h5>
-                      <p class="text-muted mb-0">Calle del Café, 42<br>28001 Madrid, España</p>
+                      <h5 class="fw-bold">Ubicación</h5>
+                      <p class="mb-0">Calle del Café, 42<br>28001 Madrid, España</p>
                     </div>
                   </div>
                 </div>
@@ -134,13 +136,12 @@
 
             <!-- Card Email -->
             <div class="col-12">
-              <div class="card border-0 shadow-md rounded-4 h-100"
-                style="background: white; border-left: 5px solid #ffd863;">
+              <div class="card border-0 shadow-md rounded-4 h-100" style="border-left: 5px solid #ffd863;">
                 <div class="card-body p-4">
                   <div class="d-flex align-items-start gap-3">
                     <div class="fs-3" style="color: #ffd863;">📧</div>
                     <div>
-                      <h5 class="fw-bold" style="color: #291902;">Email</h5>
+                      <h5 class="fw-bold">Email</h5>
                       <p class="text-muted mb-0"><a href="mailto:info@javanespresso.com" class="text-decoration-none"
                           style="color: #3d2505;">info@javanespresso.com</a></p>
                     </div>
@@ -151,13 +152,12 @@
 
             <!-- Card Teléfono -->
             <div class="col-12">
-              <div class="card border-0 shadow-md rounded-4 h-100"
-                style="background: white; border-left: 5px solid #ffd863;">
+              <div class="card border-0 shadow-md rounded-4 h-100" style="border-left: 5px solid #ffd863;">
                 <div class="card-body p-4">
                   <div class="d-flex align-items-start gap-3">
                     <div class="fs-3" style="color: #ffd863;">📱</div>
                     <div>
-                      <h5 class="fw-bold" style="color: #291902;">Teléfono</h5>
+                      <h5 class="fw-bold">Teléfono</h5>
                       <p class="text-muted mb-0"><a href="tel:+34600123456" class="text-decoration-none"
                           style="color: #3d2505;">+34 600 123 456</a></p>
                     </div>
@@ -168,13 +168,12 @@
 
             <!-- Card Horarios -->
             <div class="col-12">
-              <div class="card border-0 shadow-md rounded-4 h-100"
-                style="background: white; border-left: 5px solid #ffd863;">
+              <div class="card border-0 shadow-md rounded-4 h-100" style="border-left: 5px solid #ffd863;">
                 <div class="card-body p-4">
                   <div class="d-flex align-items-start gap-3">
                     <div class="fs-3" style="color: #ffd863;">🕐</div>
                     <div>
-                      <h5 class="fw-bold" style="color: #291902;">Horarios</h5>
+                      <h5 class="fw-bold">Horarios</h5>
                       <p class="text-muted mb-1"><strong>Lunes a Viernes:</strong> 07:00 - 22:00</p>
                       <p class="text-muted mb-0"><strong>Sábado y Domingo:</strong> 09:00 - 21:00</p>
                     </div>
@@ -188,26 +187,26 @@
     </div>
   </section>
 
-  <section class="py-5" style="background: white;">
+  <section class="py-5">
     <div class="container">
       <div class="text-center mb-5">
         <h2 class="section-title d-inline-block fw-bold"
-          style="color: #291902; font-family: 'Playfair Display', serif; font-size: 2.5rem;">¿Por qué elegirnos?</h2>
+          style="font-family: 'Playfair Display', serif; font-size: 2.5rem;">¿Por qué elegirnos?</h2>
       </div>
       <div class="row g-4">
-        <div class="col-md-4 text-center">
+        <div class="col-md-4 text-center" data-aos="zoom-in">
           <div class="mb-3 fs-1" style="color: #ffd863;">☕</div>
-          <h5 class="fw-bold" style="color: #291902;">Café de Calidad</h5>
-          <p class="text-muted">Seleccionamos los mejores granos de café para ofrecerte la mejor experiencia.</p>
+          <h5 class="fw-bold">Café de Calidad</h5>
+          <p>Seleccionamos los mejores granos de café para ofrecerte la mejor experiencia.</p>
         </div>
-        <div class="col-md-4 text-center">
+        <div class="col-md-4 text-center" data-aos="zoom-in">
           <div class="mb-3 fs-1" style="color: #ffd863;">🌐</div>
-          <h5 class="fw-bold" style="color: #291902;">WiFi de Alta Velocidad</h5>
+          <h5 class="fw-bold">WiFi de Alta Velocidad</h5>
           <p class="text-muted">Conexión perfecta para trabajar, estudiar o simplemente navegar sin interrupciones.</p>
         </div>
-        <div class="col-md-4 text-center">
+        <div class="col-md-4 text-center" data-aos="zoom-in">
           <div class="mb-3 fs-1" style="color: #ffd863;">🏢</div>
-          <h5 class="fw-bold" style="color: #291902;">Espacios Flexibles</h5>
+          <h5 class="fw-bold">Espacios Flexibles</h5>
           <p class="text-muted">Desde salas privadas hasta cabinas insonorizadas, tenemos el espacio perfecto para ti.
           </p>
         </div>
@@ -229,6 +228,17 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 600,
+      once: true,
+      offset: 0,
+      startEvent: 'DOMContentLoaded'
+    });
+
+  </script>
+
 </body>
 
 </html>
