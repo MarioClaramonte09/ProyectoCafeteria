@@ -25,9 +25,11 @@
   </div>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top py-1">
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top py-1"
+    style="background: linear-gradient(135deg, var(--brown-dark) 0%, var(--brown-medium) 40%, var(--blue-soft) 100%);">
     <div class="container-fluid px-4">
-      <a class="navbar-brand fw-bold d-flex align-items-center fs-3" href="index.html">
+      <a class="navbar-brand fw-bold d-flex align-items-center fs-3" href="index.html"
+        style="color: var(--copper); letter-spacing: 1px;">
         <img src="img/LogoTaza.png" alt="Java Espresso" width="60" class="me-2">
         <span class="text-warning">Java Espresso</span>
       </a>
@@ -38,19 +40,24 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto gap-2">
           <li class="nav-item">
-            <a class="nav-link active fs-5 fw-semibold" aria-current="page" href="index.html">Inicio</a>
+            <a class="nav-link active fs-5 fw-semibold text-white" aria-current="page" href="index.html"
+              style="transition: all 0.3s ease;">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fs-5 fw-semibold" href="pag/servicios.html">Servicios</a>
+            <a class="nav-link fs-5 fw-semibold text-white" href="pag/servicios.html"
+              style="transition: all 0.3s ease;">Servicios</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fs-5 fw-semibold" href="pag/catalogo.html">Carta</a>
+            <a class="nav-link fs-5 fw-semibold text-white" href="pag/catalogo.html"
+              style="transition: all 0.3s ease;">Carta</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fs-5 fw-semibold" href="pag/reservas.html">Reservas</a>
+            <a class="nav-link fs-5 fw-semibold text-white" href="pag/reservas.html"
+              style="transition: all 0.3s ease;">Reservas</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fs-5 fw-semibold" href="pag/contacto.html">Contacto</a>
+            <a class="nav-link fs-5 fw-semibold text-white" href="pag/contacto.html"
+              style="transition: all 0.3s ease;">Contacto</a>
           </li>
 
         </ul>
@@ -59,20 +66,33 @@
   </nav>
 
 
-  <section class="hero-section d-flex align-items-center justify-content-center py-5 py-md-0" id="inicio">
-    <div class="container-fluid px-3 px-md-5">
+  <section class="hero-section position-relative d-flex align-items-center justify-content-center py-5 py-md-0"
+    id="inicio"
+    style="background-image: url('img/espacioDeTrabajo.png'); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed; min-height: 80vh; border-bottom: 5px ridge var(--copper); border-top: 1px groove var(--copper);">
+
+    <!-- Hover Background (replaces ::after) -->
+    <div class="hero-hover-bg position-absolute top-0 start-0 w-100 h-100 z-0"
+      style="background-image: url('img/granosCafe.png'); background-size: cover; background-position: center; background-repeat: no-repeat; opacity: 0; transition: opacity 0.8s ease-in-out;">
+    </div>
+
+    <!-- Overlay (replaces ::before) -->
+    <div class="position-absolute top-0 start-0 w-100 h-100 z-2" style="background: rgba(41, 25, 2, 0.5);"></div>
+
+    <div class="container-fluid px-3 px-md-5 position-relative z-3 h-100">
       <div class="row min-vh-75 align-items-center justify-content-center">
         <div class="col-12 col-md-10 col-lg-8 col-xl-6 text-center">
           <div class="p-4 p-md-5 rounded-4 shadow-lg"
             style="background-color: rgba(41, 25, 2, 0.7); backdrop-filter: blur(5px);">
             <h1 class="display-3 display-md-2 fw-bold text-warning mb-3 text-uppercase"
-              style="letter-spacing: 2px; text-shadow: 2px 2px 10px rgba(0,0,0,0.8);" data-aos="fade-up">‹Java› Espresso
+              style="letter-spacing: 2px; text-shadow: 2px 2px 10px rgba(0,0,0,0.8); color: var(--copper);"
+              data-aos="fade-up">‹Java› Espresso
             </h1>
             <p class="lead fs-5 text-light fw-normal mb-4 px-md-5" style="text-shadow: 1px 1px 5px rgba(0,0,0,0.6);"
               data-aos="fade-up" data-aos-delay="100">Café de especialidad y servicios premium para potenciar tu
               productividad y desarrollo.</p>
             <a href="#productos" id="btn-discover"
-              class="btn btn-warning btn-lg fw-bold px-4 px-md-5 py-3 rounded-pill shadow-lg transition-hover">
+              class="btn btn-warning btn-lg fw-bold px-4 px-md-5 py-3 rounded-pill shadow-lg transition-hover"
+              style="transition: all 0.3s ease;">
               <i class="bi bi-arrow-down-circle me-2"></i>Nuestros servicios
             </a>
           </div>
@@ -83,8 +103,8 @@
 
   <section class="py-4 py-md-5" id="productos">
     <div class="container">
-      <div class="text-center mb-4 mb-md-5">
-        <h2 class="section-title d-inline-block fw-bold"
+      <div class="text-center mb-3 mb-md-4">
+        <h2 class="section-title d-inline-block fw-bold position-relative"
           style="font-family: 'Playfair Display', serif; font-size: 2.2rem;" data-aos="fade-up">
           Servicios Destacados</h2>
       </div>
@@ -92,16 +112,18 @@
         <!-- Salas Privadas -->
         <div class="col-md-6 col-lg-4" data-aos="fade-up">
           <div class="card h-100 border-0 overflow-hidden d-flex flex-column transition-hover"
-            style="border: 1px solid rgba(82, 46, 0, 0.12) !important; box-shadow: 0 6px 20px rgba(82, 46, 0, 0.08);">
+            style="background: white; border: 2px solid #ffd863 !important; box-shadow: 0 6px 20px rgba(82, 46, 0, 0.08); transition: all 0.3s ease;">
             <img src="img/zonaTrabajo.png" alt="Zona de Trabajo" class="card-img-top"
               style="height: 220px; object-fit: cover;">
             <div class="card-body p-3 p-md-4 d-flex flex-column">
-              <h5 class="card-title fw-bold mb-2">🏢 Salas Privadas</h5>
+              <h5 class="card-title fw-bold mb-2" style="color: #291902;">🏢 Salas Privadas</h5>
               <p class="card-text text-muted small mb-3">Espacios reservados para reuniones, presentaciones y eventos
                 corporativos.
               </p>
               <div class="mt-auto">
-                <a href="pag/servicios.html" class="btn btn-dark w-100 py-2">Más info</a>
+                <a href="pag/servicios.html" class="btn btn-dark w-100 py-2"
+                  style="background: linear-gradient(135deg, var(--brown-dark) 0%, var(--brown-medium) 40%, var(--blue-soft) 100%); border: 1px solid var(--copper); box-shadow: 0 3px 10px rgba(98, 56, 5, 0.519); transition: all 0.3s ease;">Más
+                  info</a>
               </div>
             </div>
           </div>
@@ -110,16 +132,18 @@
         <!-- Cabinas Insonorizadas -->
         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
           <div class="card h-100 border-0 overflow-hidden d-flex flex-column transition-hover"
-            style="border: 1px solid rgba(82, 46, 0, 0.12) !important; box-shadow: 0 6px 20px rgba(82, 46, 0, 0.08);">
+            style="background: white; border: 2px solid #ffd863 !important; box-shadow: 0 6px 20px rgba(82, 46, 0, 0.08); transition: all 0.3s ease;">
             <img src="img/cabinaInsonorizada.jpg" alt="Cabinas Insonorizadas" class="card-img-top"
               style="height: 220px; object-fit: cover;">
             <div class="card-body p-3 p-md-4 d-flex flex-column">
-              <h5 class="card-title fw-bold mb-2">🔇 Cabinas Insonorizadas</h5>
+              <h5 class="card-title fw-bold mb-2" style="color: #291902;">🔇 Cabinas Insonorizadas</h5>
               <p class="card-text text-muted small mb-3">Espacios privados y silenciosos para videoconferencias y
                 trabajo enfocado.
               </p>
               <div class="mt-auto">
-                <a href="pag/servicios.html" class="btn btn-dark w-100 py-2">Más info</a>
+                <a href="pag/servicios.html" class="btn btn-dark w-100 py-2"
+                  style="background: linear-gradient(135deg, var(--brown-dark) 0%, var(--brown-medium) 40%, var(--blue-soft) 100%); border: 1px solid var(--copper); box-shadow: 0 3px 10px rgba(98, 56, 5, 0.519); transition: all 0.3s ease;">Más
+                  info</a>
               </div>
             </div>
           </div>
@@ -128,23 +152,25 @@
         <!-- Comida y Bebida -->
         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
           <div class="card h-100 border-0 overflow-hidden d-flex flex-column transition-hover"
-            style="border: 1px solid rgba(82, 46, 0, 0.12) !important; box-shadow: 0 6px 20px rgba(82, 46, 0, 0.08);">
+            style="background: white; border: 2px solid #ffd863 !important; box-shadow: 0 6px 20px rgba(82, 46, 0, 0.08); transition: all 0.3s ease;">
             <img src="img/cafe.jpg" alt="Comida y Bebida" class="card-img-top"
               style="height: 220px; object-fit: cover;">
             <div class="card-body p-3 p-md-4 d-flex flex-column">
-              <h5 class="card-title fw-bold mb-2">☕ Comida y Bebida</h5>
+              <h5 class="card-title fw-bold mb-2" style="color: #291902;">☕ Comida y Bebida</h5>
               <p class="card-text text-muted small mb-3">Disfruta de nuestro café artesanal y deliciosas opciones
                 gastronómicas.</p>
               <div class="mt-auto">
-                <a href="pag/catalogo.html" class="btn btn-dark w-100 py-2">Ver carta</a>
+                <a href="pag/catalogo.html" class="btn btn-dark w-100 py-2"
+                  style="background: linear-gradient(135deg, var(--brown-dark) 0%, var(--brown-medium) 40%, var(--blue-soft) 100%); border: 1px solid var(--copper); box-shadow: 0 3px 10px rgba(98, 56, 5, 0.519); transition: all 0.3s ease;">Ver
+                  carta</a>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="text-center mb-4 mb-md-5">
-        <h2 class="section-title d-inline-block fw-bold"
+      <div class="text-center mb-3 mb-md-4">
+        <h2 class="section-title d-inline-block fw-bold position-relative"
           style="font-family: 'Playfair Display', serif; font-size: 2.2rem;" data-aos="fade-up">
           Nuestros Ordenadores</h2>
       </div>
@@ -152,18 +178,18 @@
         <!-- Ordenadores Gaming -->
         <div class="col-md-6 col-lg-5 col-xl-4" data-aos="zoom-in">
           <div class="card h-100 border-0 overflow-hidden transition-hover"
-            style="border: 1px solid rgba(82, 46, 0, 0.12) !important; box-shadow: 0 6px 20px rgba(82, 46, 0, 0.08);">
+            style="background: white; border: 2px solid #ffd863 !important; box-shadow: 0 6px 20px rgba(82, 46, 0, 0.08); transition: all 0.3s ease;">
             <img src="img/gaming.jpg" alt="Ordenadores Gaming" class="card-img-top"
               style="height: 220px; object-fit: cover;">
             <div class="card-body p-3 p-md-4 d-flex flex-column">
-              <h5 class="card-title fw-bold mb-2">🎮 Ordenadores Gaming</h5>
+              <h5 class="card-title fw-bold mb-2" style="color: #291902;">🎮 Ordenadores Gaming</h5>
               <p class="card-text text-muted small mb-3">Estaciones de juego de última generación para una experiencia
                 inmersiva.
               </p>
               <div class="d-flex gap-2 mt-auto">
                 <a href="pag/servicios.html" class="btn btn-outline-dark btn-sm flex-fill">Más info</a>
-                <button class="btn btn-dark btn-sm flex-fill" data-bs-toggle="modal"
-                  data-bs-target="#specModal">Especificaciones</button>
+                <button class="btn btn-dark btn-sm flex-fill" data-bs-toggle="modal" data-bs-target="#specModal"
+                  style="background: linear-gradient(135deg, var(--brown-dark) 0%, var(--brown-medium) 40%, var(--blue-soft) 100%); border: 1px solid var(--copper); box-shadow: 0 3px 10px rgba(98, 56, 5, 0.519); transition: all 0.3s ease;">Especificaciones</button>
               </div>
             </div>
           </div>
@@ -172,18 +198,18 @@
         <!-- Ordenadores para Trabajar -->
         <div class="col-md-6 col-lg-5 col-xl-4" data-aos="zoom-in" data-aos-delay="100">
           <div class="card h-100 border-0 overflow-hidden transition-hover"
-            style="border: 1px solid rgba(82, 46, 0, 0.12) !important; box-shadow: 0 6px 20px rgba(82, 46, 0, 0.08);">
+            style="background: white; border: 2px solid #ffd863 !important; box-shadow: 0 6px 20px rgba(82, 46, 0, 0.08); transition: all 0.3s ease;">
             <img src="img/ordenadoresDisponibles.jpg" alt="Ordenadores Disponibles" class="card-img-top"
               style="height: 220px; object-fit: cover;">
             <div class="card-body p-3 p-md-4 d-flex flex-column">
-              <h5 class="card-title fw-bold mb-2">💻 Ordenadores para Trabajar</h5>
+              <h5 class="card-title fw-bold mb-2" style="color: #291902;">💻 Ordenadores para Trabajar</h5>
               <p class="card-text text-muted small mb-3">Equipos profesionales con conexión de alta velocidad para
                 potenciar tu éxito.
               </p>
               <div class="d-flex gap-2 mt-auto">
                 <a href="pag/servicios.html" class="btn btn-outline-dark btn-sm flex-fill">Más info</a>
-                <button class="btn btn-dark btn-sm flex-fill" data-bs-toggle="modal"
-                  data-bs-target="#specModalWork">Especificaciones</button>
+                <button class="btn btn-dark btn-sm flex-fill" data-bs-toggle="modal" data-bs-target="#specModalWork"
+                  style="background: linear-gradient(135deg, var(--brown-dark) 0%, var(--brown-medium) 40%, var(--blue-soft) 100%); border: 1px solid var(--copper); box-shadow: 0 3px 10px rgba(98, 56, 5, 0.519); transition: all 0.3s ease;">Especificaciones</button>
               </div>
             </div>
           </div>
@@ -225,9 +251,11 @@
   <!-- Modal Especificaciones -->
   <div class="modal fade" id="specModal" tabindex="-1" aria-labelledby="specModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header bg-dark text-warning">
-          <h5 class="modal-title fw-bold" id="specModalLabel">Especificaciones de Ordenadores</h5>
+      <div class="modal-content" style="border: 1px solid var(--copper) !important;">
+        <div class="modal-header bg-dark" style="border-bottom: 2px solid var(--copper) !important;">
+          <h5 class="modal-title fw-bold" id="specModalLabel"
+            style="color: var(--copper) !important; font-size: 1.5rem; letter-spacing: 1px;">Especificaciones de
+            Ordenadores</h5>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -292,9 +320,11 @@
   <!-- Modal Especificaciones Ordenadores para Trabajar -->
   <div class="modal fade" id="specModalWork" tabindex="-1" aria-labelledby="specModalWorkLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header bg-dark text-warning">
-          <h5 class="modal-title fw-bold" id="specModalWorkLabel">Especificaciones - Ordenadores para Trabajar</h5>
+      <div class="modal-content" style="border: 1px solid var(--copper) !important;">
+        <div class="modal-header bg-dark" style="border-bottom: 2px solid var(--copper) !important;">
+          <h5 class="modal-title fw-bold" id="specModalWorkLabel"
+            style="color: var(--copper) !important; font-size: 1.5rem; letter-spacing: 1px;">Especificaciones -
+            Ordenadores para Trabajar</h5>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -373,15 +403,33 @@
   </div>
 
   <!-- Footer -->
-  <footer class="bg-dark text-white py-5 text-center mt-5">
+  <!-- Footer -->
+  <footer class="text-white py-5 text-center mt-5"
+    style="background: linear-gradient(135deg, var(--brown-dark) 0%, var(--brown-medium) 40%, var(--blue-soft) 100%); border-top: 2px solid var(--copper);">
     <div class="container">
-      <h5 class="mb-3">Java Espresso</h5>
-      <p class="mb-2">&copy; 2026 Java Espresso. Todos los derechos reservados.</p>
+      <h5 class="mb-3 text-white" style="font-family: 'Playfair Display', serif; font-weight: 900;">Java Espresso</h5>
+      <p class="mb-2 text-white-50">&copy; 2026 Java Espresso. Todos los derechos reservados.</p>
       <div class="mt-3">
-        <a href="index.html" class="text-warning text-decoration-none me-3">Inicio</a>
-        <a href="pag/catalogo.html" class="text-warning text-decoration-none me-3">Carta</a>
-        <a href="pag/servicios.html" class="text-warning text-decoration-none me-3">Servicios</a>
-        <a href="pag/contacto.html" class="text-warning text-decoration-none">Contacto</a>
+        <a href="index.html" class="text-decoration-none me-3 fw-bold"
+          style="color: var(--copper); transition: color 0.3s;"
+          onmouseover="this.style.color='var(--blue-soft)'; this.style.textDecoration='underline'"
+          onmouseout="this.style.color='var(--copper)'; this.style.textDecoration='none'">Inicio</a>
+        <a href="pag/catalogo.html" class="text-decoration-none me-3 fw-bold"
+          style="color: var(--copper); transition: color 0.3s;"
+          onmouseover="this.style.color='var(--blue-soft)'; this.style.textDecoration='underline'"
+          onmouseout="this.style.color='var(--copper)'; this.style.textDecoration='none'">Carta</a>
+        <a href="pag/servicios.html" class="text-decoration-none me-3 fw-bold"
+          style="color: var(--copper); transition: color 0.3s;"
+          onmouseover="this.style.color='var(--blue-soft)'; this.style.textDecoration='underline'"
+          onmouseout="this.style.color='var(--copper)'; this.style.textDecoration='none'">Servicios</a>
+        <a href="pag/reservas.html" class="text-decoration-none me-3 fw-bold"
+          style="color: var(--copper); transition: color 0.3s;"
+          onmouseover="this.style.color='var(--blue-soft)'; this.style.textDecoration='underline'"
+          onmouseout="this.style.color='var(--copper)'; this.style.textDecoration='none'">Reservas</a>
+        <a href="pag/contacto.html" class="text-decoration-none fw-bold"
+          style="color: var(--copper); transition: color 0.3s;"
+          onmouseover="this.style.color='var(--blue-soft)'; this.style.textDecoration='underline'"
+          onmouseout="this.style.color='var(--copper)'; this.style.textDecoration='none'">Contacto</a>
       </div>
     </div>
   </footer>

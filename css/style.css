@@ -1,4 +1,4 @@
-/* hay propiedades que se pueden remplazar por reglas de bootstrap */
+/* Global Styles */
 :root {
     --brown-dark: #291902;
     --brown-medium: #3d2505;
@@ -6,12 +6,6 @@
     --copper: #ffd863;
     --blue-soft: #c5a000;
     --cream: #ffd863;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
 body {
@@ -31,187 +25,30 @@ h6 {
     font-weight: 900;
 }
 
-.navbar {
-    background: linear-gradient(135deg, var(--brown-dark) 0%, var(--brown-medium) 40%, var(--blue-soft) 100%) !important;
-}
-
-.navbar-brand {
-    color: var(--copper) !important;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-#carouselServicios {
-    border-bottom: 5px ridge var(--copper);
-    border-top: 1px groove var(--copper);
-}
-
-.navbar-container {
-    display: flex;
-    justify-content: center;
-}
-
-.logo-brand {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.navbar-logo {
-    height: 80px;
-    width: auto;
-    max-width: 200px;
-}
-
-.nav-link {
-    color: white !important;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-.nav-link:hover {
-    color: #ffc107 !important;
-    text-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
-}
-
-.hero-section {
-    background-image: url("../img/espacioDeTrabajo.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    min-height: 80vh;
-    position: relative;
-    border-bottom: 5px ridge var(--copper);
-    border-top: 1px groove var(--copper);
-}
-
-.hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(41, 25, 2, 0.5);
-    z-index: 2;
-}
-
-.hero-section .container-fluid {
-    position: relative;
-    z-index: 3;
-    height: 100%;
-}
-
-.hero-section::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url("../img/granosCafe.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0;
-    z-index: 0;
-    transition: opacity 0.8s ease-in-out;
-}
-
-.hero-section.hero-active::after {
-    opacity: 1;
-}
-
-.hero-section h1 {
-    color: var(--copper);
-    font-weight: 900;
-    font-size: clamp(2rem, 8vw, 4rem);
-    animation: slideDown 0.8s ease-out;
-}
-
 html {
     scroll-behavior: smooth;
 }
 
-.hero-section .lead {
-    color: #ffffff;
-    font-size: clamp(1rem, 2vw, 1.5rem);
-    font-weight: 300;
-    letter-spacing: 1px;
-    animation: slideUp 0.8s ease-out 0.2s both;
-}
-
-.hero-section .btn {
-    animation: slideUp 0.8s ease-out 0.4s both;
+/* Utility for hover effects */
+.transition-hover {
     transition: all 0.3s ease;
 }
 
-.hero-section .btn:hover {
-    background-color: #543b00 !important;
-    border-color: #714d00 !important;
-    color: white !important;
-    box-shadow: 0 4px 8px rgba(92, 56, 17, 0.612) !important;
-    transition: all 0.3s ease;
+.transition-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
 }
 
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Hero Hover Effect */
+.hero-section.hero-active .hero-hover-bg {
+    opacity: 1 !important;
 }
 
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.btn-dark {
-    background: linear-gradient(135deg, var(--brown-dark) 0%, var(--brown-medium) 40%, var(--blue-soft) 100%) !important;
-    border: 1px solid var(--copper);
-    box-shadow: 0 3px 10px rgba(98, 56, 5, 0.519);
-    transition: all 0.3s ease;
-}
-
-.btn-dark:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(98, 56, 5, 0.519);
-    border-color: var(--copper) !important;
-}
-
-.card {
-    background: white;
-    border: 2px solid #ffd863;
-    transition: all 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(30, 107, 122, 0.25);
-    border-color: var(--blue-soft);
-}
-
-.card-title {
-    color: #291902;
-    font-weight: bold;
-}
-
+/* Section Title Decoration */
 .section-title {
     position: relative;
-    padding-bottom: 2.5rem;
+    padding-bottom: 3.5rem;
+    margin-bottom: 2rem;
 }
 
 .section-title::after {
@@ -228,83 +65,7 @@ html {
     background-position: center;
 }
 
-footer {
-    background: linear-gradient(135deg, var(--brown-dark) 0%, var(--brown-medium) 40%, var(--blue-soft) 100%);
-    border-top: 2px solid var(--copper);
-    color: var(--cream);
-}
-
-footer a {
-    color: var(--copper);
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-    color: var(--blue-soft);
-}
-
-.modal-header {
-    border-bottom: 2px solid var(--copper) !important;
-}
-
-.modal-content {
-    border: 1px solid var(--copper) !important;
-}
-
-.modal-title {
-    color: var(--copper) !important;
-    font-size: 1.5rem;
-    letter-spacing: 1px;
-}
-
-#carouselTrabajo .carousel-indicators [data-bs-slide-to],
-.carousel-indicators [data-bs-slide-to] {
-    background-color: var(--copper);
-}
-
-#carouselTrabajo .carousel-indicators [data-bs-slide-to].active,
-.carousel-indicators [data-bs-slide-to].active {
-    background-color: var(--cream);
-}
-
-.carousel-caption {
-    border-radius: 15px;
-    padding: 1.5rem !important;
-}
-
-[data-bs-theme="dark"] .carousel-caption {
-    background-color: rgba(0, 0, 0, 0.7) !important;
-}
-
-[data-bs-theme="dark"] .carousel-caption h5,
-[data-bs-theme="dark"] .carousel-caption p {
-    color: #f5f0e8 !important;
-}
-
-#carouselTrabajo .carousel-control-prev-icon,
-#carouselTrabajo .carousel-control-next-icon {
-    filter: brightness(0) invert(1);
-}
-
-.card {
-    cursor: pointer;
-}
-
-.card:hover {
-    box-shadow: 0 15px 40px rgba(255, 193, 7, 0.3) !important;
-}
-
-.btn-warning {
-    transition: all 0.3s ease;
-}
-
-.btn-warning:hover {
-    background: linear-gradient(135deg, #FFB81C 0%, #FFC107 100%) !important;
-    box-shadow: 0 8px 25px rgba(255, 193, 7, 0.4);
-    transform: translateY(-2px);
-}
-
+/* Media Queries */
 @media (max-width: 768px) {
     .modal-dialog {
         margin: 1rem;
