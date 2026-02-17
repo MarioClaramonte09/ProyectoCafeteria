@@ -17,6 +17,13 @@
 </head>
 
 <body>
+  <!-- Splash Screen -->
+  <div id="splash-screen"
+    class="position-fixed top-0 start-0 w-100 vh-100 bg-dark d-flex align-items-center justify-content-center"
+    style="z-index: 9999; transition: opacity 1s ease;">
+    <img src="img/LogoTaza.png" alt="Java Espresso Logo" class="img-fluid" style="max-width: 300px;">
+  </div>
+
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top py-1">
     <div class="container-fluid px-4">
@@ -38,6 +45,9 @@
           </li>
           <li class="nav-item">
             <a class="nav-link fs-5 fw-semibold" href="pag/catalogo.html">Carta</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-5 fw-semibold" href="pag/reservas.html">Reservas</a>
           </li>
           <li class="nav-item">
             <a class="nav-link fs-5 fw-semibold" href="pag/contacto.html">Contacto</a>
@@ -528,6 +538,17 @@
       heroSection.classList.remove('hero-active');
     });
 
+
+    // Splash Screen Logic
+    window.addEventListener('load', () => {
+      const splash = document.getElementById('splash-screen');
+      setTimeout(() => {
+        splash.style.opacity = '0';
+        setTimeout(() => {
+          splash.classList.add('d-none');
+        }, 1000); // Wait for the 1s transition to finish
+      }, 500); // Initial delay before fading
+    });
 
   </script>
 </body>
