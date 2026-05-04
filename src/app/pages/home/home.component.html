@@ -1,0 +1,430 @@
+<app-navbar />
+<!-- Splash Screen -->
+  <div id="splash-screen"
+    class="position-fixed top-0 start-0 w-100 vh-100 bg-dark d-flex align-items-center justify-content-center"
+    style="z-index: 9999; transition: opacity 1s ease;">
+    <img src="img/LogoTaza.png" alt="Java Espresso Logo" class="img-fluid" style="max-width: 300px;">
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top py-1"
+    style="background: linear-gradient(135deg, var(--brown-dark) 0%, var(--brown-medium) 40%, var(--blue-soft) 100%);">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand fw-bold d-flex align-items-center fs-3" routerLink="/"
+        style="color: var(--copper); letter-spacing: 1px;">
+        <img src="img/LogoTaza.png" alt="Java Espresso" width="60" class="me-2">
+        <span class="text-warning">Java Espresso</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto gap-2">
+          <li class="nav-item">
+            <a class="nav-link active fs-5 fw-semibold text-white" aria-current="page" routerLink="/"
+              style="transition: all 0.3s ease;">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-5 fw-semibold text-white" routerLink="/servicios"
+              style="transition: all 0.3s ease;">Servicios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-5 fw-semibold text-white" routerLink="/catalogo"
+              style="transition: all 0.3s ease;">Carta</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-5 fw-semibold text-white" routerLink="/reservas"
+              style="transition: all 0.3s ease;">Reservas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-5 fw-semibold text-white" routerLink="/cupones"
+              style="transition: all 0.3s ease;">Cupones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-5 fw-semibold text-white" routerLink="/contacto"
+              style="transition: all 0.3s ease;">Contacto</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <section class="hero-section position-relative d-flex align-items-center justify-content-center py-5 py-md-0"
+    id="inicio"
+    style="background-image: url('img/espacioDeTrabajo.png'); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed; min-height: 80vh; border-bottom: 5px ridge var(--copper); border-top: 1px groove var(--copper);">
+
+    <!-- Hover Background (replaces ::after) -->
+    <div class="hero-hover-bg position-absolute top-0 start-0 w-100 h-100 z-0"
+      style="background-image: url('img/granosCafe.png'); background-size: cover; background-position: center; background-repeat: no-repeat; opacity: 0; transition: opacity 0.8s ease-in-out;">
+    </div>
+
+    <!-- Overlay (replaces ::before) -->
+    <div class="position-absolute top-0 start-0 w-100 h-100 z-2" style="background: rgba(41, 25, 2, 0.5);"></div>
+
+    <div class="container-fluid px-3 px-md-5 position-relative z-3 h-100">
+      <div class="row min-vh-75 align-items-center justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8 col-xl-6 text-center">
+          <div class="p-4 p-md-5 rounded-4 shadow-lg"
+            style="background-color: rgba(41, 25, 2, 0.7); backdrop-filter: blur(5px);">
+            <h1 class="display-3 display-md-2 fw-bold text-warning mb-3 text-uppercase"
+              style="letter-spacing: 2px; text-shadow: 2px 2px 10px rgba(0,0,0,0.8); color: var(--copper);"
+              data-aos="fade-up">‹Java› Espresso
+            </h1>
+            <p class="lead fs-5 text-light fw-normal mb-4 px-md-5" style="text-shadow: 1px 1px 5px rgba(0,0,0,0.6);"
+              data-aos="fade-up" data-aos-delay="100">Café de especialidad y servicios premium para potenciar tu
+              productividad y desarrollo.</p>
+            <a href="#productos" id="btn-discover"
+              class="btn btn-warning btn-lg fw-bold px-4 px-md-5 py-3 rounded-pill shadow-lg transition-hover"
+              style="transition: all 0.3s ease;">
+              <i class="bi bi-arrow-down-circle me-2"></i>Nuestros servicios
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-4 py-md-5" id="productos">
+    <div class="container">
+      <div class="text-center mb-3 mb-md-4">
+        <h2 class="section-title d-inline-block fw-bold position-relative"
+          style="font-family: 'Playfair Display', serif; font-size: 2.2rem;" data-aos="fade-up">
+          Servicios Destacados</h2>
+      </div>
+      <div class="row g-3 g-md-4 mb-5">
+        <!-- Salas Privadas -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up">
+          <div class="card h-100 border-0 overflow-hidden d-flex flex-column transition-hover"
+            style="background: white; border: 2px solid #ffd863 !important; box-shadow: 0 6px 20px rgba(82, 46, 0, 0.08); transition: all 0.3s ease;">
+            <img src="img/zonaTrabajo.png" alt="Zona de Trabajo" class="card-img-top"
+              style="height: 220px; object-fit: cover;">
+            <div class="card-body p-3 p-md-4 d-flex flex-column">
+              <h5 class="card-title fw-bold mb-2" style="color: #291902;">🏢 Salas Privadas</h5>
+              <p class="card-text text-muted small mb-3">Espacios reservados para reuniones, presentaciones y eventos
+                corporativos.
+              </p>
+              <div class="mt-auto">
+                <a routerLink="/servicios" class="btn btn-dark w-100 py-2"
+                  style="background: linear-gradient(135deg, var(--brown-dark) 0%, var(--brown-medium) 40%, var(--blue-soft) 100%); border: 1px solid var(--copper); box-shadow: 0 3px 10px rgba(98, 56, 5, 0.519); transition: all 0.3s ease;">Más
+                  info</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cabinas Insonorizadas -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card h-100 border-0 overflow-hidden d-flex flex-column transition-hover"
+            style="background: white; border: 2px solid #ffd863 !important; box-shadow: 0 6px 20px rgba(82, 46, 0, 0.08); transition: all 0.3s ease;">
+            <img src="img/cabinaInsonorizada.jpg" alt="Cabinas Insonorizadas" class="card-img-top"
+              style="height: 220px; object-fit: cover;">
+            <div class="card-body p-3 p-md-4 d-flex flex-column">
+              <h5 class="card-title fw-bold mb-2" style="color: #291902;">🔇 Cabinas Insonorizadas</h5>
+              <p class="card-text text-muted small mb-3">Espacios privados y silenciosos para videoconferencias y
+                trabajo enfocado.
+              </p>
+              <div class="mt-auto">
+                <a routerLink="/servicios" class="btn btn-dark w-100 py-2"
+                  style="background: linear-gradient(135deg, var(--brown-dark) 0%, var(--brown-medium) 40%, var(--blue-soft) 100%); border: 1px solid var(--copper); box-shadow: 0 3px 10px rgba(98, 56, 5, 0.519); transition: all 0.3s ease;">Más
+                  info</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Comida y Bebida -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="card h-100 border-0 overflow-hidden d-flex flex-column transition-hover"
+            style="background: white; border: 2px solid #ffd863 !important; box-shadow: 0 6px 20px rgba(82, 46, 0, 0.08); transition: all 0.3s ease;">
+            <img src="img/cafe.jpg" alt="Comida y Bebida" class="card-img-top"
+              style="height: 220px; object-fit: cover;">
+            <div class="card-body p-3 p-md-4 d-flex flex-column">
+              <h5 class="card-title fw-bold mb-2" style="color: #291902;">☕ Comida y Bebida</h5>
+              <p class="card-text text-muted small mb-3">Disfruta de nuestro café artesanal y deliciosas opciones
+                gastronómicas.</p>
+              <div class="mt-auto">
+                <a routerLink="/catalogo" class="btn btn-dark w-100 py-2"
+                  style="background: linear-gradient(135deg, var(--brown-dark) 0%, var(--brown-medium) 40%, var(--blue-soft) 100%); border: 1px solid var(--copper); box-shadow: 0 3px 10px rgba(98, 56, 5, 0.519); transition: all 0.3s ease;">Ver
+                  carta</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mb-3 mb-md-4">
+        <h2 class="section-title d-inline-block fw-bold position-relative"
+          style="font-family: 'Playfair Display', serif; font-size: 2.2rem;" data-aos="fade-up">
+          Nuestros Ordenadores</h2>
+      </div>
+      <div class="row g-3 g-md-4 justify-content-center">
+        <!-- Ordenadores Gaming -->
+        <div class="col-md-6 col-lg-5 col-xl-4" data-aos="zoom-in">
+          <div class="card h-100 border-0 overflow-hidden transition-hover"
+            style="background: white; border: 2px solid #ffd863 !important; box-shadow: 0 6px 20px rgba(82, 46, 0, 0.08); transition: all 0.3s ease;">
+            <img src="img/gaming.jpg" alt="Ordenadores Gaming" class="card-img-top"
+              style="height: 220px; object-fit: cover;">
+            <div class="card-body p-3 p-md-4 d-flex flex-column">
+              <h5 class="card-title fw-bold mb-2" style="color: #291902;">🎮 Ordenadores Gaming</h5>
+              <p class="card-text text-muted small mb-3">Estaciones de juego de última generación para una experiencia
+                inmersiva.
+              </p>
+              <div class="d-flex gap-2 mt-auto">
+                <a routerLink="/servicios" class="btn btn-dark btn-sm flex-fill"
+                  style="background: linear-gradient(135deg, var(--brown-dark) 0%, var(--brown-medium) 40%, var(--blue-soft) 100%); border: 1px solid var(--copper); box-shadow: 0 3px 10px rgba(98, 56, 5, 0.519); transition: all 0.3s ease; color: white;">Más
+                  info</a>
+                <button class="btn btn-dark btn-sm flex-fill" data-bs-toggle="modal" data-bs-target="#specModal"
+                  style="background: linear-gradient(135deg, var(--brown-dark) 0%, var(--brown-medium) 40%, var(--blue-soft) 100%); border: 1px solid var(--copper); box-shadow: 0 3px 10px rgba(98, 56, 5, 0.519); transition: all 0.3s ease;">Especificaciones</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ordenadores para Trabajar -->
+        <div class="col-md-6 col-lg-5 col-xl-4" data-aos="zoom-in" data-aos-delay="100">
+          <div class="card h-100 border-0 overflow-hidden transition-hover"
+            style="background: white; border: 2px solid #ffd863 !important; box-shadow: 0 6px 20px rgba(82, 46, 0, 0.08); transition: all 0.3s ease;">
+            <img src="img/ordenadoresDisponibles.jpg" alt="Ordenadores Disponibles" class="card-img-top"
+              style="height: 220px; object-fit: cover;">
+            <div class="card-body p-3 p-md-4 d-flex flex-column">
+              <h5 class="card-title fw-bold mb-2" style="color: #291902;">💻 Ordenadores para Trabajar</h5>
+              <p class="card-text text-muted small mb-3">Equipos profesionales con conexión de alta velocidad para
+                potenciar tu éxito.
+              </p>
+              <div class="d-flex gap-2 mt-auto">
+                <a routerLink="/servicios" class="btn btn-dark btn-sm flex-fill"
+                  style="background: linear-gradient(135deg, var(--brown-dark) 0%, var(--brown-medium) 40%, var(--blue-soft) 100%); border: 1px solid var(--copper); box-shadow: 0 3px 10px rgba(98, 56, 5, 0.519); transition: all 0.3s ease; color: white;">Más
+                  info</a>
+                <button class="btn btn-dark btn-sm flex-fill" data-bs-toggle="modal" data-bs-target="#specModalWork"
+                  style="background: linear-gradient(135deg, var(--brown-dark) 0%, var(--brown-medium) 40%, var(--blue-soft) 100%); border: 1px solid var(--copper); box-shadow: 0 3px 10px rgba(98, 56, 5, 0.519); transition: all 0.3s ease;">Especificaciones</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section class="py-4 py-md-5 bg-transparent" id="contacto">
+    <div class="container text-center">
+      <h2 class="section-title d-inline-block mb-4">Ubicación y Contacto</h2>
+      <div class="row g-3 justify-content-center">
+        <div class="col-sm-6 col-md-4">
+          <div class="p-3 bg-white bg-opacity-75 rounded-4 h-100 transition-hover"
+            style="border: 1px solid rgba(82, 46, 0, 0.15) !important; box-shadow: 0 6px 18px rgba(82, 46, 0, 0.08);">
+            <p class="mb-1 fw-bold text-warning">📧 Email</p>
+            <p class="mb-0 small text-dark fw-medium">info&#64;javanespresso.com</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="p-3 bg-white bg-opacity-75 rounded-4 h-100 transition-hover"
+            style="border: 1px solid rgba(82, 46, 0, 0.15) !important; box-shadow: 0 6px 18px rgba(82, 46, 0, 0.08);">
+            <p class="mb-1 fw-bold text-warning">📱 Teléfono</p>
+            <p class="mb-0 small text-dark fw-medium">+34 912 345 678</p>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4">
+          <div class="p-3 bg-white bg-opacity-75 rounded-4 h-100 transition-hover"
+            style="border: 1px solid rgba(82, 46, 0, 0.15) !important; box-shadow: 0 6px 18px rgba(82, 46, 0, 0.08);">
+            <p class="mb-1 fw-bold text-warning">🏪 Dirección</p>
+            <p class="mb-0 small text-dark fw-medium">Calle del Café, 42 - Madrid</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Especificaciones -->
+  <div class="modal fade" id="specModal" tabindex="-1" aria-labelledby="specModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content" style="border: 1px solid var(--copper) !important;">
+        <div class="modal-header bg-dark" style="border-bottom: 2px solid var(--copper) !important;">
+          <h5 class="modal-title fw-bold" id="specModalLabel"
+            style="color: var(--copper) !important; font-size: 1.5rem; letter-spacing: 1px;">Especificaciones de
+            Ordenadores</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-3 mb-4">
+            <!-- Foto 1 -->
+            <div class="col-md-4">
+              <div class="card photo-card cursor-pointer" data-spec="1" style="cursor: pointer;">
+                <img src="https://www.lg.com/es/lg-experience/images/es-es/2024/batch-1/9-1.jpg" alt="Foto 1"
+                  class="card-img-top" style="height: 200px; object-fit: cover;">
+                <div class="card-body">
+                  <p class="text-muted small">EQUIPO LOWCOST</p>
+                </div>
+              </div>
+            </div>
+            <!-- Foto 2 -->
+            <div class="col-md-4">
+              <div class="card photo-card cursor-pointer" data-spec="2" style="cursor: pointer;">
+                <img src="https://i.ytimg.com/vi/pYMchqcc2Qc/maxresdefault.jpg" alt="Foto 2" class="card-img-top"
+                  style="height: 200px; object-fit: cover;">
+                <div class="card-body">
+                  <p class="text-muted small">EQUIPO IDRA</p>
+                </div>
+              </div>
+            </div>
+            <!-- Foto 3 -->
+            <div class="col-md-4">
+              <div class="card photo-card cursor-pointer" data-spec="3" style="cursor: pointer;">
+                <img
+                  src="https://preview.redd.it/v0pn116evmp71.jpg?auto=webp&s=9108c6b751dab34a105e71f2d643f65cec0b1dbc"
+                  alt="Foto 3" class="card-img-top" style="height: 200px; object-fit: cover;">
+                <div class="card-body">
+                  <p class="text-muted small">EQUIPO ULTRA</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Información sobre Especificaciones -->
+          <div class="p-4 rounded" id="specContent">
+            <h6 class="fw-bold mb-3">Especificaciones Técnicas</h6>
+            <ul class="list-unstyled" id="specList">
+              <li class="mb-2"><strong>Procesador:</strong> Intel Core i9 / AMD Ryzen 9</li>
+              <li class="mb-2"><strong>Memoria RAM:</strong> 32 GB DDR5</li>
+              <li class="mb-2"><strong>Almacenamiento:</strong> SSD NVMe 1TB</li>
+              <li class="mb-2"><strong>GPU:</strong> NVIDIA RTX 4070 Ti / AMD Radeon RX 7900 XT</li>
+              <li class="mb-2"><strong>Monitor:</strong> 4K 144Hz</li>
+              <li class="mb-2"><strong>Conectividad:</strong> WiFi 6E, Gigabit Ethernet</li>
+              <li class="mb-2"><strong>Refrigeración:</strong> Líquida de última generación</li>
+            </ul>
+            <hr>
+            <p class="small" id="specDesc">Todos nuestros ordenadores incluyen sistemas de última generación
+              con las mejores prestaciones para gaming profesional y trabajo intensivo.</p>
+          </div>
+        </div>
+        <div class="modal-footer bg-light">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Especificaciones Ordenadores para Trabajar -->
+  <div class="modal fade" id="specModalWork" tabindex="-1" aria-labelledby="specModalWorkLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content" style="border: 1px solid var(--copper) !important;">
+        <div class="modal-header bg-dark" style="border-bottom: 2px solid var(--copper) !important;">
+          <h5 class="modal-title fw-bold" id="specModalWorkLabel"
+            style="color: var(--copper) !important; font-size: 1.5rem; letter-spacing: 1px;">Especificaciones -
+            Ordenadores para Trabajar</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-3 mb-4">
+            <!-- Foto 1 -->
+            <div class="col-md-4">
+              <div class="card photo-card-work cursor-pointer" data-spec-work="1" style="cursor: pointer;">
+                <img
+                  src="https://i.ytimg.com/vi/C0_H-lnMDys/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBiFCNx8MWFu9TNj0SnurPuk-fvnA"
+                  alt="Foto 1" class="card-img-top" style="height: 200px; object-fit: cover;">
+                <div class="card-body">
+                  <p class="text-muted small">PRODUCTIVIDAD BÁSICA</p>
+                </div>
+              </div>
+            </div>
+            <!-- Foto 2 -->
+            <div class="col-md-4">
+              <div class="card photo-card-work cursor-pointer" data-spec-work="2" style="cursor: pointer;">
+                <img src="https://img.pccomponentes.com/pcblog/6151/mejores-ordenadores-sobremesa.jpg" alt="Foto 2"
+                  class="card-img-top" style="height: 200px; object-fit: cover;">
+                <div class="card-body">
+                  <p class="text-muted small">WORKSTATION PRO</p>
+                </div>
+              </div>
+            </div>
+            <!-- Foto 3 -->
+            <div class="col-md-4">
+              <div class="card photo-card-work cursor-pointer" data-spec-work="3" style="cursor: pointer;">
+                <img
+                  src="https://thumbs.dreamstime.com/b/espacio-de-trabajo-moderno-con-un-ordenador-sobremesa-que-muestra-obras-arte-digitales-una-computadora-escritorio-digital-formas-376874312.jpg  "
+                  alt="Foto 3" class="card-img-top" style="height: 200px; object-fit: cover;">
+                <div class="card-body">
+                  <p class="text-muted small">SERVIDOR EMPRESARIAL</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Información sobre Especificaciones -->
+          <div class="bg-light p-4 rounded" id="specContentWork">
+            <h6 class="fw-bold mb-3">Especificaciones Técnicas</h6>
+            <ul class="list-unstyled" id="specListWork">
+              <li class="mb-2"><strong>Procesador:</strong> Intel Core i5 / AMD Ryzen 5</li>
+              <li class="mb-2"><strong>Memoria RAM:</strong> 16 GB DDR4</li>
+              <li class="mb-2"><strong>Almacenamiento:</strong> SSD 512GB</li>
+              <li class="mb-2"><strong>GPU:</strong> Integrada</li>
+              <li class="mb-2"><strong>Monitor:</strong> Full HD</li>
+              <li class="mb-2"><strong>Conectividad:</strong> WiFi 6, Gigabit Ethernet</li>
+              <li class="mb-2"><strong>Refrigeración:</strong> Aire pasivo</li>
+            </ul>
+            <hr>
+            <p class="text-dark small" id="specDescWork">Equipos diseñados para tareas de oficina y trabajo productivo.
+            </p>
+          </div>
+        </div>
+        <div class="modal-footer bg-light">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notificación de Descuento para Estudiantes -->
+  <div class="position-fixed bottom-0 end-0 m-3 z-3" style="max-width: 300px;">
+    <div class="alert alert-warning alert-dismissible fade show shadow-lg border-2 border-dark" role="alert">
+      <div class="d-flex align-items-center">
+        <i class="bi bi-mortarboard-fill fs-3 me-3 text-dark"></i>
+        <div>
+          <h6 class="alert-heading fw-bold mb-1">¡Descuento Estudiantes!</h6>
+          <p class="mb-0 small">Presenta tu carnet y obtén un <span class="fw-bold">20% de descuento</span> en todos
+            nuestros servicios.</p>
+        </div>
+      </div>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <!-- Footer -->
+  <footer class="text-white py-5 text-center mt-5"
+    style="background: linear-gradient(135deg, var(--brown-dark) 0%, var(--brown-medium) 40%, var(--blue-soft) 100%); border-top: 2px solid var(--copper);">
+    <div class="container">
+      <h5 class="mb-3 text-white" style="font-family: 'Playfair Display', serif; font-weight: 900;">Java Espresso</h5>
+      <p class="mb-2 text-white-50">&copy; 2026 Java Espresso. Todos los derechos reservados.</p>
+      <div class="mt-3">
+        <a routerLink="/" class="text-decoration-none me-3 fw-bold"
+          style="color: var(--copper); transition: color 0.3s;"
+          onmouseover="this.style.color='var(--blue-soft)'; this.style.textDecoration='underline'"
+          onmouseout="this.style.color='var(--copper)'; this.style.textDecoration='none'">Inicio</a>
+        <a routerLink="/catalogo" class="text-decoration-none me-3 fw-bold"
+          style="color: var(--copper); transition: color 0.3s;"
+          onmouseover="this.style.color='var(--blue-soft)'; this.style.textDecoration='underline'"
+          onmouseout="this.style.color='var(--copper)'; this.style.textDecoration='none'">Carta</a>
+        <a routerLink="/servicios" class="text-decoration-none me-3 fw-bold"
+          style="color: var(--copper); transition: color 0.3s;"
+          onmouseover="this.style.color='var(--blue-soft)'; this.style.textDecoration='underline'"
+          onmouseout="this.style.color='var(--copper)'; this.style.textDecoration='none'">Servicios</a>
+        <a routerLink="/reservas" class="text-decoration-none me-3 fw-bold"
+          style="color: var(--copper); transition: color 0.3s;"
+          onmouseover="this.style.color='var(--blue-soft)'; this.style.textDecoration='underline'"
+          onmouseout="this.style.color='var(--copper)'; this.style.textDecoration='none'">Reservas</a>
+        <a routerLink="/cupones" class="text-decoration-none me-3 fw-bold"
+          style="color: var(--copper); transition: color 0.3s;"
+          onmouseover="this.style.color='var(--blue-soft)'; this.style.textDecoration='underline'"
+          onmouseout="this.style.color='var(--copper)'; this.style.textDecoration='none'">Cupones</a>
+        <a routerLink="/contacto" class="text-decoration-none fw-bold"
+          style="color: var(--copper); transition: color 0.3s;"
+          onmouseover="this.style.color='var(--blue-soft)'; this.style.textDecoration='underline'"
+          onmouseout="this.style.color='var(--copper)'; this.style.textDecoration='none'">Contacto</a>
+      </div>
+    </div>
+  </footer>
+<app-footer />
