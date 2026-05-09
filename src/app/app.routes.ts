@@ -5,6 +5,7 @@ import { ServiciosComponent } from './pages/servicios/servicios.component';
 import { ReservasComponent } from './pages/reservas/reservas.component';
 import { CuponesComponent } from './pages/cupones/cupones.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
+import { NotFoundComponent } from './pages/not-found/not-found';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -13,5 +14,5 @@ export const routes: Routes = [
     { path: 'reservas', component: ReservasComponent },
     { path: 'cupones', component: CuponesComponent },
     { path: 'contacto', component: ContactoComponent },
-    { path: '**', redirectTo: '' }
+    { path: '**', component:  NotFoundComponent}
 ];
