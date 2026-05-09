@@ -20,24 +20,24 @@ export class HomeComponent implements AfterViewInit {
     }
 
     // Splash screen
-    const splash = document.getElementById('splash-screen');
-    if (splash) {
-      setTimeout(() => {
-        splash.style.opacity = '0';
-        setTimeout(() => splash.classList.add('d-none'), 1000);
-      }, 500);
-    }
+const splash = document.getElementById('splash-screen');
+if (splash) {
+  setTimeout(() => {
+    splash.style.opacity = '0';
+    setTimeout(() => splash.classList.add('d-none'), 1000);
+  }, 100);
+}
 
     // Hero background carousel
     const heroSection = document.querySelector('.hero-section') as HTMLElement;
     const btnDiscover = document.getElementById('btn-discover');
     if (heroSection) {
-      const images = [
-        'assets/img/espacioDeTrabajo.png',
-        'assets/img/zonaTrabajo.png',
-        'assets/img/salaPrivada.png',
-        'assets/img/salaGaming.png'
-      ];
+const images = [
+  'img/espacioDeTrabajo.png',
+  'img/zonaTrabajo.png',
+  'img/salaPrivada.png',
+  'img/salaGaming.png'
+];
       let currentIndex = 0;
       images.forEach(src => { const img = new Image(); img.src = src; });
       setInterval(() => {
