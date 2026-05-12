@@ -44,7 +44,7 @@
   </nav>
 
   <!-- Cabecera de la Carta -->
-  <div class="container pt-3 pt-md-4 pb-0 pb-md-2">
+  <div id="carta-inicio" class="container pt-3 pt-md-4 pb-0 pb-md-2">
     <div class="position-relative d-flex align-items-center justify-content-center mb-3">
       <!-- Icono de lupa (Menu Switch) a la izquierda -->
       <button
@@ -73,17 +73,17 @@
             data-bs-dismiss="offcanvas">📋 Todas las secciones</a></li>
         <li class="nav-item"><a class="nav-link text-white ps-4 py-3" href="#cafes-calientes"
             data-bs-dismiss="offcanvas">☕ Cafés Calientes</a></li>
-        <li class="nav-item"><a class="nav-link text-white ps-4 py-3" href="#cafes-frios" data-bs-dismiss="offcanvas">❄️
+        <li class="nav-item"><a class="nav-link text-white ps-4 py-3" href="#cafes-frios" data-bs-dismiss="offcanvas" (click)="irASeccion('cafes-frios', $event)">❄️
             Cafés Fríos</a></li>
         <li class="nav-item"><a class="nav-link text-white ps-4 py-3" href="#tes-infusiones"
             data-bs-dismiss="offcanvas">🍵 Tés e Infusiones</a></li>
         <li class="nav-item"><a class="nav-link text-white ps-4 py-3" href="#bolleria-dulces"
             data-bs-dismiss="offcanvas">🥐 Bollería y Dulces</a></li>
-        <li class="nav-item"><a class="nav-link text-white ps-4 py-3" href="#salado" data-bs-dismiss="offcanvas">🥪
+        <li class="nav-item"><a class="nav-link text-white ps-4 py-3" href="#salado" data-bs-dismiss="offcanvas" (click)="irASeccion('salado', $event)">🥪
             Salado</a></li>
         <li class="nav-item"><a class="nav-link text-white ps-4 py-3" href="#opciones-especiales"
             data-bs-dismiss="offcanvas">🌱 Opciones Especiales</a></li>
-        <li class="nav-item"><a class="nav-link text-white ps-4 py-3" href="#especialidad" data-bs-dismiss="offcanvas">⭐
+        <li class="nav-item"><a class="nav-link text-white ps-4 py-3" href="#especialidad" data-bs-dismiss="offcanvas" (click)="irASeccion('especialidad', $event)">⭐
             Especialidad Java Espresso</a></li>
       </ul>
     </div>

@@ -13,6 +13,34 @@ declare const AOS: any;
 })
 export class HomeComponent implements AfterViewInit {
 
+  cerrarModalesBootstrap(): void {
+    document.querySelectorAll('.modal.show').forEach((modal) => modal.classList.remove('show'));
+    document.querySelectorAll('.modal-backdrop').forEach((backdrop) => backdrop.remove());
+    document.body.classList.remove('modal-open');
+    document.body.style.removeProperty('overflow');
+    document.body.style.removeProperty('padding-right');
+  }
+
+
+  scrollToServiciosDestacados(event?: Event): void {
+    if (event) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+
+    const section = document.getElementById('servicios-destacados');
+    if (!section) return;
+
+    const navbar = document.querySelector('nav, .navbar') as HTMLElement | null;
+    const navbarHeight = navbar ? navbar.offsetHeight : 0;
+    const top = section.getBoundingClientRect().top + window.scrollY - navbarHeight - 12;
+
+    window.scrollTo({
+      top: Math.max(top, 0),
+      behavior: 'smooth'
+    });
+  }
+
   ngAfterViewInit(): void {
     // AOS
     if (typeof AOS !== 'undefined') {
@@ -48,6 +76,7 @@ export class HomeComponent implements AfterViewInit {
       if (btnDiscover) {
         btnDiscover.addEventListener('mouseenter', () => heroSection.classList.add('hero-active'));
         btnDiscover.addEventListener('mouseleave', () => heroSection.classList.remove('hero-active'));
+        btnDiscover.addEventListener('click', (event) => this.scrollToServiciosDestacados(event));
       }
     }
 

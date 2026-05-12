@@ -76,7 +76,7 @@
             <p class="lead fs-5 text-light fw-normal mb-4 px-md-5" style="text-shadow: 1px 1px 5px rgba(0,0,0,0.6);"
               data-aos="fade-up" data-aos-delay="100">Café de especialidad y servicios premium para potenciar tu
               productividad y desarrollo.</p>
-            <a href="#productos" id="btn-discover"
+            <a href="javascript:void(0)" id="btn-discover" (click)="scrollToServiciosDestacados($event)"
               class="btn btn-warning btn-lg fw-bold px-4 px-md-5 py-3 rounded-pill shadow-lg transition-hover"
               style="transition: all 0.3s ease;">
               <i class="bi bi-arrow-down-circle me-2"></i>Nuestros servicios
@@ -87,7 +87,7 @@
     </div>
   </section>
 
-  <section class="py-4 py-md-5" id="productos">
+  <section class="py-4 py-md-5" id="servicios-destacados">
     <div class="container">
       <div class="text-center mb-3 mb-md-4">
         <h2 class="section-title d-inline-block fw-bold position-relative"

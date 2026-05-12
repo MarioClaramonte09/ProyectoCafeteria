@@ -51,4 +51,25 @@ export class CatalogoComponent implements AfterViewInit {
       });
     });
   }
+    irASeccion(idSeccion: string, event?: Event): void {
+        if (event) {
+            event.preventDefault();
+        }
+
+        // Esperamos un momento para que Bootstrap cierre el menú lateral de la lupa.
+        setTimeout(() => {
+            const seccion = document.getElementById(idSeccion);
+            if (!seccion) return;
+
+            const navbar = document.querySelector('app-navbar') as HTMLElement | null;
+            const offsetNavbar = navbar?.offsetHeight || 85;
+            const posicion = seccion.getBoundingClientRect().top + window.scrollY - offsetNavbar - 12;
+
+            window.scrollTo({
+                top: Math.max(posicion, 0),
+                behavior: 'smooth'
+            });
+        }, 250);
+    }
+
 }

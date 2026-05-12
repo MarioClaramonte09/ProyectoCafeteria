@@ -75,7 +75,7 @@
             <p class="lead fs-5 text-light fw-normal mb-4 px-md-5" style="text-shadow: 1px 1px 5px rgba(0,0,0,0.6);"
               data-aos="fade-up" data-aos-delay="100">Café de especialidad y servicios premium para potenciar tu
               productividad y desarrollo.</p>
-            <a href="#productos" id="btn-discover"
+            <a href="javascript:void(0)" id="btn-discover" (click)="scrollToServiciosDestacados($event)"
               class="btn btn-warning btn-lg fw-bold px-4 px-md-5 py-3 rounded-pill shadow-lg transition-hover"
               style="transition: all 0.3s ease;">
               <i class="bi bi-arrow-down-circle me-2"></i>Nuestros servicios
@@ -86,7 +86,7 @@
     </div>
   </section>
 
-  <section class="py-4 py-md-5" id="productos">
+  <section class="py-4 py-md-5" id="servicios-destacados">
     <div class="container">
       <div class="text-center mb-3 mb-md-4">
         <h2 class="section-title d-inline-block fw-bold position-relative"
@@ -297,6 +297,12 @@
             <hr>
             <p class="small" id="specDesc">Todos nuestros ordenadores incluyen sistemas de última generación
               con las mejores prestaciones para gaming profesional y trabajo intensivo.</p>
+
+            <div class="mt-4 text-center">
+              <a routerLink="/reservas" class="btn btn-warning fw-bold px-4 py-2" data-bs-dismiss="modal" (click)="cerrarModalesBootstrap()">
+                <i class="bi bi-calendar-check me-2"></i>Reservar Equipo Gaming
+              </a>
+            </div>
           </div>
         </div>
         <div class="modal-footer bg-light">
@@ -367,6 +373,12 @@
             <hr>
             <p class="text-dark small" id="specDescWork">Equipos diseñados para tareas de oficina y trabajo productivo.
             </p>
+
+            <div class="mt-4 text-center">
+              <a routerLink="/reservas" class="btn btn-dark fw-bold px-4 py-2" data-bs-dismiss="modal" (click)="cerrarModalesBootstrap()">
+                <i class="bi bi-calendar-check me-2"></i>Reservar Equipo de Trabajo
+              </a>
+            </div>
           </div>
         </div>
         <div class="modal-footer bg-light">
@@ -403,14 +415,14 @@
           style="color: var(--copper); transition: color 0.3s;"
           onmouseover="this.style.color='var(--blue-soft)'; this.style.textDecoration='underline'"
           onmouseout="this.style.color='var(--copper)'; this.style.textDecoration='none'">Inicio</a>
-        <a routerLink="/catalogo" class="text-decoration-none me-3 fw-bold"
-          style="color: var(--copper); transition: color 0.3s;"
-          onmouseover="this.style.color='var(--blue-soft)'; this.style.textDecoration='underline'"
-          onmouseout="this.style.color='var(--copper)'; this.style.textDecoration='none'">Carta</a>
         <a routerLink="/servicios" class="text-decoration-none me-3 fw-bold"
           style="color: var(--copper); transition: color 0.3s;"
           onmouseover="this.style.color='var(--blue-soft)'; this.style.textDecoration='underline'"
           onmouseout="this.style.color='var(--copper)'; this.style.textDecoration='none'">Servicios</a>
+        <a routerLink="/catalogo" class="text-decoration-none me-3 fw-bold"
+          style="color: var(--copper); transition: color 0.3s;"
+          onmouseover="this.style.color='var(--blue-soft)'; this.style.textDecoration='underline'"
+          onmouseout="this.style.color='var(--copper)'; this.style.textDecoration='none'">Carta</a>
         <a routerLink="/reservas" class="text-decoration-none me-3 fw-bold"
           style="color: var(--copper); transition: color 0.3s;"
           onmouseover="this.style.color='var(--blue-soft)'; this.style.textDecoration='underline'"

@@ -1,7 +1,7 @@
 <app-navbar />
 
 <!-- Cabecera de la Carta -->
-<div class="container pt-3 pt-md-4 pb-0 pb-md-2">
+<div id="carta-inicio" class="container pt-3 pt-md-4 pb-0 pb-md-2">
     <div class="position-relative d-flex align-items-center justify-content-center mb-3">
         <button
                 class="btn btn-lg position-absolute start-0 shadow-sm transition-hover rounded-circle d-flex align-items-center justify-content-center"
@@ -23,14 +23,14 @@
     </div>
     <div class="offcanvas-body p-0">
         <ul class="nav nav-pills flex-column w-100" id="menu-filtros">
-            <li class="nav-item"><a class="nav-link text-white ps-4 py-3 active" href="#" data-filter="all" data-bs-dismiss="offcanvas">📋 Todas las secciones</a></li>
-            <li class="nav-item"><a class="nav-link text-white ps-4 py-3" href="#cafes-calientes" data-bs-dismiss="offcanvas">☕ Cafés Calientes</a></li>
-            <li class="nav-item"><a class="nav-link text-white ps-4 py-3" href="#cafes-frios" data-bs-dismiss="offcanvas">❄️ Cafés Fríos</a></li>
-            <li class="nav-item"><a class="nav-link text-white ps-4 py-3" href="#tes-infusiones" data-bs-dismiss="offcanvas">🍵 Tés e Infusiones</a></li>
-            <li class="nav-item"><a class="nav-link text-white ps-4 py-3" href="#bolleria-dulces" data-bs-dismiss="offcanvas">🥐 Bollería y Dulces</a></li>
-            <li class="nav-item"><a class="nav-link text-white ps-4 py-3" href="#salado" data-bs-dismiss="offcanvas">🥪 Salado</a></li>
-            <li class="nav-item"><a class="nav-link text-white ps-4 py-3" href="#opciones-especiales" data-bs-dismiss="offcanvas">🌱 Opciones Especiales</a></li>
-            <li class="nav-item"><a class="nav-link text-white ps-4 py-3" href="#especialidad" data-bs-dismiss="offcanvas">⭐ Especialidad Java Espresso</a></li>
+            <li class="nav-item"><a class="nav-link text-white ps-4 py-3 active" href="#" data-filter="all" data-bs-dismiss="offcanvas" (click)="irASeccion('carta-inicio', $event)">📋 Todas las secciones</a></li>
+            <li class="nav-item"><a class="nav-link text-white ps-4 py-3" href="#cafes-calientes" data-bs-dismiss="offcanvas" (click)="irASeccion('cafes-calientes', $event)">☕ Cafés Calientes</a></li>
+            <li class="nav-item"><a class="nav-link text-white ps-4 py-3" href="#cafes-frios" data-bs-dismiss="offcanvas" (click)="irASeccion('cafes-frios', $event)">❄️ Cafés Fríos</a></li>
+            <li class="nav-item"><a class="nav-link text-white ps-4 py-3" href="#tes-infusiones" data-bs-dismiss="offcanvas" (click)="irASeccion('tes-infusiones', $event)">🍵 Tés e Infusiones</a></li>
+            <li class="nav-item"><a class="nav-link text-white ps-4 py-3" href="#bolleria-dulces" data-bs-dismiss="offcanvas" (click)="irASeccion('bolleria-dulces', $event)">🥐 Bollería y Dulces</a></li>
+            <li class="nav-item"><a class="nav-link text-white ps-4 py-3" href="#salado" data-bs-dismiss="offcanvas" (click)="irASeccion('salado', $event)">🥪 Salado</a></li>
+            <li class="nav-item"><a class="nav-link text-white ps-4 py-3" href="#opciones-especiales" data-bs-dismiss="offcanvas" (click)="irASeccion('opciones-especiales', $event)">🌱 Opciones Especiales</a></li>
+            <li class="nav-item"><a class="nav-link text-white ps-4 py-3" href="#especialidad" data-bs-dismiss="offcanvas" (click)="irASeccion('especialidad', $event)">⭐ Especialidad Java Espresso</a></li>
         </ul>
     </div>
 </div>
