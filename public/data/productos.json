@@ -1,0 +1,210 @@
+[
+  {
+    "id": 1,
+    "categoria": "cafes-calientes",
+    "nombre": "Espresso",
+    "descripcion": "Café intenso y aromático, base de todo buen código.",
+    "precio": 1.60,
+    "imagen": "https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=400"
+  },
+  {
+    "id": 2,
+    "categoria": "cafes-calientes",
+    "nombre": "Espresso Doble",
+    "descripcion": "Para largas sesiones de programación.",
+    "precio": 2.20,
+    "imagen": "https://images.unsplash.com/photo-1541167760496-1628856ab772?w=400"
+  },
+  {
+    "id": 3,
+    "categoria": "cafes-calientes",
+    "nombre": "Americano",
+    "descripcion": "Espresso con agua caliente.",
+    "precio": 1.80,
+    "imagen": "https://images.unsplash.com/photo-1551030173-122aabc4489c?w=400"
+  },
+  {
+    "id": 4,
+    "categoria": "cafes-calientes",
+    "nombre": "Café con Leche",
+    "descripcion": "Equilibrio perfecto entre café y leche.",
+    "precio": 2.00,
+    "imagen": "https://images.unsplash.com/photo-1561882468-9110e03e0f78?w=400"
+  },
+  {
+    "id": 5,
+    "categoria": "cafes-calientes",
+    "nombre": "Capuccino",
+    "descripcion": "Espresso, leche vaporizada y espuma.",
+    "precio": 2.30,
+    "imagen": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=400"
+  },
+  {
+    "id": 6,
+    "categoria": "cafes-calientes",
+    "nombre": "Latte",
+    "descripcion": "Suave, cremoso y reconfortante.",
+    "precio": 2.50,
+    "imagen": "https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?w=400"
+  },
+  {
+    "id": 7,
+    "categoria": "cafes-calientes",
+    "nombre": "Mocha",
+    "descripcion": "Café con chocolate y leche.",
+    "precio": 2.70,
+    "imagen": "https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?w=400"
+  },
+  {
+    "id": 8,
+    "categoria": "cafes-frios",
+    "nombre": "Iced Coffee",
+    "descripcion": "Café frío con hielo.",
+    "precio": 2.50,
+    "imagen": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400"
+  },
+  {
+    "id": 9,
+    "categoria": "cafes-frios",
+    "nombre": "Iced Latte",
+    "descripcion": "Latte frío, ideal para el verano.",
+    "precio": 2.80,
+    "imagen": "https://images.unsplash.com/photo-1517959105821-eaf2591984ca?w=400"
+  },
+  {
+    "id": 10,
+    "categoria": "cafes-frios",
+    "nombre": "Frappé de Café",
+    "descripcion": "Café batido con hielo y espuma.",
+    "precio": 3.20,
+    "imagen": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=400"
+  },
+  {
+    "id": 11,
+    "categoria": "tes-infusiones",
+    "nombre": "Té Verde",
+    "descripcion": "Suave y refrescante.",
+    "precio": 2.00,
+    "imagen": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400"
+  },
+  {
+    "id": 12,
+    "categoria": "tes-infusiones",
+    "nombre": "Té Negro",
+    "descripcion": "Intenso y reconfortante.",
+    "precio": 2.00,
+    "imagen": "https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?w=400"
+  },
+  {
+    "id": 13,
+    "categoria": "tes-infusiones",
+    "nombre": "Rooibos",
+    "descripcion": "Infusión sin teína, dulce y especiada.",
+    "precio": 2.20,
+    "imagen": "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?w=400"
+  },
+  {
+    "id": 14,
+    "categoria": "tes-infusiones",
+    "nombre": "Manzanilla / Menta Poleo",
+    "descripcion": "Relajante y digestiva.",
+    "precio": 1.80,
+    "imagen": "https://images.unsplash.com/photo-1587556930799-8dca6fad6d41?w=400"
+  },
+  {
+    "id": 15,
+    "categoria": "bolleria-dulces",
+    "nombre": "Croissant Clásico",
+    "descripcion": "Crujiente y mantecoso.",
+    "precio": 1.60,
+    "imagen": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=400"
+  },
+  {
+    "id": 16,
+    "categoria": "bolleria-dulces",
+    "nombre": "Croissant Relleno",
+    "descripcion": "Relleno de crema o chocolate.",
+    "precio": 2.20,
+    "imagen": "https://images.unsplash.com/photo-1509365465985-25d11c17e812?w=400"
+  },
+  {
+    "id": 17,
+    "categoria": "bolleria-dulces",
+    "nombre": "Napolitana de Chocolate",
+    "descripcion": "Hojaldre con chocolate.",
+    "precio": 2.00,
+    "imagen": "https://images.unsplash.com/photo-1530610476181-d83430b64dcd?w=400"
+  },
+  {
+    "id": 18,
+    "categoria": "bolleria-dulces",
+    "nombre": "Muffin",
+    "descripcion": "Chocolate o Arándanos.",
+    "precio": 2.50,
+    "imagen": "https://images.unsplash.com/photo-1607958996333-41aef7caefaa?w=400"
+  },
+  {
+    "id": 19,
+    "categoria": "bolleria-dulces",
+    "nombre": "Cookie Artesanal",
+    "descripcion": "Receta artesanal con pepitas de chocolate.",
+    "precio": 1.80,
+    "imagen": "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400"
+  },
+  {
+    "id": 20,
+    "categoria": "salado",
+    "nombre": "Tostada con Tomate y Aceite",
+    "descripcion": "Pan tostado con tomate fresco y aceite de oliva.",
+    "precio": 2.20,
+    "imagen": "https://images.unsplash.com/photo-1525351484163-7529414344d8?w=400"
+  },
+  {
+    "id": 21,
+    "categoria": "salado",
+    "nombre": "Tostada Mixta",
+    "descripcion": "Jamón y Queso.",
+    "precio": 2.80,
+    "imagen": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=400"
+  },
+  {
+    "id": 22,
+    "categoria": "salado",
+    "nombre": "Sandwich Vegetal",
+    "descripcion": "Fresco y saludable.",
+    "precio": 3.50,
+    "imagen": "https://images.unsplash.com/photo-1540713434306-58505cf1b6fc?w=400"
+  },
+  {
+    "id": 23,
+    "categoria": "salado",
+    "nombre": "Bocadillo Caliente",
+    "descripcion": "Recién hecho y crujiente.",
+    "precio": 3.80,
+    "imagen": "https://images.unsplash.com/photo-1509722747041-616f39b57569?w=400"
+  },
+  {
+    "id": 24,
+    "categoria": "opciones-especiales",
+    "nombre": "Leche Vegetal",
+    "descripcion": "Soja o Avena, para todos los cafés.",
+    "precio": 0.30,
+    "imagen": "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=400"
+  },
+  {
+    "id": 25,
+    "categoria": "especialidad",
+    "nombre": "Java Special Latte",
+    "descripcion": "Latte con sirope a elegir y topping especial.",
+    "precio": 3.50,
+    "imagen": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400"
+  },
+  {
+    "id": 26,
+    "categoria": "especialidad",
+    "nombre": "Café del Programador",
+    "descripcion": "Espresso doble con toque de vainilla.",
+    "precio": 3.80,
+    "imagen": "https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=400"
+  }
+]

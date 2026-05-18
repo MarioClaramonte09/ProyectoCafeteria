@@ -6,13 +6,15 @@ import { ReservasComponent } from './pages/reservas/reservas.component';
 import { CuponesComponent } from './pages/cupones/cupones.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { NotFoundComponent } from './pages/not-found/not-found';
+import { ProductoComponent } from './pages/producto/producto.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'catalogo', component: CatalogoComponent },
+    { path: 'catalogo/:id', component: ProductoComponent },
     { path: 'servicios', component: ServiciosComponent },
     { path: 'reservas', component: ReservasComponent },
     { path: 'cupones', component: CuponesComponent },
     { path: 'contacto', component: ContactoComponent },
-    { path: '**', component:  NotFoundComponent}
+    { path: '**', component: NotFoundComponent }
 ];

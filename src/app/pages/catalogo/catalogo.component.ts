@@ -3,7 +3,8 @@ import { RouterLink } from '@angular/router';
 import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { CommonModule } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
+import { ProductoService } from '../../producto.service';
+import { Producto } from '../../producto';
 
 declare const AOS: any;
 
@@ -11,13 +12,6 @@ interface ProductoCarrito {
     nombre: string;
     precio: number;
     cantidad: number;
-}
-
-interface Producto {
-    categoria: string;
-    nombre: string;
-    descripcion: string;
-    precio: number;
 }
 
 @Component({
@@ -32,8 +26,8 @@ export class CatalogoComponent implements AfterViewInit {
     carritoAbierto = false;
     productos: Producto[] = [];
 
-    constructor(private http: HttpClient) {
-        this.http.get<Producto[]>('assets/productos.json').subscribe(data => {
+    constructor(private productoService: ProductoService) {
+        this.productoService.getProductos().subscribe(data => {
             this.productos = data;
         });
     }

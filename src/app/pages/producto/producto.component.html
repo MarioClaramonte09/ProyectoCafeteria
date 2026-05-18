@@ -1,0 +1,32 @@
+<app-navbar />
+
+<div class="container py-5" *ngIf="producto; else cargando">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+            <div class="card shadow-lg" style="border: 2px solid #ffd863 !important;">
+                <img [src]="producto.imagen" class="card-img-top" alt="{{ producto.nombre }}" style="height: 350px; object-fit: cover;">
+                <div class="card-body p-4">
+                    <h2 class="card-title fw-bold mb-3">{{ producto.nombre }}</h2>
+                    <p class="card-text text-muted mb-3">{{ producto.descripcion }}</p>
+                    <p class="fs-3 fw-bold text-warning mb-4">{{ producto.precio.toFixed(2) }} €</p>
+                    <div class="d-flex gap-3">
+                        <button class="btn btn-warning flex-grow-1" (click)="agregarYVolver()">
+                            🛒 Agregar al carrito
+                        </button>
+                        <a [routerLink]="['/catalogo']" class="btn btn-outline-warning">
+                            ← Volver a la carta
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #cargando>
+    <div class="container py-5 text-center">
+        <p class="text-muted">Cargando producto...</p>
+    </div>
+</ng-template>
+
+<app-footer />
