@@ -4,15 +4,10 @@ import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { CommonModule } from '@angular/common';
 import { ProductoService } from '../../producto.service';
+import { CarritoService } from '../../carrito.service';
 import { Producto } from '../../producto';
 
 declare const AOS: any;
-
-interface ProductoCarrito {
-    nombre: string;
-    precio: number;
-    cantidad: number;
-}
 
 @Component({
     selector: 'app-catalogo',
@@ -22,11 +17,13 @@ interface ProductoCarrito {
 })
 export class CatalogoComponent implements AfterViewInit {
 
-    carrito: ProductoCarrito[] = [];
     carritoAbierto = false;
     productos: Producto[] = [];
 
-    constructor(private productoService: ProductoService) {
+    constructor(
+        private productoService: ProductoService,
+        private carritoService: CarritoService
+    ) {
         this.productoService.getProductos().subscribe(data => {
             this.productos = data;
         });
@@ -36,25 +33,24 @@ export class CatalogoComponent implements AfterViewInit {
         return this.productos.filter(p => p.categoria === categoria);
     }
 
+    get carrito() {
+        return this.carritoService.getCarrito();
+    }
+
     get total(): number {
-        return this.carrito.reduce((acc, p) => acc + p.precio * p.cantidad, 0);
+        return this.carritoService.getTotal();
     }
 
     get totalItems(): number {
-        return this.carrito.reduce((acc, p) => acc + p.cantidad, 0);
+        return this.carritoService.getTotalItems();
     }
 
     agregarAlCarrito(nombre: string, precio: number) {
-        const existente = this.carrito.find(p => p.nombre === nombre);
-        if (existente) {
-            existente.cantidad++;
-        } else {
-            this.carrito.push({ nombre, precio, cantidad: 1 });
-        }
+        this.carritoService.agregar(nombre, precio);
     }
 
     eliminarDelCarrito(nombre: string) {
-        this.carrito = this.carrito.filter(p => p.nombre !== nombre);
+        this.carritoService.eliminar(nombre);
     }
 
     toggleCarrito() {

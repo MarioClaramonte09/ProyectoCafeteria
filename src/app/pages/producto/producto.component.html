@@ -10,8 +10,8 @@
                     <p class="card-text text-muted mb-3">{{ producto.descripcion }}</p>
                     <p class="fs-3 fw-bold text-warning mb-4">{{ producto.precio.toFixed(2) }} €</p>
                     <div class="d-flex gap-3">
-                        <button class="btn btn-warning flex-grow-1" (click)="agregarYVolver()">
-                            🛒 Agregar al carrito
+                        <button class="btn btn-warning flex-grow-1" (click)="agregarYVolver()" [disabled]="agregado">
+                            {{ agregado ? '✅ Añadido al carrito' : '🛒 Agregar al carrito' }}
                         </button>
                         <a [routerLink]="['/catalogo']" class="btn btn-outline-warning">
                             ← Volver a la carta
