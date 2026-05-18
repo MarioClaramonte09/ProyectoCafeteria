@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 import { Producto } from './producto';
 
 @Injectable({
@@ -16,7 +16,9 @@ export class ProductoService {
     return this.http.get<Producto[]>(this.url);
   }
 
-  getProductoPorId(id: number): Observable<Producto[]> {
-    return this.http.get<Producto[]>(this.url);
+  getProductoPorId(id: number): Observable<Producto | undefined> {
+    return this.getProductos().pipe(
+      map(productos => productos.find(producto => producto.id === id))
+    );
   }
 }

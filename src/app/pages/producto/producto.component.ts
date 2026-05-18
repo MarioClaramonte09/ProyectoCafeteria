@@ -15,7 +15,8 @@ import { Producto } from '../../producto';
 })
 export class ProductoComponent implements OnInit {
 
-    producto: Producto | null = null;
+    producto: Producto | undefined;
+    cargando = true;
     agregado = false;
 
     constructor(
@@ -26,12 +27,13 @@ export class ProductoComponent implements OnInit {
 
     ngOnInit(): void {
         const id = Number(this.route.snapshot.paramMap.get('id'));
-        this.productoService.getProductos().subscribe(productos => {
-            this.producto = productos.find(p => p.id === id) || null;
+        this.productoService.getProductoPorId(id).subscribe(producto => {
+            this.producto = producto;
+            this.cargando = false;
         });
     }
 
-    agregarYVolver(): void {
+    agregarAlCarrito(): void {
         if (this.producto) {
             this.carritoService.agregar(this.producto.nombre, this.producto.precio);
             this.agregado = true;
