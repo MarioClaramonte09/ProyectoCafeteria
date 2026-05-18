@@ -41,84 +41,16 @@
     <section id="cafes-calientes" class="mb-4 mb-md-5 catalogo-section" data-aos="fade-up">
         <h3 class="mb-3 mb-md-4 pb-2 border-bottom border-warning fs-4 fw-bold">☕ Cafés Calientes</h3>
         <div class="row g-2 g-md-3">
-
-            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up">
+            <div class="col-12 col-md-6 col-lg-4" *ngFor="let producto of getProductosPorCategoria('cafes-calientes')" data-aos="fade-up">
                 <div class="card h-100 transition-hover" style="border: 2px solid #ffd863 !important; background: white;">
                     <div class="card-body p-3 d-flex flex-column">
-                        <h5 class="card-title fw-bold">Espresso</h5>
-                        <p class="card-text mb-2">Café intenso y aromático, base de todo buen código.</p>
-                        <p class="fs-5 fw-bold text-warning">1,60 €</p>
-                        <button class="btn btn-warning btn-sm w-100 mt-auto" (click)="agregarAlCarrito('Espresso', '1.60')">🛒 Añadir</button>
+                        <h5 class="card-title fw-bold">{{ producto.nombre }}</h5>
+                        <p class="card-text mb-2" *ngIf="producto.descripcion">{{ producto.descripcion }}</p>
+                        <p class="fs-5 fw-bold text-warning">{{ producto.precio.toFixed(2) }} €</p>
+                        <button class="btn btn-warning btn-sm w-100 mt-auto" (click)="agregarAlCarrito(producto.nombre, producto.precio)">🛒 Añadir</button>
                     </div>
                 </div>
             </div>
-
-            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up">
-                <div class="card h-100 transition-hover" style="border: 2px solid #ffd863 !important; background: white;">
-                    <div class="card-body p-3 d-flex flex-column">
-                        <h5 class="card-title fw-bold">Espresso Doble</h5>
-                        <p class="card-text mb-2">Para largas sesiones de programación.</p>
-                        <p class="fs-5 fw-bold text-warning">2,20 €</p>
-                        <button class="btn btn-warning btn-sm w-100 mt-auto" (click)="agregarAlCarrito('Espresso Doble', '2.20')">🛒 Añadir</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up">
-                <div class="card h-100 transition-hover" style="border: 2px solid #ffd863 !important; background: white;">
-                    <div class="card-body p-3 d-flex flex-column">
-                        <h5 class="card-title fw-bold">Americano</h5>
-                        <p class="card-text mb-2">Espresso con agua caliente.</p>
-                        <p class="fs-5 fw-bold text-warning">1,80 €</p>
-                        <button class="btn btn-warning btn-sm w-100 mt-auto" (click)="agregarAlCarrito('Americano', '1.80')">🛒 Añadir</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up">
-                <div class="card h-100 transition-hover" style="border: 2px solid #ffd863 !important; background: white;">
-                    <div class="card-body p-3 d-flex flex-column">
-                        <h5 class="card-title fw-bold">Café con Leche</h5>
-                        <p class="card-text mb-2">Equilibrio perfecto entre café y leche.</p>
-                        <p class="fs-5 fw-bold text-warning">2,00 €</p>
-                        <button class="btn btn-warning btn-sm w-100 mt-auto" (click)="agregarAlCarrito('Café con Leche', '2.00')">🛒 Añadir</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up">
-                <div class="card h-100 transition-hover" style="border: 2px solid #ffd863 !important; background: white;">
-                    <div class="card-body p-3 d-flex flex-column">
-                        <h5 class="card-title fw-bold">Capuccino</h5>
-                        <p class="card-text mb-2">Espresso, leche vaporizada y espuma.</p>
-                        <p class="fs-5 fw-bold text-warning">2,30 €</p>
-                        <button class="btn btn-warning btn-sm w-100 mt-auto" (click)="agregarAlCarrito('Capuccino', '2.30')">🛒 Añadir</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up">
-                <div class="card h-100 transition-hover" style="border: 2px solid #ffd863 !important; background: white;">
-                    <div class="card-body p-3 d-flex flex-column">
-                        <h5 class="card-title fw-bold">Latte</h5>
-                        <p class="card-text mb-2">Suave, cremoso y reconfortante.</p>
-                        <p class="fs-5 fw-bold text-warning">2,50 €</p>
-                        <button class="btn btn-warning btn-sm w-100 mt-auto" (click)="agregarAlCarrito('Latte', '2.50')">🛒 Añadir</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up">
-                <div class="card h-100 transition-hover" style="border: 2px solid #ffd863 !important; background: white;">
-                    <div class="card-body p-3 d-flex flex-column">
-                        <h5 class="card-title fw-bold">Mocha</h5>
-                        <p class="card-text mb-2">Café con chocolate y leche.</p>
-                        <p class="fs-5 fw-bold text-warning">2,70 €</p>
-                        <button class="btn btn-warning btn-sm w-100 mt-auto" (click)="agregarAlCarrito('Mocha', '2.70')">🛒 Añadir</button>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
 
@@ -126,40 +58,16 @@
     <section id="cafes-frios" class="mb-5 catalogo-section" data-aos="fade-up">
         <h3 class="mb-4 pb-2 border-bottom border-warning">❄️ Cafés Fríos</h3>
         <div class="row g-3">
-
-            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up">
+            <div class="col-12 col-md-6 col-lg-4" *ngFor="let producto of getProductosPorCategoria('cafes-frios')" data-aos="fade-up">
                 <div class="card h-100 transition-hover" style="border: 2px solid #ffd863 !important; background: white;">
                     <div class="card-body p-3 d-flex flex-column">
-                        <h5 class="card-title fw-bold">Iced Coffee</h5>
-                        <p class="card-text mb-2">Café frío con hielo.</p>
-                        <p class="fs-5 fw-bold text-warning">2,50 €</p>
-                        <button class="btn btn-warning btn-sm w-100 mt-auto" (click)="agregarAlCarrito('Iced Coffee', '2.50')">🛒 Añadir</button>
+                        <h5 class="card-title fw-bold">{{ producto.nombre }}</h5>
+                        <p class="card-text mb-2" *ngIf="producto.descripcion">{{ producto.descripcion }}</p>
+                        <p class="fs-5 fw-bold text-warning">{{ producto.precio.toFixed(2) }} €</p>
+                        <button class="btn btn-warning btn-sm w-100 mt-auto" (click)="agregarAlCarrito(producto.nombre, producto.precio)">🛒 Añadir</button>
                     </div>
                 </div>
             </div>
-
-            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up">
-                <div class="card h-100 transition-hover" style="border: 2px solid #ffd863 !important; background: white;">
-                    <div class="card-body p-3 d-flex flex-column">
-                        <h5 class="card-title fw-bold">Iced Latte</h5>
-                        <p class="card-text mb-2">Latte frío, ideal para el verano.</p>
-                        <p class="fs-5 fw-bold text-warning">2,80 €</p>
-                        <button class="btn btn-warning btn-sm w-100 mt-auto" (click)="agregarAlCarrito('Iced Latte', '2.80')">🛒 Añadir</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up">
-                <div class="card h-100 transition-hover" style="border: 2px solid #ffd863 !important; background: white;">
-                    <div class="card-body p-3 d-flex flex-column">
-                        <h5 class="card-title fw-bold">Frappé de Café</h5>
-                        <p class="card-text mb-2">Café batido con hielo y espuma.</p>
-                        <p class="fs-5 fw-bold text-warning">3,20 €</p>
-                        <button class="btn btn-warning btn-sm w-100 mt-auto" (click)="agregarAlCarrito('Frappé de Café', '3.20')">🛒 Añadir</button>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
 
@@ -167,47 +75,16 @@
     <section id="tes-infusiones" class="mb-5 catalogo-section" data-aos="fade-up">
         <h3 class="mb-4 pb-2 border-bottom border-warning">🍵 Tés e Infusiones</h3>
         <div class="row g-3">
-
-            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up">
+            <div class="col-12 col-md-6 col-lg-4" *ngFor="let producto of getProductosPorCategoria('tes-infusiones')" data-aos="fade-up">
                 <div class="card h-100 transition-hover" style="border: 2px solid #ffd863 !important; background: white;">
                     <div class="card-body p-3 d-flex flex-column">
-                        <h5 class="card-title fw-bold">Té Verde</h5>
-                        <p class="fs-5 fw-bold text-warning">2,00 €</p>
-                        <button class="btn btn-warning btn-sm w-100 mt-auto" (click)="agregarAlCarrito('Té Verde', '2.00')">🛒 Añadir</button>
+                        <h5 class="card-title fw-bold">{{ producto.nombre }}</h5>
+                        <p class="card-text mb-2" *ngIf="producto.descripcion">{{ producto.descripcion }}</p>
+                        <p class="fs-5 fw-bold text-warning">{{ producto.precio.toFixed(2) }} €</p>
+                        <button class="btn btn-warning btn-sm w-100 mt-auto" (click)="agregarAlCarrito(producto.nombre, producto.precio)">🛒 Añadir</button>
                     </div>
                 </div>
             </div>
-
-            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up">
-                <div class="card h-100 transition-hover" style="border: 2px solid #ffd863 !important; background: white;">
-                    <div class="card-body p-3 d-flex flex-column">
-                        <h5 class="card-title fw-bold">Té Negro</h5>
-                        <p class="fs-5 fw-bold text-warning">2,00 €</p>
-                        <button class="btn btn-warning btn-sm w-100 mt-auto" (click)="agregarAlCarrito('Té Negro', '2.00')">🛒 Añadir</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up">
-                <div class="card h-100 transition-hover" style="border: 2px solid #ffd863 !important; background: white;">
-                    <div class="card-body p-3 d-flex flex-column">
-                        <h5 class="card-title fw-bold">Rooibos</h5>
-                        <p class="fs-5 fw-bold text-warning">2,20 €</p>
-                        <button class="btn btn-warning btn-sm w-100 mt-auto" (click)="agregarAlCarrito('Rooibos', '2.20')">🛒 Añadir</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up">
-                <div class="card h-100 transition-hover" style="border: 2px solid #ffd863 !important; background: white;">
-                    <div class="card-body p-3 d-flex flex-column">
-                        <h5 class="card-title fw-bold">Manzanilla / Menta Poleo</h5>
-                        <p class="fs-5 fw-bold text-warning">1,80 €</p>
-                        <button class="btn btn-warning btn-sm w-100 mt-auto" (click)="agregarAlCarrito('Manzanilla / Menta Poleo', '1.80')">🛒 Añadir</button>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
 
@@ -215,58 +92,16 @@
     <section id="bolleria-dulces" class="mb-5 catalogo-section" data-aos="fade-up">
         <h3 class="mb-4 pb-2 border-bottom border-warning">🥐 Bollería y Dulces</h3>
         <div class="row g-3">
-
-            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up">
+            <div class="col-12 col-md-6 col-lg-4" *ngFor="let producto of getProductosPorCategoria('bolleria-dulces')" data-aos="fade-up">
                 <div class="card h-100 transition-hover" style="border: 2px solid #ffd863 !important; background: white;">
                     <div class="card-body p-3 d-flex flex-column">
-                        <h5 class="card-title fw-bold">Croissant Clásico</h5>
-                        <p class="fs-5 fw-bold text-warning">1,60 €</p>
-                        <button class="btn btn-warning btn-sm w-100 mt-auto" (click)="agregarAlCarrito('Croissant Clásico', '1.60')">🛒 Añadir</button>
+                        <h5 class="card-title fw-bold">{{ producto.nombre }}</h5>
+                        <p class="card-text mb-2" *ngIf="producto.descripcion">{{ producto.descripcion }}</p>
+                        <p class="fs-5 fw-bold text-warning">{{ producto.precio.toFixed(2) }} €</p>
+                        <button class="btn btn-warning btn-sm w-100 mt-auto" (click)="agregarAlCarrito(producto.nombre, producto.precio)">🛒 Añadir</button>
                     </div>
                 </div>
             </div>
-
-            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up">
-                <div class="card h-100 transition-hover" style="border: 2px solid #ffd863 !important; background: white;">
-                    <div class="card-body p-3 d-flex flex-column">
-                        <h5 class="card-title fw-bold">Croissant Relleno</h5>
-                        <p class="fs-5 fw-bold text-warning">2,20 €</p>
-                        <button class="btn btn-warning btn-sm w-100 mt-auto" (click)="agregarAlCarrito('Croissant Relleno', '2.20')">🛒 Añadir</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up">
-                <div class="card h-100 transition-hover" style="border: 2px solid #ffd863 !important; background: white;">
-                    <div class="card-body p-3 d-flex flex-column">
-                        <h5 class="card-title fw-bold">Napolitana de Chocolate</h5>
-                        <p class="fs-5 fw-bold text-warning">2,00 €</p>
-                        <button class="btn btn-warning btn-sm w-100 mt-auto" (click)="agregarAlCarrito('Napolitana de Chocolate', '2.00')">🛒 Añadir</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up">
-                <div class="card h-100 transition-hover" style="border: 2px solid #ffd863 !important; background: white;">
-                    <div class="card-body p-3 d-flex flex-column">
-                        <h5 class="card-title fw-bold">Muffin</h5>
-                        <p class="card-text mb-2">(Chocolate o Arándanos)</p>
-                        <p class="fs-5 fw-bold text-warning">2,50 €</p>
-                        <button class="btn btn-warning btn-sm w-100 mt-auto" (click)="agregarAlCarrito('Muffin', '2.50')">🛒 Añadir</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up">
-                <div class="card h-100 transition-hover" style="border: 2px solid #ffd863 !important; background: white;">
-                    <div class="card-body p-3 d-flex flex-column">
-                        <h5 class="card-title fw-bold">Cookie Artesanal</h5>
-                        <p class="fs-5 fw-bold text-warning">1,80 €</p>
-                        <button class="btn btn-warning btn-sm w-100 mt-auto" (click)="agregarAlCarrito('Cookie Artesanal', '1.80')">🛒 Añadir</button>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
 
@@ -274,48 +109,16 @@
     <section id="salado" class="mb-5 catalogo-section" data-aos="fade-up">
         <h3 class="mb-4 pb-2 border-bottom border-warning">🥪 Salado</h3>
         <div class="row g-3">
-
-            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up">
+            <div class="col-12 col-md-6 col-lg-4" *ngFor="let producto of getProductosPorCategoria('salado')" data-aos="fade-up">
                 <div class="card h-100 transition-hover" style="border: 2px solid #ffd863 !important; background: white;">
                     <div class="card-body p-3 d-flex flex-column">
-                        <h5 class="card-title fw-bold">Tostada con Tomate y Aceite</h5>
-                        <p class="fs-5 fw-bold text-warning">2,20 €</p>
-                        <button class="btn btn-warning btn-sm w-100 mt-auto" (click)="agregarAlCarrito('Tostada con Tomate y Aceite', '2.20')">🛒 Añadir</button>
+                        <h5 class="card-title fw-bold">{{ producto.nombre }}</h5>
+                        <p class="card-text mb-2" *ngIf="producto.descripcion">{{ producto.descripcion }}</p>
+                        <p class="fs-5 fw-bold text-warning">{{ producto.precio.toFixed(2) }} €</p>
+                        <button class="btn btn-warning btn-sm w-100 mt-auto" (click)="agregarAlCarrito(producto.nombre, producto.precio)">🛒 Añadir</button>
                     </div>
                 </div>
             </div>
-
-            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up">
-                <div class="card h-100 transition-hover" style="border: 2px solid #ffd863 !important; background: white;">
-                    <div class="card-body p-3 d-flex flex-column">
-                        <h5 class="card-title fw-bold">Tostada Mixta</h5>
-                        <p class="card-text mb-2">(Jamón y Queso)</p>
-                        <p class="fs-5 fw-bold text-warning">2,80 €</p>
-                        <button class="btn btn-warning btn-sm w-100 mt-auto" (click)="agregarAlCarrito('Tostada Mixta', '2.80')">🛒 Añadir</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up">
-                <div class="card h-100 transition-hover" style="border: 2px solid #ffd863 !important; background: white;">
-                    <div class="card-body p-3 d-flex flex-column">
-                        <h5 class="card-title fw-bold">Sandwich Vegetal</h5>
-                        <p class="fs-5 fw-bold text-warning">3,50 €</p>
-                        <button class="btn btn-warning btn-sm w-100 mt-auto" (click)="agregarAlCarrito('Sandwich Vegetal', '3.50')">🛒 Añadir</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up">
-                <div class="card h-100 transition-hover" style="border: 2px solid #ffd863 !important; background: white;">
-                    <div class="card-body p-3 d-flex flex-column">
-                        <h5 class="card-title fw-bold">Bocadillo Caliente</h5>
-                        <p class="fs-5 fw-bold text-warning">3,80 €</p>
-                        <button class="btn btn-warning btn-sm w-100 mt-auto" (click)="agregarAlCarrito('Bocadillo Caliente', '3.80')">🛒 Añadir</button>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
 
@@ -323,36 +126,16 @@
     <section id="opciones-especiales" class="mb-5 catalogo-section" data-aos="fade-up">
         <h3 class="mb-4 pb-2 border-bottom border-warning">🌱 Opciones Especiales</h3>
         <div class="row g-3">
-
-            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up">
+            <div class="col-12 col-md-6 col-lg-4" *ngFor="let producto of getProductosPorCategoria('opciones-especiales')" data-aos="fade-up">
                 <div class="card h-100 transition-hover" style="border: 2px solid #ffd863 !important; background: white;">
                     <div class="card-body p-3 d-flex flex-column">
-                        <h5 class="card-title fw-bold">Leche Vegetal</h5>
-                        <p class="card-text mb-2">(Soja, Avena)</p>
-                        <p class="fs-5 fw-bold text-warning">+0,30 €</p>
-                        <button class="btn btn-warning btn-sm w-100 mt-auto" (click)="agregarAlCarrito('Leche Vegetal', '0.30')">🛒 Añadir</button>
+                        <h5 class="card-title fw-bold">{{ producto.nombre }}</h5>
+                        <p class="card-text mb-2" *ngIf="producto.descripcion">{{ producto.descripcion }}</p>
+                        <p class="fs-5 fw-bold text-warning">+{{ producto.precio.toFixed(2) }} €</p>
+                        <button class="btn btn-warning btn-sm w-100 mt-auto" (click)="agregarAlCarrito(producto.nombre, producto.precio)">🛒 Añadir</button>
                     </div>
                 </div>
             </div>
-
-            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up">
-                <div class="card h-100 transition-hover" style="border: 2px solid #ffd863 !important; background: white;">
-                    <div class="card-body p-3 d-flex flex-column">
-                        <h5 class="card-title fw-bold">Opciones Sin Lactosa</h5>
-                        <p class="text-muted">Disponibles en todos nuestros productos</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up">
-                <div class="card h-100 transition-hover" style="border: 2px solid #ffd863 !important; background: white;">
-                    <div class="card-body p-3 d-flex flex-column">
-                        <h5 class="card-title fw-bold">Bollería Vegana</h5>
-                        <p class="text-muted">Según disponibilidad</p>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
 
@@ -360,54 +143,19 @@
     <section id="especialidad" class="mb-5 catalogo-section" data-aos="fade-up">
         <h3 class="mb-4 pb-2 border-bottom border-warning">⭐ Especialidad Java Espresso</h3>
         <div class="row g-3">
-
-            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up">
+            <div class="col-12 col-md-6 col-lg-4" *ngFor="let producto of getProductosPorCategoria('especialidad')" data-aos="fade-up">
                 <div class="card h-100 transition-hover border-warning bg-light">
                     <div class="card-body p-3 d-flex flex-column">
-                        <h5 class="card-title fw-bold">Java Special Latte</h5>
-                        <p class="card-text mb-2">Latte con sirope a elegir y topping especial.</p>
-                        <p class="fs-5 fw-bold text-warning">3,50 €</p>
-                        <button class="btn btn-warning btn-sm w-100 mt-auto" (click)="agregarAlCarrito('Java Special Latte', '3.50')">🛒 Añadir</button>
+                        <h5 class="card-title fw-bold">{{ producto.nombre }}</h5>
+                        <p class="card-text mb-2" *ngIf="producto.descripcion">{{ producto.descripcion }}</p>
+                        <p class="fs-5 fw-bold text-warning">{{ producto.precio.toFixed(2) }} €</p>
+                        <button class="btn btn-warning btn-sm w-100 mt-auto" (click)="agregarAlCarrito(producto.nombre, producto.precio)">🛒 Añadir</button>
                     </div>
                 </div>
             </div>
-
-            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up">
-                <div class="card h-100 transition-hover border-warning bg-light">
-                    <div class="card-body p-3 d-flex flex-column">
-                        <h5 class="card-title fw-bold">Café del Programador</h5>
-                        <p class="card-text mb-2">Espresso doble + toque de vainilla.</p>
-                        <p class="fs-5 fw-bold text-warning">3,80 €</p>
-                        <button class="btn btn-warning btn-sm w-100 mt-auto" (click)="agregarAlCarrito('Café del Programador', '3.80')">🛒 Añadir</button>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
 
-</div>
-
-<!-- Modal para productos -->
-<div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content" style="border: 1px solid var(--copper) !important;">
-            <div class="modal-header bg-dark" style="border-bottom: 2px solid var(--copper) !important;">
-                <h5 class="modal-title fw-bold" style="color: var(--copper) !important; font-size: 1.5rem;">Producto</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-            </div>
-            <div class="modal-body text-center">
-                <img id="productImage" src="" alt="Producto"
-                     style="max-width: 100%; max-height: 400px; object-fit: cover; margin-bottom: 20px; border-radius: 8px;">
-                <h4 id="productName" class="fw-bold mb-3"></h4>
-                <p id="productDescription" class="text-muted mb-3"></p>
-                <p id="productPrice" class="fs-5 fw-bold text-warning"></p>
-            </div>
-            <div class="modal-footer bg-light">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-            </div>
-        </div>
-    </div>
 </div>
 
 <!-- Carrito flotante -->
@@ -418,8 +166,8 @@
         🛒
         <span *ngIf="totalItems > 0"
               class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-      {{ totalItems }}
-    </span>
+            {{ totalItems }}
+        </span>
     </button>
 </div>
 

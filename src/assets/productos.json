@@ -1,0 +1,158 @@
+[
+  {
+    "categoria": "cafes-calientes",
+    "nombre": "Espresso",
+    "descripcion": "Café intenso y aromático, base de todo buen código.",
+    "precio": 1.60
+  },
+  {
+    "categoria": "cafes-calientes",
+    "nombre": "Espresso Doble",
+    "descripcion": "Para largas sesiones de programación.",
+    "precio": 2.20
+  },
+  {
+    "categoria": "cafes-calientes",
+    "nombre": "Americano",
+    "descripcion": "Espresso con agua caliente.",
+    "precio": 1.80
+  },
+  {
+    "categoria": "cafes-calientes",
+    "nombre": "Café con Leche",
+    "descripcion": "Equilibrio perfecto entre café y leche.",
+    "precio": 2.00
+  },
+  {
+    "categoria": "cafes-calientes",
+    "nombre": "Capuccino",
+    "descripcion": "Espresso, leche vaporizada y espuma.",
+    "precio": 2.30
+  },
+  {
+    "categoria": "cafes-calientes",
+    "nombre": "Latte",
+    "descripcion": "Suave, cremoso y reconfortante.",
+    "precio": 2.50
+  },
+  {
+    "categoria": "cafes-calientes",
+    "nombre": "Mocha",
+    "descripcion": "Café con chocolate y leche.",
+    "precio": 2.70
+  },
+  {
+    "categoria": "cafes-frios",
+    "nombre": "Iced Coffee",
+    "descripcion": "Café frío con hielo.",
+    "precio": 2.50
+  },
+  {
+    "categoria": "cafes-frios",
+    "nombre": "Iced Latte",
+    "descripcion": "Latte frío, ideal para el verano.",
+    "precio": 2.80
+  },
+  {
+    "categoria": "cafes-frios",
+    "nombre": "Frappé de Café",
+    "descripcion": "Café batido con hielo y espuma.",
+    "precio": 3.20
+  },
+  {
+    "categoria": "tes-infusiones",
+    "nombre": "Té Verde",
+    "descripcion": "",
+    "precio": 2.00
+  },
+  {
+    "categoria": "tes-infusiones",
+    "nombre": "Té Negro",
+    "descripcion": "",
+    "precio": 2.00
+  },
+  {
+    "categoria": "tes-infusiones",
+    "nombre": "Rooibos",
+    "descripcion": "",
+    "precio": 2.20
+  },
+  {
+    "categoria": "tes-infusiones",
+    "nombre": "Manzanilla / Menta Poleo",
+    "descripcion": "",
+    "precio": 1.80
+  },
+  {
+    "categoria": "bolleria-dulces",
+    "nombre": "Croissant Clásico",
+    "descripcion": "",
+    "precio": 1.60
+  },
+  {
+    "categoria": "bolleria-dulces",
+    "nombre": "Croissant Relleno",
+    "descripcion": "",
+    "precio": 2.20
+  },
+  {
+    "categoria": "bolleria-dulces",
+    "nombre": "Napolitana de Chocolate",
+    "descripcion": "",
+    "precio": 2.00
+  },
+  {
+    "categoria": "bolleria-dulces",
+    "nombre": "Muffin",
+    "descripcion": "Chocolate o Arándanos",
+    "precio": 2.50
+  },
+  {
+    "categoria": "bolleria-dulces",
+    "nombre": "Cookie Artesanal",
+    "descripcion": "",
+    "precio": 1.80
+  },
+  {
+    "categoria": "salado",
+    "nombre": "Tostada con Tomate y Aceite",
+    "descripcion": "",
+    "precio": 2.20
+  },
+  {
+    "categoria": "salado",
+    "nombre": "Tostada Mixta",
+    "descripcion": "Jamón y Queso",
+    "precio": 2.80
+  },
+  {
+    "categoria": "salado",
+    "nombre": "Sandwich Vegetal",
+    "descripcion": "",
+    "precio": 3.50
+  },
+  {
+    "categoria": "salado",
+    "nombre": "Bocadillo Caliente",
+    "descripcion": "",
+    "precio": 3.80
+  },
+  {
+    "categoria": "opciones-especiales",
+    "nombre": "Leche Vegetal",
+    "descripcion": "Soja, Avena",
+    "precio": 0.30
+  },
+  {
+    "categoria": "especialidad",
+    "nombre": "Java Special Latte",
+    "descripcion": "Latte con sirope a elegir y topping especial.",
+    "precio": 3.50
+  },
+  {
+    "categoria": "especialidad",
+    "nombre": "Café del Programador",
+    "descripcion": "Espresso doble + toque de vainilla.",
+    "precio": 3.80
+  }
+]

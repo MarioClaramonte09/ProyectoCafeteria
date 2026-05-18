@@ -3,6 +3,7 @@ import { RouterLink } from '@angular/router';
 import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { CommonModule } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 
 declare const AOS: any;
 
@@ -10,6 +11,13 @@ interface ProductoCarrito {
     nombre: string;
     precio: number;
     cantidad: number;
+}
+
+interface Producto {
+    categoria: string;
+    nombre: string;
+    descripcion: string;
+    precio: number;
 }
 
 @Component({
@@ -22,6 +30,17 @@ export class CatalogoComponent implements AfterViewInit {
 
     carrito: ProductoCarrito[] = [];
     carritoAbierto = false;
+    productos: Producto[] = [];
+
+    constructor(private http: HttpClient) {
+        this.http.get<Producto[]>('assets/productos.json').subscribe(data => {
+            this.productos = data;
+        });
+    }
+
+    getProductosPorCategoria(categoria: string): Producto[] {
+        return this.productos.filter(p => p.categoria === categoria);
+    }
 
     get total(): number {
         return this.carrito.reduce((acc, p) => acc + p.precio * p.cantidad, 0);
@@ -31,9 +50,7 @@ export class CatalogoComponent implements AfterViewInit {
         return this.carrito.reduce((acc, p) => acc + p.cantidad, 0);
     }
 
-    agregarAlCarrito(nombre: string, precioStr: string) {
-        const precio = parseFloat(precioStr.replace(',', '.').replace('€', '').replace('+', '').trim());
-        if (isNaN(precio)) return;
+    agregarAlCarrito(nombre: string, precio: number) {
         const existente = this.carrito.find(p => p.nombre === nombre);
         if (existente) {
             existente.cantidad++;
@@ -67,25 +84,16 @@ export class CatalogoComponent implements AfterViewInit {
             });
         });
     }
-    irASeccion(idSeccion: string, event?: Event): void {
-        if (event) {
-            event.preventDefault();
-        }
 
-        // Esperamos un momento para que Bootstrap cierre el menú lateral de la lupa.
+    irASeccion(idSeccion: string, event?: Event): void {
+        if (event) event.preventDefault();
         setTimeout(() => {
             const seccion = document.getElementById(idSeccion);
             if (!seccion) return;
-
             const navbar = document.querySelector('app-navbar') as HTMLElement | null;
             const offsetNavbar = navbar?.offsetHeight || 85;
             const posicion = seccion.getBoundingClientRect().top + window.scrollY - offsetNavbar - 12;
-
-            window.scrollTo({
-                top: Math.max(posicion, 0),
-                behavior: 'smooth'
-            });
+            window.scrollTo({ top: Math.max(posicion, 0), behavior: 'smooth' });
         }, 250);
     }
-
 }
