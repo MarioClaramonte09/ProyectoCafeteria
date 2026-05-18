@@ -44,6 +44,17 @@
             <a class="nav-link fs-5 fw-semibold text-white" routerLink="/contacto"
               style="transition: all 0.3s ease;">Contacto</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link fs-5 fw-semibold text-white" routerLink="/about-us"
+              style="transition: all 0.3s ease;">AboutUs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-5 fw-semibold text-white" routerLink="/pago"
+              style="transition: all 0.3s ease;">Pago</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-warning fw-bold ms-lg-2" routerLink="/auth/login">Login</a>
+          </li>
 
         </ul>
       </div>
@@ -388,6 +399,29 @@
     </div>
   </div>
 
+
+  <!-- Productos destacados dinámicos desde JSON -->
+  <section class="container py-5" id="productos-destacados">
+    <div class="text-center mb-4">
+      <span class="badge text-bg-warning mb-2">Contenido dinámico</span>
+      <h2 class="fw-bold">Productos destacados</h2>
+      <p class="text-muted">Estos productos se cargan desde el archivo JSON mediante el servicio Angular.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-12 col-md-6 col-lg-4" *ngFor="let producto of productosDestacados">
+        <div class="card h-100 shadow border-warning">
+          <img [src]="producto.imagen" class="card-img-top" [alt]="producto.nombre" style="height: 220px; object-fit: cover;">
+          <div class="card-body d-flex flex-column p-4">
+            <h3 class="h5 fw-bold">{{ producto.nombre }}</h3>
+            <p class="text-muted">{{ producto.descripcion }}</p>
+            <p class="fs-4 fw-bold text-warning mt-auto">{{ producto.precio.toFixed(2) }} €</p>
+            <a [routerLink]="['/catalogo', producto.id]" class="btn btn-warning fw-bold">Ver detalles</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Notificación de Descuento para Estudiantes -->
   <div class="position-fixed bottom-0 end-0 m-3 z-3" style="max-width: 300px;">
     <div class="alert alert-warning alert-dismissible fade show shadow-lg border-2 border-dark" role="alert">
@@ -431,10 +465,13 @@
           style="color: var(--copper); transition: color 0.3s;"
           onmouseover="this.style.color='var(--blue-soft)'; this.style.textDecoration='underline'"
           onmouseout="this.style.color='var(--copper)'; this.style.textDecoration='none'">Cupones</a>
-        <a routerLink="/contacto" class="text-decoration-none fw-bold"
+        <a routerLink="/contacto" class="text-decoration-none me-3 fw-bold"
           style="color: var(--copper); transition: color 0.3s;"
           onmouseover="this.style.color='var(--blue-soft)'; this.style.textDecoration='underline'"
           onmouseout="this.style.color='var(--copper)'; this.style.textDecoration='none'">Contacto</a>
+        <a routerLink="/about-us" class="text-decoration-none me-3 fw-bold" style="color: var(--copper);">AboutUs</a>
+        <a routerLink="/pago" class="text-decoration-none me-3 fw-bold" style="color: var(--copper);">Pago</a>
+        <a routerLink="/auth/login" class="text-decoration-none fw-bold" style="color: var(--copper);">Login</a>
       </div>
     </div>
   </footer>

@@ -1,0 +1,87 @@
+<app-navbar />
+
+<div class="container py-5">
+  <div class="text-center mb-5">
+    <h1 class="fw-bold">Finalizar compra</h1>
+    <p class="text-muted">Completa los datos de envío y selecciona un método de pago.</p>
+  </div>
+
+  <div class="row g-4">
+    <div class="col-12 col-lg-7">
+      <form (ngSubmit)="confirmarPago()" #pagoForm="ngForm" class="card shadow border-warning">
+        <div class="card-body p-4">
+          <h2 class="h4 fw-bold mb-3">Datos de envío</h2>
+          <div class="row g-3">
+            <div class="col-md-6"><label class="form-label">Nombre</label><input class="form-control" name="nombre" [(ngModel)]="envio.nombre" required></div>
+            <div class="col-md-6"><label class="form-label">Apellidos</label><input class="form-control" name="apellidos" [(ngModel)]="envio.apellidos" required></div>
+            <div class="col-md-6"><label class="form-label">Email</label><input type="email" class="form-control" name="email" [(ngModel)]="envio.email" required></div>
+            <div class="col-md-6"><label class="form-label">Teléfono</label><input class="form-control" name="telefono" [(ngModel)]="envio.telefono" required></div>
+            <div class="col-12"><label class="form-label">Dirección</label><input class="form-control" name="direccion" [(ngModel)]="envio.direccion" required></div>
+            <div class="col-md-8"><label class="form-label">Ciudad</label><input class="form-control" name="ciudad" [(ngModel)]="envio.ciudad" required></div>
+            <div class="col-md-4"><label class="form-label">Código postal</label><input class="form-control" name="codigoPostal" [(ngModel)]="envio.codigoPostal" required></div>
+          </div>
+
+          <hr class="my-4">
+          <h2 class="h4 fw-bold mb-3">Formulario de pago</h2>
+          <div class="row g-3">
+            <div class="col-12">
+              <label class="form-label">Método de pago</label>
+              <select class="form-select" name="metodoPago" [(ngModel)]="metodoPago">
+                <option value="tarjeta">Tarjeta bancaria</option>
+                <option value="paypal">PayPal</option>
+                <option value="bizum">Bizum</option>
+                <option value="tienda">Pago en tienda</option>
+              </select>
+            </div>
+
+            <ng-container *ngIf="metodoPago === 'tarjeta'">
+              <div class="col-12"><label class="form-label">Titular de la tarjeta</label><input class="form-control" name="titular" [(ngModel)]="pago.titular"></div>
+              <div class="col-12"><label class="form-label">Número de tarjeta</label><input class="form-control" name="numeroTarjeta" [(ngModel)]="pago.numeroTarjeta" placeholder="0000 0000 0000 0000"></div>
+              <div class="col-md-6"><label class="form-label">Caducidad</label><input class="form-control" name="caducidad" [(ngModel)]="pago.caducidad" placeholder="MM/AA"></div>
+              <div class="col-md-6"><label class="form-label">CVV</label><input class="form-control" name="cvv" [(ngModel)]="pago.cvv" placeholder="123"></div>
+            </ng-container>
+
+            <div class="col-12" *ngIf="metodoPago === 'paypal'">
+              <label class="form-label">Email de PayPal</label><input type="email" class="form-control" name="paypalEmail" [(ngModel)]="pago.paypalEmail">
+            </div>
+            <div class="col-12" *ngIf="metodoPago === 'bizum'">
+              <label class="form-label">Teléfono Bizum</label><input class="form-control" name="bizumTelefono" [(ngModel)]="pago.bizumTelefono">
+            </div>
+            <div class="col-12" *ngIf="metodoPago === 'tienda'">
+              <div class="alert alert-info mb-0">Podrás pagar el pedido directamente al recogerlo en Java Espresso.</div>
+            </div>
+          </div>
+
+          <div class="d-grid d-md-flex gap-2 mt-4">
+            <button class="btn btn-warning btn-lg fw-bold" type="submit" [disabled]="pagoForm.invalid">Confirmar pedido</button>
+            <a routerLink="/catalogo" class="btn btn-outline-warning btn-lg">Volver al catálogo</a>
+          </div>
+
+          <div *ngIf="mensaje" class="alert alert-success mt-3 mb-0">{{ mensaje }}</div>
+        </div>
+      </form>
+    </div>
+
+    <div class="col-12 col-lg-5">
+      <div class="card shadow h-100">
+        <img src="img/carruselCafeteria.png" class="card-img-top" alt="Pedido Java Espresso" style="height: 220px; object-fit: cover;">
+        <div class="card-body p-4">
+          <h2 class="h4 fw-bold mb-3">Resumen del pedido</h2>
+          <div *ngIf="carrito.length === 0" class="alert alert-warning">Tu carrito está vacío. Puedes hacer una compra de prueba o volver al catálogo.</div>
+          <ul class="list-group mb-3" *ngIf="carrito.length > 0">
+            <li class="list-group-item d-flex justify-content-between" *ngFor="let item of carrito">
+              <span>{{ item.nombre }} x{{ item.cantidad }}</span>
+              <strong>{{ (item.precio * item.cantidad).toFixed(2) }} €</strong>
+            </li>
+          </ul>
+          <div class="d-flex justify-content-between fs-4 fw-bold border-top pt-3">
+            <span>Total</span>
+            <span class="text-warning">{{ total.toFixed(2) }} €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer />

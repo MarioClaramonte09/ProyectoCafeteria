@@ -1,0 +1,48 @@
+<app-navbar />
+
+<section class="container py-5">
+  <div class="row align-items-center g-4">
+    <div class="col-12 col-lg-6">
+      <img src="img/LogoCafeteria.png" class="img-fluid rounded shadow" alt="Java Espresso empresa">
+    </div>
+    <div class="col-12 col-lg-6">
+      <span class="badge text-bg-warning mb-3">Sobre nosotros</span>
+      <h1 class="fw-bold mb-3">Java Espresso</h1>
+      <p class="lead">Somos una cafetería moderna que combina café de especialidad, espacios de trabajo, salas privadas y zona gaming.</p>
+      <p class="text-muted">Nuestro objetivo es ofrecer un lugar cómodo para estudiar, trabajar, reunirse o disfrutar de productos de calidad. La página permite consultar el catálogo dinámico, ver productos concretos, reservar servicios y contactar con el equipo.</p>
+      <div class="d-flex flex-column flex-sm-row gap-3 mt-4">
+        <a routerLink="/catalogo" class="btn btn-warning btn-lg">Ver carta</a>
+        <a routerLink="/contacto" class="btn btn-outline-warning btn-lg">Contactar</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="row g-4 mt-5">
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm border-warning">
+        <div class="card-body text-center p-4">
+          <h2 class="h5 fw-bold">☕ Café de calidad</h2>
+          <p class="text-muted mb-0">Productos seleccionados y carta dinámica cargada desde JSON.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm border-warning">
+        <div class="card-body text-center p-4">
+          <h2 class="h5 fw-bold">💻 Espacios tecnológicos</h2>
+          <p class="text-muted mb-0">Zonas de trabajo, salas privadas y ordenadores gaming.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm border-warning">
+        <div class="card-body text-center p-4">
+          <h2 class="h5 fw-bold">🤝 Atención cercana</h2>
+          <p class="text-muted mb-0">Formulario de contacto, reservas y proceso de pago completo.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-footer />

@@ -1,17 +1,30 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { FooterComponent } from '../../components/footer/footer.component';
+import { ProductoService } from '../../producto.service';
+import { Producto } from '../../producto';
 
 declare const AOS: any;
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLink, NavbarComponent, FooterComponent],
+  imports: [CommonModule, RouterLink, NavbarComponent, FooterComponent],
   templateUrl: './home.component.html'
 })
-export class HomeComponent implements AfterViewInit {
+export class HomeComponent implements OnInit, AfterViewInit {
+
+  productosDestacados: Producto[] = [];
+
+  constructor(private productoService: ProductoService) {}
+
+  ngOnInit(): void {
+    this.productoService.getProductos().subscribe(productos => {
+      this.productosDestacados = productos.slice(0, 3);
+    });
+  }
 
   cerrarModalesBootstrap(): void {
     document.querySelectorAll('.modal.show').forEach((modal) => modal.classList.remove('show'));
